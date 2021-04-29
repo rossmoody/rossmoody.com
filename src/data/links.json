@@ -1,0 +1,47 @@
+{
+  "stationery": {
+    "link": "https://www.55his.com",
+    "label": "www.55his.com",
+    "children": "stationery company"
+  },
+  "fun": {
+    "link": "https://www.55his.com/products/shot-glass-card",
+    "label": "Claim to fame was making a card that turned into a shot glass. www.55his.com/products/shot-glass-card",
+    "children": "fun products"
+  },
+  "brave": {
+    "link": "https://www.brave.com",
+    "label": "www.brave.com",
+    "children": "Brave"
+  },
+  "lettering": {
+    "link": "https://www.instagram.com/_rossmoody",
+    "label": "I have always had an appreciation and admiration for sign painting. www.instagram.com/_rossmoody",
+    "children": "hand-lettering artist"
+  },
+  "illustrator": {
+    "link": "https://dribbble.com/_rossmoody",
+    "label": "I don't post to Dribbble much these days but there is past illustration work there. www.dribbble.com/_rossmoody",
+    "children": "illustrator"
+  },
+  "print": {
+    "link": "https://www.skillshare.com/classes/Design-for-Print-Stand-Out-with-Specialty-Printing-Techniques/166642129",
+    "label": "I spent some time leading workshops and teaching classes on Skillshare. www.skillshare.com/classes/Design-for-Print ",
+    "children": "print designer"
+  },
+  "zendesk": {
+    "link": "https://garden.zendesk.com",
+    "label": "garden.zendesk.com",
+    "children": "Garden design system"
+  },
+  "crypto": {
+    "link": "https://www.basicattentiontoken.com",
+    "label": "www.basicattentiontoken.com",
+    "children": "cryptocurrency"
+  },
+  "blend": {
+    "link": "https://www.blend.com",
+    "label": "www.blend.com",
+    "children": "Blend"
+  }
+}
