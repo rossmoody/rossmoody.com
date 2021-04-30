@@ -1,5 +1,3 @@
 import React from 'react'
 
-export const Section = () => {
-  return <div>test</div>
-}
+export const Section = () => <div>test</div>
