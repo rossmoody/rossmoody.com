@@ -1,3 +1,3 @@
 import React from 'react'
 
-export const Favorites = () => <div>favorites</div>
+export const Favorites = (): JSX.Element => <div>favorites</div>

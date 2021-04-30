@@ -1,8 +1,12 @@
-import React from 'react'
+import { Box, Flex, Heading } from '@chakra-ui/react'
 import { Logo, ThemeIcon } from '../'
-import { Box, Flex } from '@chakra-ui/react'
+import React from 'react'
 
-export const Header = ({ themeToggle }) => {
+interface IToggle {
+  themeToggle: () => void
+}
+
+export const Header = ({ themeToggle }: IToggle): JSX.Element => {
   return (
     <Flex
       alignItems='center'
@@ -11,9 +15,12 @@ export const Header = ({ themeToggle }) => {
       maxW='5xl'
       marginX='auto'
     >
-      <Box w='180px' mr='8px'>
+      <Flex mr='8px' justifyContent='center'>
         <Logo />
-      </Box>
+        <Heading as='span' ml={2} fontWeight='400' fontSize='2xl'>
+          Ross Moody
+        </Heading>
+      </Flex>
       <Box as='button' w='24px' onClick={themeToggle}>
         <ThemeIcon />
       </Box>
