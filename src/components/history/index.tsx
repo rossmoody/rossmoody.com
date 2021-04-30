@@ -1,6 +1,7 @@
 import React from 'react'
-import { Footnote, LinkTooltip } from '../'
 import { Box, Divider, Heading } from '@chakra-ui/react'
+
+import { Footnote, LinkTooltip } from '..'
 
 export const History = () => (
   <Box>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Header, Footer } from '../'
 import { ChakraProvider, Box } from '@chakra-ui/react'
-import { themeOne } from './themes'
+
+import { Header, Footer } from '..'
 import { Fonts } from '../../fonts'
+
+import { themeOne } from './themes'
 
 export const Layout: React.FC = ({ children }) => {
   const [themeState, setThemeState] = useState(themeOne)
@@ -10,7 +12,7 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <ChakraProvider theme={themeState}>
       <Fonts />
-      <Box px={8} bg='surface' pt='48px' pb='60px'>
+      <Box px={8} bg="surface" pt="48px" pb="60px">
         <Header themeToggle={setThemeState} />
         {children}
         <Footer />

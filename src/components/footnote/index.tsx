@@ -1,9 +1,10 @@
-import { Text, Tooltip } from '@chakra-ui/react'
 import React from 'react'
+import { Text, Tooltip } from '@chakra-ui/react'
+
 import footnotes from '../../data/footnotes.json'
 
 export const Footnote = ({ name }: { name: string }): JSX.Element => {
-  const item = footnotes.find((obj) => obj[name])
+  const item = footnotes.find((object) => object[name])
   const index = (footnotes.indexOf(item) + 1).toString()
   const label = item[name]
 

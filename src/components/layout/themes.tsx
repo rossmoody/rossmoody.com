@@ -3,15 +3,15 @@ import { extendTheme } from '@chakra-ui/react'
 const rootTheme = {
   fonts: {
     body: 'Apercu Pro',
-    heading: 'Plantin MT Pro'
+    heading: 'Plantin MT Pro',
   },
   styles: {
     global: {
       body: {
-        color: '#fff'
-      }
-    }
-  }
+        color: '#fff',
+      },
+    },
+  },
 }
 
 const themeOne = extendTheme({
@@ -19,8 +19,8 @@ const themeOne = extendTheme({
   colors: {
     text: '#fff',
     primary: '#F2BB92',
-    surface: '#324345'
-  }
+    surface: '#324345',
+  },
 })
 
 export { themeOne }
