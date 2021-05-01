@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'rossmoody.com',
+    description: `The portfolio site for Ross Moody.`,
+    siteUrl: 'https://www.rossmoody.com',
   },
   plugins: [
     'gatsby-plugin-image',
