@@ -2,8 +2,8 @@ import { extendTheme } from '@chakra-ui/react'
 
 const rootTheme = {
   fonts: {
-    body: 'Apercu Pro',
     heading: 'Plantin MT Pro',
+    body: 'Akkurat Pro',
   },
   styles: {
     global: {

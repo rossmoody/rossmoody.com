@@ -2,14 +2,14 @@ import React from 'react'
 import { Box, Divider, Heading } from '@chakra-ui/react'
 
 interface Properties {
-  name: string
+  title: string
 }
 
-export const SectionTitle = ({ name }: Properties) => (
+export const SectionTitle = ({ title }: Properties) => (
   <Box>
     <Divider mb="20px" w="32px" borderBottom="2px" />
     <Heading as="h3" fontWeight="400">
-      {name}
+      {title}
     </Heading>
   </Box>
 )
