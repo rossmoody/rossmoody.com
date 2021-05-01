@@ -1,13 +1,13 @@
 import React from 'react'
 import { Box, Divider } from '@chakra-ui/react'
 
-import { Favorites, History, Layout, Projects, Writing } from '../components'
+import { Favorites, Main, Layout, Projects, Writing } from '../components'
 
 const IndexPage = () => {
   return (
     <Layout>
       <Box maxW="4xl" marginX="auto">
-        <History />
+        <Main />
         <Divider my="60px" variant="dashed" />
         <Projects />
         <Divider my="60px" variant="dashed" />

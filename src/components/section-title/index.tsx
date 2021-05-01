@@ -8,7 +8,7 @@ interface Properties {
 export const SectionTitle = ({ title }: Properties) => (
   <Box>
     <Divider mb="20px" w="32px" borderBottom="2px" />
-    <Heading as="h3" fontWeight="400">
+    <Heading as="h3" fontWeight="400" mb="24px">
       {title}
     </Heading>
   </Box>

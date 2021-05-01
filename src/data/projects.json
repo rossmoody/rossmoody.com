@@ -1,0 +1,20 @@
+{
+  "svgGobbler": {
+    "pretext": "Chrome & Firefox Extension",
+    "heading": "SVG Gobbler",
+    "link": "https://www.svggobbler.com",
+    "description": "SVG Gobbler is a side project of mine I have been working on over the years to become better at JavaScript. It's a browser extension that finds SVG icons on any website to download or copy to clipboard. Proud to say there are over 1k people gobbling SVGs with this extension."
+  },
+  "fiftyfivehis": {
+    "pretext": "Online Stationery Business",
+    "heading": "Fifty Five Hi's",
+    "link": "https://www.55his.com",
+    "description": "55 Hi's was a company I owned and operated for several years that stopped in 2014. The claim to fame was making a card that turn into a shot glass. Though the brand is now over, I leave the website up for reference because it gives a good glimpse into how how I approach design problems."
+  },
+  "fomo": {
+    "pretext": "Web App",
+    "heading": "Fomo Crypto Calculator",
+    "link": "https://www.fomocryptocalculator.com",
+    "description": "55 Hi's was a company I owned and operated for several years that stopped in 2014. The claim to fame was making a card that turn into a shot glass. Though the brand is now over, I leave the website up for reference because it gives a good glimpse into how how I approach design problems."
+  }
+}

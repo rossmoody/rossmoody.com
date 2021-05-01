@@ -1,5 +1,5 @@
 export { Favorites } from './favorites'
-export { History } from './history'
+export { Main } from './main'
 export { Layout } from './layout'
 export { Projects } from './projects'
 export { Writing } from './writing'

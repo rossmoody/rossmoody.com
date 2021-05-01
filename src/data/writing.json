@@ -1,0 +1,20 @@
+{
+  "ethereum": {
+    "pretext": "2021",
+    "heading": "A Gentle Introduction to Staking ETH 2.0",
+    "link": "https://medium.datadriveninvestor.com/a-gentle-introduction-to-staking-eth-2-0-d262496a9e21",
+    "description": "A beginner’s journey to discovering the different methods and resources available for staking Eth2."
+  },
+  "principles": {
+    "pretext": "2021",
+    "heading": "Defining Design System Principles",
+    "link": "https://medium.com/p/69e4790b95b0",
+    "description": "An iterative set of standards for building and maintaining empowering design systems."
+  },
+  "documentation": {
+    "pretext": "2020",
+    "heading": "6 Tips for Effective Design System Documentation",
+    "link": "https://medium.com/zendesk-creative-blog/6-tips-for-writing-effective-design-system-documentation-11c35b44169",
+    "description": "Practical tactics for writing helpful design guidelines."
+  }
+}
