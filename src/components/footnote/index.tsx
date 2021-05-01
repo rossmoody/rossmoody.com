@@ -5,6 +5,9 @@ import footnotes from '../../data/footnotes.json'
 
 export const Footnote = ({ name }: { name: string }): JSX.Element => {
   const item = footnotes.find((object) => object[name])
+
+  if (!item) throw new Error('Problems...')
+
   const index = (footnotes.indexOf(item) + 1).toString()
   const label = item[name]
 
