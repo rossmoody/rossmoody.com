@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { ChakraProvider, Box } from '@chakra-ui/react'
 
-import { Header, Footer } from '..'
+import { Header } from '../header'
+import { Footer } from '../footer'
 import { Fonts } from '../../fonts'
 
 import { themeOne } from './themes'

@@ -1,11 +1,16 @@
 import React from 'react'
 import { Box, Divider, Heading } from '@chakra-ui/react'
 
-import { Footnote, LinkTooltip } from '..'
+import { Footnote } from '../footnote'
+import { LinkTooltip } from '../link-tooltip'
 
 export const History = () => (
   <Box>
-    <Heading as="h1" sx={{ fontWeight: '400' }} size="3xl">
+    <Heading
+      as="h1"
+      fontWeight="400"
+      fontSize={{ base: '36px', sm: '52px', md: '60px' }}
+    >
       Hi, I’m Ross. A visual systems thinker
       <Footnote name="thinker" /> that likes understanding how things work under
       the hood

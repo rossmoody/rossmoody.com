@@ -15,7 +15,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "lint": "npx eslint . --ext .tsx,.ts --fix"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.0",
