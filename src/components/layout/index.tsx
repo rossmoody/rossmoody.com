@@ -9,11 +9,11 @@ import * as themes from './themes'
 
 const themeArray = Object.values(themes)
 
-const initialTheme = themeArray[5]
+const initialTheme = themes.five
 
 export const Layout: React.FC = ({ children }) => {
   const [index, setIndex] = useState(0)
-  const [themeState, setThemeState] = useState(themeArray[initialTheme])
+  const [themeState, setThemeState] = useState(initialTheme)
 
   const handleSetThemeState = () => {
     let localIndex = index + 1
