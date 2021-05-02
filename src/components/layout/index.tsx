@@ -23,6 +23,7 @@ export const Layout: React.FC = ({ children }) => {
 
   return (
     <ChakraProvider theme={themeState}>
+      {console.log(themeState)}
       <Fonts />
       <Box px={8} bg="surface" pt="48px" pb="60px">
         <Header themeToggle={handleSetThemeState} />
