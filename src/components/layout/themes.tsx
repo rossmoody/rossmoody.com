@@ -31,10 +31,10 @@ function makeTheme(properties: ThemeProperties) {
 }
 
 export const one = makeTheme({
-  primary: '#ECAE8B',
-  surface: '#2f3644',
-  color: '#fff',
-  divider: '#9dbaca',
+  primary: '#aa8878',
+  surface: '#F4EBE2',
+  color: '#41393E',
+  divider: '#8a897b',
 })
 
 export const two = makeTheme({
@@ -66,8 +66,8 @@ export const five = makeTheme({
 })
 
 export const six = makeTheme({
-  primary: '#aa8878',
-  surface: '#F4EBE2',
-  color: '#41393E',
-  divider: '#8a897b',
+  primary: '#ECAE8B',
+  surface: '#2f3644',
+  color: '#fff',
+  divider: '#9dbaca',
 })
