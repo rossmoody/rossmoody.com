@@ -9,21 +9,21 @@ import * as themes from './themes'
 
 const themeArray = Object.values(themes)
 
+const initialTheme = themeArray[5]
+
 export const Layout: React.FC = ({ children }) => {
   const [index, setIndex] = useState(0)
-  const [themeState, setThemeState] = useState(themeArray[0])
+  const [themeState, setThemeState] = useState(themeArray[initialTheme])
 
   const handleSetThemeState = () => {
-    // let localIndex = index + 1
-    // if (localIndex === themeArray.length) localIndex = 0
-    // setIndex(localIndex)
-    // setThemeState(themeArray[localIndex])
-    console.log(index, themeState)
+    let localIndex = index + 1
+    if (localIndex === themeArray.length) localIndex = 0
+    setIndex(localIndex)
+    setThemeState(themeArray[localIndex])
   }
 
   return (
     <ChakraProvider theme={themeState}>
-      {console.log(themeState)}
       <Fonts />
       <Box px={8} bg="surface" pt="48px" pb="60px">
         <Header themeToggle={handleSetThemeState} />
