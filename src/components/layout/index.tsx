@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { ChakraProvider, Box } from '@chakra-ui/react'
 
 import { Header } from '../header'
@@ -11,7 +11,7 @@ const themeArray = Object.values(themes)
 
 export const Layout: React.FC = ({ children }) => {
   const [index, setIndex] = useState(0)
-  const [themeState, setThemeState] = useState(themeArray[index])
+  const [themeState, setThemeState] = useState(themeArray[0])
 
   const handleSetThemeState = () => {
     let localIndex = index + 1
@@ -19,11 +19,6 @@ export const Layout: React.FC = ({ children }) => {
     setIndex(localIndex)
     setThemeState(themeArray[localIndex])
   }
-
-  useEffect(() => {
-    setIndex(0)
-    setThemeState(themeArray[0])
-  }, [])
 
   return (
     <ChakraProvider theme={themeState}>
