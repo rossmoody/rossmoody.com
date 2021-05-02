@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconButton, Flex, Heading, useMediaQuery } from '@chakra-ui/react'
+import { IconButton, Flex, Heading } from '@chakra-ui/react'
 
 import { Logo } from '../logo'
 import { ThemeIcon } from '../icons/theme-icon'
@@ -9,11 +9,6 @@ interface Toggle {
 }
 
 export const Header = ({ themeToggle }: Toggle): JSX.Element => {
-  const [isLargerThan500, isBrowser] = useMediaQuery([
-    '(min-width: 500px)',
-    '(display-mode: browser)',
-  ])
-
   return (
     <Flex
       justifyContent="space-between"
@@ -31,7 +26,11 @@ export const Header = ({ themeToggle }: Toggle): JSX.Element => {
           fontSize="2xl"
           lineHeight={1}
           mt="6px"
-          display={isBrowser && isLargerThan500 ? 'block' : 'none'}
+          sx={{
+            '@media screen and (max-width: 500px)': {
+              display: 'none',
+            },
+          }}
         >
           Ross Moody
         </Heading>

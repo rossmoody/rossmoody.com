@@ -32,7 +32,7 @@ function makeTheme(properties: ThemeProperties) {
 
 export const one = makeTheme({
   primary: '#ECAE8B',
-  surface: '#32444E',
+  surface: '#2f3644',
   color: '#fff',
   divider: '#9dbaca',
 })
