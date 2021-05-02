@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ChakraProvider, Box } from '@chakra-ui/react'
 
 import { Header } from '../header'
@@ -19,6 +19,10 @@ export const Layout: React.FC = ({ children }) => {
     setIndex(localIndex)
     setThemeState(themeArray[localIndex])
   }
+
+  useEffect(() => {
+    setThemeState(themeArray[5])
+  }, [])
 
   return (
     <ChakraProvider theme={themeState}>
