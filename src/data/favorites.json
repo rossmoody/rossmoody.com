@@ -1,7 +1,7 @@
 {
   "digital": {
-    "pretext": "Digital",
-    "title": "Software",
+    "pretext": "Software",
+    "title": "Apps",
     "items": [
       {
         "link": "https://www.alfredapp.com/",
@@ -34,8 +34,8 @@
     ]
   },
   "analog": {
-    "pretext": "Analog",
-    "title": "Tools",
+    "pretext": "Tools",
+    "title": "Analog",
     "items": [
       {
         "link": "https://www.gouletpens.com/collections/sailor-1911-king-of-pens/products/sailor-1911-king-of-pens-fountain-pen-black-gold?variant=31485705814059",
@@ -60,8 +60,8 @@
     ]
   },
   "tech": {
-    "pretext": "Tech",
-    "title": "Gadgets",
+    "pretext": "Gear",
+    "title": "Tech",
     "items": [
       {
         "link": "https://www.logitech.com/en-us/products/mice/mx-ergo-wireless-trackball-mouse.html?crid=7",
@@ -81,7 +81,7 @@
       },
       {
         "link": "https://www.apple.com/shop/buy-mac/macbook-pro/13-inch",
-        "name": "Macbook Pro 13"
+        "name": "Macbook Pro 13\""
       },
       {
         "link": "https://us.kobobooks.com/products/kobo-libra-h2o?utm_source=Kobo&utm_medium=TopNav&utm_campaign=Libra",
@@ -116,6 +116,40 @@
       {
         "link": "https://www.goodreads.com/book/show/42046112-recursion",
         "name": "Recursion"
+      }
+    ]
+  },
+  "general": {
+    "pretext": "General",
+    "title": "Miscellaneous",
+    "items": [
+      {
+        "link": "https://www.goodreads.com/user/show/31218546-ross-moody",
+        "name": "GoodReads"
+      },
+      {
+        "link": "https://www.drinktrade.com/",
+        "name": "DrinkTrade Coffee"
+      },
+      {
+        "link": "https://www.udemy.com/",
+        "name": "Udemy"
+      },
+      {
+        "link": "https://www.pocketcasts.com/",
+        "name": "PocketCasts"
+      },
+      {
+        "link": "https://www.gatsbyjs.com/",
+        "name": "GatsbyJS"
+      },
+      {
+        "link": "https://www.netlify.com/",
+        "name": "Netlify"
+      },
+      {
+        "link": "https://shop.ledger.com/products/ledger-nano-x",
+        "name": "Ledger Nano X"
       }
     ]
   }

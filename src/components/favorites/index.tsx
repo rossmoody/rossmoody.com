@@ -6,15 +6,15 @@ import { SectionTitle } from '../section-title'
 import { SectionFavorite } from '../section-favorite'
 
 export const Favorites = () => {
-  const { analog, digital, tech, books } = favorites
+  const { analog, digital, tech, books, general } = favorites
 
   return (
     <Grid
       templateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)']}
-      templateRows={['1fr', '1fr', 'repeat(2, 1fr)']}
+      templateRows={['1fr', '1fr', 'repeat(3, 1fr)']}
       gap={4}
     >
-      <GridItem colSpan={[1, 2, 1]} rowSpan={[1, 2]}>
+      <GridItem colSpan={[1, 2, 1]} rowSpan={[1, 3]}>
         <SectionTitle title="Favorites" />
       </GridItem>
       <GridItem colSpan={1}>
@@ -36,6 +36,13 @@ export const Favorites = () => {
           pretext={analog.pretext}
           heading={analog.title}
           items={analog.items}
+        />
+      </GridItem>
+      <GridItem colSpan={1}>
+        <SectionFavorite
+          pretext={general.pretext}
+          heading={general.title}
+          items={general.items}
         />
       </GridItem>
       <GridItem colSpan={1}>

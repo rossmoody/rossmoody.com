@@ -7,7 +7,7 @@ import { History } from './history'
 export const Main = () => (
   <Box>
     <Hero />
-    <Divider my="60px" variant="dashed" />
+    <Divider my="60px" variant="dashed" borderColor="divider" />
     <History />
   </Box>
 )

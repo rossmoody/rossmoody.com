@@ -23,7 +23,7 @@ export const Footnote = ({ name }: { name: string }): JSX.Element => {
     >
       <Tooltip
         label={label}
-        bg="text"
+        bg="primary"
         color="surface"
         placement="top"
         maxW="350px"

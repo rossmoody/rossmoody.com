@@ -30,9 +30,8 @@ export const History = () => (
     <LinkTooltip name="blend" /> where my focus is on creating accessible
     components and standards for product teams. I like French Bulldogs
     <Footnote name="french" />, cryptocurrency
-    <Footnote name="cryptocurrency" />, and learning how to code
-    <Footnote name="program" />. If you let me too close to your closet I’ll
-    organize it
+    <Footnote name="cryptocurrency" />, and learning how to code. If you let me
+    too close to your closet I’ll organize it
     <Footnote name="organize" />.
   </Heading>
 )

@@ -25,7 +25,7 @@ export const SectionFavorite = ({
       {heading}
     </Heading>
     {items.map((item) => (
-      <Link color="primary" href={item.link}>
+      <Link color="primary" href={item.link} key={item.name}>
         <Text letterSpacing=".3px">{item.name}</Text>
       </Link>
     ))}

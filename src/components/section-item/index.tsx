@@ -17,7 +17,7 @@ export const SectionItem = ({
   marginBottom,
 }: SectionItemProperties) => (
   <Box mb={marginBottom ? '0' : '60px'}>
-    <Text fontWeight="500" mb="8px" letterSpacing=".3px">
+    <Text fontWeight="500" mb="8px" letterSpacing=".5px">
       {pretext}
     </Text>
     <Link color="primary" href={link}>

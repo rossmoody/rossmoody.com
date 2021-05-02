@@ -15,7 +15,7 @@ export const LinkTooltip = ({ name }: { name: string }) => {
   return (
     <T
       label={object.label}
-      bg="text"
+      bg="primary"
       color="surface"
       placement="top"
       maxW="350px"

@@ -20,7 +20,7 @@ const Item = ({ href, children }: ItemProperties) => (
 
 export const Footer = (): JSX.Element => (
   <Box maxW="5xl" marginX="auto">
-    <Divider mt="100px" mb="24px" variant="dashed" />
+    <Divider mt="100px" mb="24px" variant="dashed" borderColor="divider" />
     <Item href="mailto:ross@rossmoody.com">Email</Item>
     <Break />
     <Item href="https://dribbble.com/_rossmoody">Dribbble</Item>
