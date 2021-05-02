@@ -22,7 +22,7 @@ export const Layout: React.FC = ({ children }) => {
 
   useEffect(() => {
     handleSetThemeState()
-  })
+  }, [])
 
   return (
     <ChakraProvider theme={themeState}>

@@ -8,7 +8,10 @@
   "eslintConfig": {
     "extends": [
       "eslint-config-rossmoody"
-    ]
+    ],
+    "rules": {
+      "react-hooks/exhaustive-deps": "off"
+    }
   },
   "scripts": {
     "develop": "gatsby develop",
