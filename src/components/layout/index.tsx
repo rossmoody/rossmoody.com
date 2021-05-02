@@ -14,10 +14,11 @@ export const Layout: React.FC = ({ children }) => {
   const [themeState, setThemeState] = useState(themeArray[0])
 
   const handleSetThemeState = () => {
-    let localIndex = index + 1
-    if (localIndex === themeArray.length) localIndex = 0
-    setIndex(localIndex)
-    setThemeState(themeArray[localIndex])
+    // let localIndex = index + 1
+    // if (localIndex === themeArray.length) localIndex = 0
+    // setIndex(localIndex)
+    // setThemeState(themeArray[localIndex])
+    console.log(index, themeState)
   }
 
   return (
