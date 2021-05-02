@@ -28,7 +28,8 @@ export const Footnote = ({ name }: { name: string }): JSX.Element => {
         placement="top"
         maxW="350px"
         borderRadius="8px"
-        padding="12px"
+        fontWeight="400"
+        padding="12px 16px"
       >
         {index}
       </Tooltip>

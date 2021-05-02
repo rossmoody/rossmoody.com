@@ -20,7 +20,8 @@ export const LinkTooltip = ({ name }: { name: string }) => {
       placement="top"
       maxW="350px"
       borderRadius="8px"
-      padding="8px 12px"
+      fontWeight="400"
+      padding="12px 16px"
     >
       <Link href={object.link} color="primary">
         {object.children}

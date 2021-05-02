@@ -12,8 +12,8 @@ const IndexPage = () => {
         <Projects />
         <Divider my="60px" variant="dashed" />
         <Writing />
-        {/* <Divider my="60px" variant="dashed" />
-        <Favorites /> */}
+        <Divider my="60px" variant="dashed" />
+        <Favorites />
       </Box>
     </Layout>
   )

@@ -1,0 +1,122 @@
+{
+  "digital": {
+    "pretext": "Digital",
+    "title": "Software",
+    "items": [
+      {
+        "link": "https://www.alfredapp.com/",
+        "name": "Alfred"
+      },
+      {
+        "link": "https://code.visualstudio.com/",
+        "name": "Visual Studio Code"
+      },
+      {
+        "link": "https://1password.com/",
+        "name": "1Password"
+      },
+      {
+        "link": "https://hemingwayapp.com/",
+        "name": "Hemingway Editor"
+      },
+      {
+        "link": "https://desktop.github.com/",
+        "name": "GitHub Desktop"
+      },
+      {
+        "link": "https://www.figma.com/",
+        "name": "Figma"
+      },
+      {
+        "link": "https://iterm2.com/",
+        "name": "iTerm2"
+      }
+    ]
+  },
+  "analog": {
+    "pretext": "Analog",
+    "title": "Tools",
+    "items": [
+      {
+        "link": "https://www.gouletpens.com/collections/sailor-1911-king-of-pens/products/sailor-1911-king-of-pens-fountain-pen-black-gold?variant=31485705814059",
+        "name": "Sailor 1911 Fountain Pen"
+      },
+      {
+        "link": "https://www.baronfig.com/tools/confidant/classic?size=plus+%287%22+x+10%22%29&paper+type=ruled&color=charcoal",
+        "name": "Baron Fig Notebook"
+      },
+      {
+        "link": "https://www.amazon.com/Moisture-Garden-Gardening-Outdoors-Battery/dp/B01J1HO6XY",
+        "name": "Plant Moisture Meter"
+      },
+      {
+        "link": "https://us.moccamaster.com/kb-matte-black.html",
+        "name": "Technivorm Mochamaster"
+      },
+      {
+        "link": "https://missionworkshop.com/products/the-rummy-advanced-messenger-bag?variant=18522575621",
+        "name": "Mission Workshop Rummy Bag"
+      }
+    ]
+  },
+  "tech": {
+    "pretext": "Tech",
+    "title": "Gadgets",
+    "items": [
+      {
+        "link": "https://www.logitech.com/en-us/products/mice/mx-ergo-wireless-trackball-mouse.html?crid=7",
+        "name": "Logitech Ergo Mouse"
+      },
+      {
+        "link": "https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.html",
+        "name": "Logitech Vertical Mouse"
+      },
+      {
+        "link": "https://kinesis-ergo.com/shop/advantage2/",
+        "name": "Kinesis Advantage 2 Keyboard"
+      },
+      {
+        "link": "https://www.bluemic.com/en-us/products/snowball/",
+        "name": "Blue Snowball Microphone"
+      },
+      {
+        "link": "https://www.apple.com/shop/buy-mac/macbook-pro/13-inch",
+        "name": "Macbook Pro 13"
+      },
+      {
+        "link": "https://us.kobobooks.com/products/kobo-libra-h2o?utm_source=Kobo&utm_medium=TopNav&utm_campaign=Libra",
+        "name": "Kobo Libra H20"
+      },
+      {
+        "link": "https://www.apple.com/airpods-max/",
+        "name": "Airpods Max"
+      }
+    ]
+  },
+  "books": {
+    "pretext": "Literature",
+    "title": "Books",
+    "items": [
+      {
+        "link": "https://www.goodreads.com/book/show/233667.Firestarter",
+        "name": "Firestarter"
+      },
+      {
+        "link": "https://www.goodreads.com/book/show/149267.The_Stand",
+        "name": "The Stand"
+      },
+      {
+        "link": "https://www.goodreads.com/book/show/19063.The_Book_Thief",
+        "name": "The Book Thief"
+      },
+      {
+        "link": "https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning",
+        "name": "Man's Search for Meaning"
+      },
+      {
+        "link": "https://www.goodreads.com/book/show/42046112-recursion",
+        "name": "Recursion"
+      }
+    ]
+  }
+}
