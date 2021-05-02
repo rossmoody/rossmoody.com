@@ -9,7 +9,7 @@ import * as themes from './themes'
 
 const themeArray = Object.values(themes)
 
-const initialTheme = themes.five
+const initialTheme = themes.six
 
 export const Layout: React.FC = ({ children }) => {
   const [index, setIndex] = useState(0)
