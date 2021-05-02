@@ -4,7 +4,13 @@ import { useToken } from '@chakra-ui/react'
 export const ThemeIcon = () => {
   const primaryColor = useToken('colors', 'primary')
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 24 24"
+      width="24px"
+      height="24px"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

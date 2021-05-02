@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Heading, useMediaQuery } from '@chakra-ui/react'
+import { IconButton, Flex, Heading, useMediaQuery } from '@chakra-ui/react'
 
 import { Logo } from '../logo'
 import { ThemeIcon } from '../icons/theme-icon'
@@ -33,9 +33,12 @@ export const Header = ({ themeToggle }: Toggle): JSX.Element => {
           Ross Moody
         </Heading>
       </Flex>
-      <Box as="button" w="24px" onClick={themeToggle}>
-        <ThemeIcon />
-      </Box>
+      <IconButton
+        aria-label="Change theme"
+        onClick={themeToggle}
+        icon={<ThemeIcon />}
+        variant="ghost"
+      />
     </Flex>
   )
 }
