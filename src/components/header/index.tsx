@@ -9,7 +9,10 @@ interface Toggle {
 }
 
 export const Header = ({ themeToggle }: Toggle): JSX.Element => {
-  const [isLargerThan500] = useMediaQuery('(min-width: 500px)')
+  const [isLargerThan500, isBrowser] = useMediaQuery([
+    '(min-width: 500px)',
+    '(display-mode: browser)',
+  ])
 
   return (
     <Flex
@@ -28,7 +31,7 @@ export const Header = ({ themeToggle }: Toggle): JSX.Element => {
           fontSize="2xl"
           lineHeight={1}
           mt="6px"
-          display={isLargerThan500 ? 'block' : 'none'}
+          display={isBrowser && isLargerThan500 ? 'block' : 'none'}
         >
           Ross Moody
         </Heading>
