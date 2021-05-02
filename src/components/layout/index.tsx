@@ -10,7 +10,7 @@ import * as themes from './themes'
 const themeArray = Object.values(themes)
 
 export const Layout: React.FC = ({ children }) => {
-  const [index, setIndex] = useState(5)
+  const [index, setIndex] = useState(0)
   const [themeState, setThemeState] = useState(themeArray[index])
 
   const handleSetThemeState = () => {
@@ -21,8 +21,8 @@ export const Layout: React.FC = ({ children }) => {
   }
 
   useEffect(() => {
-    setIndex(5)
-    setThemeState(themeArray[5])
+    setIndex(0)
+    setThemeState(themeArray[0])
   }, [])
 
   return (
