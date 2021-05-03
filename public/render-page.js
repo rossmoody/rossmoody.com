@@ -3480,13 +3480,33 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
+    "name": "Ross Moody",
+    "short_name": "Ross Moody",
+    "description": "The portfolio site for Ross Moody.",
     "icon": "src/images/icon.png",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "53aa06cf17e4239d0dba6ffd09854e02"
+    "cacheDigest": "d6834289d8f71028396aa117e2b7c9ef"
+  }
+}, {
+  name: 'gatsby-plugin-google-gtag',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-google-gtag/gatsby-ssr */ "./node_modules/gatsby-plugin-google-gtag/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "trackingIds": ["G-08M9MV3L72"],
+    "gtagConfig": {
+      "optimize_id": "OPT_CONTAINER_ID",
+      "anonymize_ip": true,
+      "cookie_expires": 0
+    },
+    "pluginConfig": {
+      "head": false,
+      "respectDNT": true,
+      "exclude": ["/preview/**", "/do-not-track/me/too/"]
+    }
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -4843,6 +4863,68 @@ function stripPrefix(str, prefix = ``) {
 
   return str;
 }
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-google-gtag/gatsby-ssr.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-google-gtag/gatsby-ssr.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _minimatch = __webpack_require__(/*! minimatch */ "./node_modules/minimatch/minimatch.js");
+
+exports.onRenderBody = function (_ref, pluginOptions) {
+  var setHeadComponents = _ref.setHeadComponents,
+      setPostBodyComponents = _ref.setPostBodyComponents;
+  if (true) return null; // Lighthouse recommends pre-connecting to google analytics
+
+  setHeadComponents([/*#__PURE__*/_react.default.createElement("link", {
+    rel: "preconnect dns-prefetch",
+    key: "preconnect-google-analytics",
+    href: "https://www.google-analytics.com"
+  })]);
+  var gtagConfig = pluginOptions.gtagConfig || {};
+  var pluginConfig = pluginOptions.pluginConfig || {}; // Prevent duplicate or excluded pageview events being emitted on initial load of page by the `config` command
+  // https://developers.google.com/analytics/devguides/collection/gtagjs/#disable_pageview_tracking
+
+  gtagConfig.send_page_view = false;
+  var firstTrackingId = pluginOptions.trackingIds && pluginOptions.trackingIds.length ? pluginOptions.trackingIds[0] : "";
+  var excludeGtagPaths = [];
+
+  if (typeof pluginConfig.exclude !== "undefined") {
+    pluginConfig.exclude.map(function (exclude) {
+      var mm = new _minimatch.Minimatch(exclude);
+      excludeGtagPaths.push(mm.makeRe());
+    });
+  }
+
+  var setComponents = pluginConfig.head ? setHeadComponents : setPostBodyComponents;
+
+  var renderHtml = function renderHtml() {
+    return "\n      " + (excludeGtagPaths.length ? "window.excludeGtagPaths=[" + excludeGtagPaths.join(",") + "];" : "") + "\n      " + (typeof gtagConfig.anonymize_ip !== "undefined" && gtagConfig.anonymize_ip === true ? "function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='" + firstTrackingId + "',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);" : "") + "\n      if(" + (pluginConfig.respectDNT ? "!(navigator.doNotTrack == \"1\" || window.doNotTrack == \"1\")" : "true") + ") {\n        window.dataLayer = window.dataLayer || [];\n        function gtag(){window.dataLayer && window.dataLayer.push(arguments);}\n        gtag('js', new Date());\n\n        " + pluginOptions.trackingIds.map(function (trackingId) {
+      return "gtag('config', '" + trackingId + "', " + JSON.stringify(gtagConfig) + ");";
+    }).join("") + "\n      }\n      ";
+  };
+
+  return setComponents([/*#__PURE__*/_react.default.createElement("script", {
+    key: "gatsby-plugin-google-gtag",
+    async: true,
+    src: "https://www.googletagmanager.com/gtag/js?id=" + firstTrackingId
+  }), /*#__PURE__*/_react.default.createElement("script", {
+    key: "gatsby-plugin-google-gtag-config",
+    dangerouslySetInnerHTML: {
+      __html: renderHtml()
+    }
+  })]);
+};
 
 /***/ }),
 
