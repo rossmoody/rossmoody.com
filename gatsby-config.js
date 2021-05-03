@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Ross Moody',
-    siteUrl: 'https://rossmoody.com',
     description: `The portfolio site for Ross Moody.`,
+    siteUrl: 'https://rossmoody.com',
   },
   plugins: [
     {
@@ -28,6 +28,11 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
+        name: 'Ross Moody',
+        short_name: 'Ross Moody',
+        description: `The portfolio site for Ross Moody.`,
+        start_url: '/',
+        display: 'standalone',
       },
     },
     'gatsby-plugin-sharp',
