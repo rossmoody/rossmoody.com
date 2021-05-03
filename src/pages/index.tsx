@@ -29,7 +29,7 @@ const IndexPage = () => {
         <meta name="twitter:site" content={meta.author} />
         <meta name="twitter:title" content={meta.title} />
         <meta property="twitter:description" content={meta.description} />
-        <meta property="twitter:image" content={image} />
+        <meta property="twitter:image" content={`${meta.url}/0g-image.png`} />
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1.0"
