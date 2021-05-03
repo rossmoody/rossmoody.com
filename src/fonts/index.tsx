@@ -1,10 +1,10 @@
 import React from 'react'
 import { Global } from '@emotion/react'
 
-import plantinRegular from '../static/plantin/plantin-pro-regular.ttf'
-import apercuRegular from '../static/apercu/apercu-regular-pro.otf'
-import apercuMedium from '../static/apercu/apercu-medium-pro.otf'
-import apercuBold from '../static/apercu/apercu-bold-pro.otf'
+import plantinRegular from './plantin/plantin-pro-regular.ttf'
+import apercuRegular from './apercu/apercu-regular-pro.otf'
+import apercuMedium from './apercu/apercu-medium-pro.otf'
+import apercuBold from './apercu/apercu-bold-pro.otf'
 
 export const Fonts = () => (
   <Global

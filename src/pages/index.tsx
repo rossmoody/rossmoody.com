@@ -2,8 +2,10 @@ import React from 'react'
 import { Box, Divider } from '@chakra-ui/react'
 import { Helmet } from 'react-helmet'
 
-import image from '../static/og-image.png'
 import { Favorites, Main, Layout, Projects, Writing } from '../components'
+import image from '../static/og-image.png'
+
+import('../static/og-image.png')
 
 const meta = {
   title: 'Ross Moody',
