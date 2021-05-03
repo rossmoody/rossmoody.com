@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Ross Moody',
-    siteUrl: 'https://www.rossmoody.com',
+    siteUrl: 'https://rossmoody.com',
     description: `The portfolio site for Ross Moody.`,
   },
   plugins: [
@@ -13,6 +13,7 @@ module.exports = {
       options: {
         name: `Ross Moody`,
         short_name: `Ross Moody`,
+        start_url: '/',
         description: `The portfolio site for Ross Moody.`,
         icon: 'src/images/icon.png',
       },
