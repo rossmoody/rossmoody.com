@@ -10,7 +10,8 @@
       "eslint-config-rossmoody"
     ],
     "rules": {
-      "react-hooks/exhaustive-deps": "off"
+      "react-hooks/exhaustive-deps": "off",
+      "@shopify/images-no-direct-imports": "off"
     }
   },
   "scripts": {

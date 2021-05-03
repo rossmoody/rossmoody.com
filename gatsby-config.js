@@ -12,9 +12,9 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: `Ross Moody`,
+        description: `The portfolio site for Ross Moody.`,
         short_name: `Ross Moody`,
         start_url: '/',
-        description: `The portfolio site for Ross Moody.`,
         icon: 'src/images/icon.png',
       },
     },

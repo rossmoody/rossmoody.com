@@ -3481,8 +3481,9 @@ var plugins = [{
   options: {
     "plugins": [],
     "name": "Ross Moody",
-    "short_name": "Ross Moody",
     "description": "The portfolio site for Ross Moody.",
+    "short_name": "Ross Moody",
+    "start_url": "/",
     "icon": "src/images/icon.png",
     "legacy": true,
     "theme_color_in_head": true,
