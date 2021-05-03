@@ -5,29 +5,6 @@ module.exports = {
     description: `The portfolio site for Ross Moody.`,
   },
   plugins: [
-    'gatsby-plugin-image',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: `Ross Moody`,
-        description: `The portfolio site for Ross Moody.`,
-        short_name: `Ross Moody`,
-        start_url: '/',
-        icon: 'src/images/icon.png',
-      },
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: './src/images/',
-      },
-      __key: 'images',
-    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -43,6 +20,25 @@ module.exports = {
           exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
       },
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
     },
   ],
 }
