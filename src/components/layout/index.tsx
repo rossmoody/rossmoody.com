@@ -12,7 +12,7 @@ const themeArray = Object.values(themes)
 const initialTheme = themes.six
 
 export const Layout: React.FC = ({ children }) => {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(5)
   const [themeState, setThemeState] = useState(initialTheme)
 
   const handleSetThemeState = () => {
