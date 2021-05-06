@@ -1,4 +1,10 @@
 {
+  "product": {
+    "pretext": "2021",
+    "heading": "The Product Idea List",
+    "link": "https://moodyrooster.medium.com/the-product-idea-list-c7280097147d",
+    "description": "A design retrospective with the best product ideas from a year of scraping people’s tweets on Twitter."
+  },
   "ethereum": {
     "pretext": "2021",
     "heading": "A Gentle Introduction to Staking ETH 2.0",

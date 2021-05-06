@@ -6,8 +6,6 @@ import { SectionTitle } from '../section-title'
 import { SectionFavorite } from '../section-favorite'
 
 export const Favorites = () => {
-  const { analog, digital, tech, books, general } = favorites
-
   return (
     <Grid
       templateColumns={['1fr', 'repeat(2, 1fr)', 'repeat(3, 1fr)']}
@@ -17,41 +15,17 @@ export const Favorites = () => {
       <GridItem colSpan={[1, 2, 1]} rowSpan={[1, 3]}>
         <SectionTitle title="Favorites" />
       </GridItem>
-      <GridItem colSpan={1}>
-        <SectionFavorite
-          pretext={digital.pretext}
-          heading={digital.title}
-          items={digital.items}
-        />
-      </GridItem>
-      <GridItem colSpan={1}>
-        <SectionFavorite
-          pretext={tech.pretext}
-          heading={tech.title}
-          items={tech.items}
-        />
-      </GridItem>
-      <GridItem colSpan={1}>
-        <SectionFavorite
-          pretext={analog.pretext}
-          heading={analog.title}
-          items={analog.items}
-        />
-      </GridItem>
-      <GridItem colSpan={1}>
-        <SectionFavorite
-          pretext={general.pretext}
-          heading={general.title}
-          items={general.items}
-        />
-      </GridItem>
-      <GridItem colSpan={1}>
-        <SectionFavorite
-          pretext={books.pretext}
-          heading={books.title}
-          items={books.items}
-        />
-      </GridItem>
+      {Object.values(favorites).map((favorite) => {
+        return (
+          <GridItem colSpan={1}>
+            <SectionFavorite
+              pretext={favorite.pretext}
+              heading={favorite.title}
+              items={favorite.items}
+            />
+          </GridItem>
+        )
+      })}
     </Grid>
   )
 }
