@@ -1,4 +1,10 @@
 {
+  "fomo": {
+    "pretext": "Web App",
+    "heading": "Fomo Crypto Calculator",
+    "link": "https://www.fomocryptocalculator.com",
+    "description": "A web app for accurately predicting the dollar amount of regret you should feel for not investing in cryptocurrency sooner."
+  },
   "svgGobbler": {
     "pretext": "Chrome & Firefox Extension",
     "heading": "SVG Gobbler",
@@ -10,11 +16,5 @@
     "heading": "Fifty Five Hi's",
     "link": "https://www.55his.com",
     "description": "55 Hi's was a company I owned and operated for several years that closed up shop in 2014. The claim to fame was making a card that turned into a shot glass. Though the business is now defunct, I leave the website up for reference because it gives a good glimpse into how effective I am at writing bad jokes."
-  },
-  "fomo": {
-    "pretext": "Web App",
-    "heading": "Fomo Crypto Calculator",
-    "link": "https://www.fomocryptocalculator.com",
-    "description": "A web app for accurately predicting the dollar amount of regret you should feel for not investing in cryptocurrency sooner."
   }
 }
