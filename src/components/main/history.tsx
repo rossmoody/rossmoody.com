@@ -6,7 +6,8 @@ import { LinkTooltip } from '../link-tooltip'
 
 export const History = () => (
   <Heading size="lg" as="h2" sx={{ fontWeight: '500' }}>
-    I started my career <Footnote name="career" /> running a screenprinting{' '}
+    I started my career
+    <Footnote name="career" /> running a screenprinting{' '}
     <LinkTooltip name="stationery" /> where I printed all kinds of{' '}
     <LinkTooltip name="fun" /> out of a 1-bedroom apartment in NYC
     <Footnote name="nyc" />. I worked as a <LinkTooltip name="lettering" />,{' '}
@@ -26,8 +27,9 @@ export const History = () => (
     <br />
     <br />
     Recently I decided to take some professional time off and study programming
-    in the September cohort of <LinkTooltip name="hack" />. I like French
-    Bulldogs <Footnote name="french" />, cryptocurrency
+    full time in the September cohort of <LinkTooltip name="hack" />. I like
+    French Bulldogs
+    <Footnote name="french" />, cryptocurrency
     <Footnote name="cryptocurrency" />, and plants with unique leaf shapes. If
     you let me too close to your closet I’ll organize it
     <Footnote name="organize" />.
