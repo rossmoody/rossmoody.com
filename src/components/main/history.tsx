@@ -6,8 +6,7 @@ import { LinkTooltip } from '../link-tooltip'
 
 export const History = () => (
   <Heading size="lg" as="h2" sx={{ fontWeight: '500' }}>
-    I started my design career
-    <Footnote name="career" /> running a screenprinting{' '}
+    I started my career <Footnote name="career" /> running a screenprinting{' '}
     <LinkTooltip name="stationery" /> where I printed all kinds of{' '}
     <LinkTooltip name="fun" /> out of a 1-bedroom apartment in NYC
     <Footnote name="nyc" />. I worked as a <LinkTooltip name="lettering" />,{' '}
@@ -26,12 +25,11 @@ export const History = () => (
     Zendesk in launching their documentation website.
     <br />
     <br />
-    These days I’m the first recruit for the design systems initiative at{' '}
-    <LinkTooltip name="blend" /> where my focus is on creating accessible
-    components and standards for product teams. I like French Bulldogs
-    <Footnote name="french" />, cryptocurrency
-    <Footnote name="cryptocurrency" />, and learning how to code. If you let me
-    too close to your closet I’ll organize it
+    Recently I decided to take some professional time off and study programming
+    in the September cohort of <LinkTooltip name="hack" />. I like French
+    Bulldogs <Footnote name="french" />, cryptocurrency
+    <Footnote name="cryptocurrency" />, and plants with unique leaf shapes. If
+    you let me too close to your closet I’ll organize it
     <Footnote name="organize" />.
   </Heading>
 )
