@@ -26,9 +26,8 @@ export const History = () => (
     Zendesk in launching their documentation website.
     <br />
     <br />
-    Recently I decided to take some professional time off and study programming
-    full time in the September cohort of <LinkTooltip name="hack" />. I like
-    French Bulldogs
+    These days I'm a Principal Design Technologist at <Footnote name="splunk" />
+    . I like French Bulldogs
     <Footnote name="french" />, cryptocurrency
     <Footnote name="cryptocurrency" />, and plants with unique leaf shapes. If
     you let me too close to your closet I’ll organize it

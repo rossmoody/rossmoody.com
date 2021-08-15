@@ -44,9 +44,9 @@
     "label": "www.basicattentiontoken.com",
     "children": "cryptocurrency"
   },
-  "hack": {
-    "link": "https://www.hackreactor.com/",
-    "label": "www.hackreactor.com/",
-    "children": "Hack Reactor"
+  "splunk": {
+    "link": "https://www.splunk.com/",
+    "label": "www.splunk.com/",
+    "children": "Splunk"
   }
 }
