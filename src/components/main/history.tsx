@@ -26,7 +26,8 @@ export const History = () => (
     Zendesk in launching their documentation website.
     <br />
     <br />
-    These days I'm a Principal Design Technologist at <Footnote name="splunk" />
+    These days I'm a Principal Design Technologist at{' '}
+    <LinkTooltip name="splunk" />
     . I like French Bulldogs
     <Footnote name="french" />, cryptocurrency
     <Footnote name="cryptocurrency" />, and plants with unique leaf shapes. If

@@ -11,7 +11,7 @@
   },
   "fun": {
     "link": "https://www.55his.com/products/shot-glass-card",
-    "label": "Claim to fame was making a card that turned into a shot glass. www.55his.com/products/shot-glass-card",
+    "label": "Claim to fame was making a card that turned into a shot glass.",
     "children": "fun products"
   },
   "brave": {
@@ -21,17 +21,17 @@
   },
   "lettering": {
     "link": "https://www.instagram.com/_rossmoody",
-    "label": "I have always had an appreciation and admiration for sign painting. www.instagram.com/_rossmoody",
+    "label": "I have always had an appreciation and admiration for sign painting.",
     "children": "hand-lettering artist"
   },
   "illustrator": {
     "link": "https://dribbble.com/_rossmoody",
-    "label": "I don't post to Dribbble much these days but there is past illustration work there. www.dribbble.com/_rossmoody",
+    "label": "I don't post to Dribbble much these days but there is past illustration work there.",
     "children": "illustrator"
   },
   "print": {
     "link": "https://www.skillshare.com/classes/Design-for-Print-Stand-Out-with-Specialty-Printing-Techniques/166642129",
-    "label": "I spent some time leading workshops and teaching classes on Skillshare. www.skillshare.com/classes/Design-for-Print ",
+    "label": "I spent some time leading workshops and teaching classes on Skillshare.",
     "children": "print designer"
   },
   "zendesk": {
@@ -46,7 +46,7 @@
   },
   "splunk": {
     "link": "https://www.splunk.com/",
-    "label": "www.splunk.com/",
+    "label": "www.splunk.com",
     "children": "Splunk"
   }
 }
