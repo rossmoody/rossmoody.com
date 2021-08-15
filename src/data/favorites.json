@@ -98,6 +98,10 @@
     "title": "Books",
     "items": [
       {
+        "link": "https://www.goodreads.com/book/show/54493401-project-hail-mary",
+        "name": "Project Hail Mary"
+      },
+      {
         "link": "https://www.goodreads.com/book/show/233667.Firestarter",
         "name": "Firestarter"
       },

@@ -30,8 +30,8 @@ export const History = () => (
     <LinkTooltip name="splunk" />
     . I like French Bulldogs
     <Footnote name="french" />, cryptocurrency
-    <Footnote name="cryptocurrency" />, and plants with unique leaf shapes. If
-    you let me too close to your closet I’ll organize it
+    <Footnote name="cryptocurrency" />, and my <LinkTooltip name="aprilia" /> RS
+    660. If you let me too close to your closet I’ll organize it
     <Footnote name="organize" />.
   </Heading>
 )

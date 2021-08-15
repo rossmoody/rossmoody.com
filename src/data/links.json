@@ -48,5 +48,10 @@
     "link": "https://www.splunk.com/",
     "label": "www.splunk.com",
     "children": "Splunk"
+  },
+  "aprilia": {
+    "link": "https://www.aprilia.com/us_EN/models/rs-660/",
+    "label": "www.aprilia.com",
+    "children": "Aprilia"
   }
 }
