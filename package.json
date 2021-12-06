@@ -5,28 +5,17 @@
   "description": "rossmoody.com",
   "prettier": "prettier-config-rossmoody",
   "author": "rossmoody",
-  "eslintConfig": {
-    "extends": [
-      "eslint-config-rossmoody"
-    ],
-    "rules": {
-      "react-hooks/exhaustive-deps": "off",
-      "@shopify/images-no-direct-imports": "off"
-    }
-  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "lint": "npx eslint . --ext .tsx,.ts --fix"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
-    "eslint-config-rossmoody": "^1.1.2",
     "framer-motion": "^4.1.10",
     "gatsby": "^3.3.1",
     "gatsby-plugin-google-gtag": "^3.4.0",
