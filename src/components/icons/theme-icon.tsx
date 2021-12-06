@@ -3,6 +3,7 @@ import { useToken } from '@chakra-ui/react'
 
 export const ThemeIcon = () => {
   const primaryColor = useToken('colors', 'primary')
+
   return (
     <svg
       viewBox="0 0 24 24"

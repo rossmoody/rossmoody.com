@@ -6,11 +6,11 @@ The portfolio site for Ross Moody.
 
 ```bash
 cd rossmoody.com
-npm i
+yarn
 ```
 
 ## 2. Run
 
 ```bash
-npm run start
+yarn start
 ```
