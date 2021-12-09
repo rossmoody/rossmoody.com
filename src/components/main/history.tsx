@@ -26,9 +26,9 @@ export const History = () => (
     Zendesk in launching their documentation website.
     <br />
     <br />
-    These days I split my time being a Principal Design Technologist at{' '}
+    These days I split my time between being a Principal Design Technologist at{' '}
     <LinkTooltip name="splunk" /> and studying to get my Masters in Computer
-    Science at Stanford. I like French Bulldogs
+    Science from Stanford. I like French Bulldogs
     <Footnote name="french" />, cryptocurrency
     <Footnote name="cryptocurrency" />, and my <LinkTooltip name="aprilia" /> RS
     660. If you let me too close to your closet I’ll organize it
