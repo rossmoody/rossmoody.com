@@ -21,14 +21,36 @@ const Item = ({ href, children }: ItemProperties) => (
 export const Footer = (): JSX.Element => (
   <Box maxW="5xl" marginX="auto">
     <Divider mt="80px" mb="24px" variant="dashed" borderColor="divider" />
-    <Item href="mailto:ross@rossmoody.com">Email</Item>
+    <Item aria-label="Send email" href="mailto:ross@rossmoody.com">
+      Email
+    </Item>
     <Break />
-    <Item href="https://dribbble.com/_rossmoody">Dribbble</Item>
+    <Item
+      aria-label="Navigate to Dribbble Profile"
+      href="https://dribbble.com/_rossmoody"
+    >
+      Dribbble
+    </Item>
     <Break />
-    <Item href="https://www.twitter.com/_rossmoody">Twitter</Item>
+    <Item
+      aria-label="Navigate to Twitter Profile"
+      href="https://www.twitter.com/_rossmoody"
+    >
+      Twitter
+    </Item>
     <Break />
-    <Item href="https://www.github.com/rossmoody">GitHub</Item>
+    <Item
+      aria-label="Navigate to GitHub Profile"
+      href="https://www.github.com/rossmoody"
+    >
+      GitHub
+    </Item>
     <Break />
-    <Item href="https://www.linkedin.com/in/moodyrooster/">LinkedIn</Item>
+    <Item
+      aria-label="Navigate to LinkedIn Profile"
+      href="https://www.linkedin.com/in/moodyrooster/"
+    >
+      LinkedIn
+    </Item>
   </Box>
 )

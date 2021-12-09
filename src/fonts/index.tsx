@@ -16,6 +16,7 @@ export const Fonts = () => (
         font-weight: 400;
         font-display: swap;
         src: url(${plantinRegular}) format('truetype');
+        preload: true;
       }
       /* latin */
       @font-face {
@@ -24,6 +25,7 @@ export const Fonts = () => (
         font-weight: 400;
         font-display: swap;
         src: url(${apercuRegular}) format('opentype');
+        preload: true;
       }
       /* latin */
       @font-face {
@@ -32,6 +34,7 @@ export const Fonts = () => (
         font-weight: 500;
         font-display: swap;
         src: url(${apercuMedium}) format('opentype');
+        preload: true;
       }
       /* latin */
       @font-face {
@@ -40,6 +43,7 @@ export const Fonts = () => (
         font-weight: 600;
         font-display: swap;
         src: url(${apercuBold}) format('opentype');
+        preload: true;
       }
       `}
   />
