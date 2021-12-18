@@ -16,8 +16,8 @@
         "name": "1Password"
       },
       {
-        "link": "https://hemingwayapp.com/",
-        "name": "Hemingway Editor"
+        "link": "grammarly.com",
+        "name": "Grammarly"
       },
       {
         "link": "https://desktop.github.com/",
@@ -38,8 +38,8 @@
     "title": "Analog",
     "items": [
       {
-        "link": "https://www.gouletpens.com/collections/sailor-1911-king-of-pens/products/sailor-1911-king-of-pens-fountain-pen-black-gold?variant=31485705814059",
-        "name": "Sailor 1911 Fountain Pen"
+        "link": "https://www.lamy.com/en/lamy-2000/",
+        "name": "Lamy 2000 EF"
       },
       {
         "link": "https://www.baronfig.com/tools/confidant/classic?size=plus+%287%22+x+10%22%29&paper+type=ruled&color=charcoal",
@@ -54,8 +54,8 @@
         "name": "Technivorm Mochamaster"
       },
       {
-        "link": "https://missionworkshop.com/products/the-rummy-advanced-messenger-bag?variant=18522575621",
-        "name": "Mission Workshop Rummy Bag"
+        "link": "https://www.aersf.com/tech-pack-2-black",
+        "name": "Aer Tech Pack 2"
       }
     ]
   },
@@ -64,24 +64,20 @@
     "title": "Tech",
     "items": [
       {
-        "link": "https://www.logitech.com/en-us/products/mice/mx-ergo-wireless-trackball-mouse.html?crid=7",
-        "name": "Logitech Ergo Mouse"
-      },
-      {
         "link": "https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.html",
         "name": "Logitech Vertical Mouse"
       },
       {
-        "link": "https://kinesis-ergo.com/shop/advantage2/",
-        "name": "Kinesis Advantage 2 Keyboard"
+        "link": "https://www.zsa.io/moonlander/",
+        "name": "Moonlander Keyboard"
       },
       {
         "link": "https://www.bluemic.com/en-us/products/snowball/",
         "name": "Blue Snowball Microphone"
       },
       {
-        "link": "https://www.apple.com/shop/buy-mac/macbook-pro/13-inch",
-        "name": "Macbook Pro 13\""
+        "link": "https://www.apple.com/shop/buy-mac/macbook-pro/14-inch-space-gray-10-core-cpu-16-core-gpu-1tb#",
+        "name": "Macbook Pro 14\" M1 Max"
       },
       {
         "link": "https://us.kobobooks.com/products/kobo-libra-h2o?utm_source=Kobo&utm_medium=TopNav&utm_campaign=Libra",
@@ -142,10 +138,6 @@
       {
         "link": "https://www.pocketcasts.com/",
         "name": "PocketCasts"
-      },
-      {
-        "link": "https://www.gatsbyjs.com/",
-        "name": "GatsbyJS"
       },
       {
         "link": "https://www.netlify.com/",
