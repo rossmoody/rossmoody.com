@@ -1,7 +1,6 @@
 import React from 'react'
 import { Heading } from '@chakra-ui/react'
-
-import { LinkTooltip } from '../link-tooltip'
+import { LinkTooltip } from './LinkTooltip'
 
 export const Hero = () => (
   <Heading

@@ -1,8 +1,8 @@
 import React from 'react'
 import { IconButton, Flex, Heading } from '@chakra-ui/react'
 
-import { Logo } from '../logo'
-import { ThemeIcon } from '../icons/theme-icon'
+import { Logo } from './Logo'
+import { ThemeIcon } from './ThemeIcon'
 
 interface Toggle {
   themeToggle: React.Dispatch<any>

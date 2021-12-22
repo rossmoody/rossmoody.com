@@ -1,11 +1,10 @@
 import React from 'react'
 import { Heading } from '@chakra-ui/react'
-
-import { Footnote } from '../footnote'
-import { LinkTooltip } from '../link-tooltip'
+import { Footnote } from './Footnote'
+import { LinkTooltip } from './LinkTooltip'
 
 export const History = () => (
-  <Heading size="lg" as="h2" sx={{ fontWeight: '500' }}>
+  <Heading size="lg" as="h2" sx={{ fontWeight: '400' }}>
     I started my career
     <Footnote name="career" /> running a screenprinting{' '}
     <LinkTooltip name="stationery" /> where I printed all kinds of{' '}

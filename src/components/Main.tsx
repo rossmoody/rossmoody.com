@@ -1,8 +1,7 @@
 import React from 'react'
 import { Box, Divider } from '@chakra-ui/react'
-
-import { Hero } from './hero'
-import { History } from './history'
+import { Hero } from './Hero'
+import { History } from './History'
 
 export const Main = () => (
   <Box>
