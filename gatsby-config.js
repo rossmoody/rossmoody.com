@@ -1,9 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Ross Moody',
-    description: `The portfolio site for Ross Moody.`,
-    siteUrl: 'https://rossmoody.com',
-  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -14,23 +9,17 @@ module.exports = {
           anonymize_ip: true,
           cookie_expires: 0,
         },
-        pluginConfig: {
-          head: false,
-          respectDNT: true,
-          exclude: ['/preview/**', '/do-not-track/me/too/'],
-        },
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-image',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
-        name: 'Ross Moody',
-        short_name: 'Ross Moody',
-        description: `The portfolio site for Ross Moody.`,
+        name: 'Ross Moody | 👋',
+        short_name: 'Ross Moody | 👋',
+        description: `Hi, I'm Ross Moody. A product designer, full-stack engineer, and systems thinker that loves making things for the web.`,
         start_url: '/',
         display: 'standalone',
       },

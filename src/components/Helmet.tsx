@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet as ReactHelmet } from 'react-helmet'
 
 const meta = {
-  title: 'Ross Moody',
+  title: 'Ross Moody • 👋',
   description: 'The portfolio site of Ross Moody.',
   url: 'https://rossmoody.com',
   author: '@_rossmoody',
