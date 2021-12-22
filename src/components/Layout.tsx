@@ -4,7 +4,7 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 import * as themes from './makeTheme'
 
-const initialTheme = 5
+const initialTheme = Math.floor(Math.random() * (6 - 0) + 0)
 const themeArray = Object.values(themes)
 
 export const Layout: React.FC = ({ children }) => {

@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://rossmoody.com`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,
