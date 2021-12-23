@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooltip, Text, Link, Box } from '@chakra-ui/react'
+import { Tooltip, Text, Link } from '@chakra-ui/react'
 import links from '../data/links.json'
 
 interface TooltipLabelProps {
