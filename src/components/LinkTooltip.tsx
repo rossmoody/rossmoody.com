@@ -1,6 +1,5 @@
 import React from 'react'
 import { Tooltip as T, Link } from '@chakra-ui/react'
-
 import links from '../data/links.json'
 
 interface ObjectProperties {

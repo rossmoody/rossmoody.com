@@ -16,6 +16,7 @@ export const Header = ({ themeToggle }: Toggle): JSX.Element => {
       alignItems="center"
       marginX="auto"
       mb="100px"
+      as="header"
     >
       <Flex mr="8px" alignItems="center">
         <Logo />

@@ -4,7 +4,7 @@ import { Hero } from './Hero'
 import { History } from './History'
 
 export const Main = () => (
-  <Box>
+  <Box as="main">
     <Hero />
     <Divider my="60px" variant="dashed" borderColor="divider" />
     <History />
