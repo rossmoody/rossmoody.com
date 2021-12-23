@@ -1,19 +1,31 @@
 import React from 'react'
-import { Tooltip as T, Link } from '@chakra-ui/react'
+import { Tooltip, Text, Link, Box } from '@chakra-ui/react'
 import links from '../data/links.json'
+
+interface TooltipLabelProps {
+  label: string
+  url: string
+}
+
+const TooltipLabel = (props: TooltipLabelProps) => (
+  <>
+    <Text fontWeight="medium">{props.label}</Text>
+    <Text fontSize="12px">{props.url}</Text>
+  </>
+)
 
 interface ObjectProperties {
   label: string
   link: string
-  children: string
+  text: string
 }
 
 export const LinkTooltip = ({ name }: { name: string }) => {
   const object: ObjectProperties = links[name]
 
   return (
-    <T
-      label={object.label}
+    <Tooltip
+      label={<TooltipLabel url={object.link} label={object.label} />}
       bg="primary"
       color="surface"
       placement="top"
@@ -23,8 +35,8 @@ export const LinkTooltip = ({ name }: { name: string }) => {
       padding="12px 16px"
     >
       <Link href={object.link} color="primary">
-        {object.children}
+        {object.text}
       </Link>
-    </T>
+    </Tooltip>
   )
 }
