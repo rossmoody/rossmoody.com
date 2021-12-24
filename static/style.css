@@ -1,3 +1,7 @@
+body {
+  min-height: 100%;
+}
+
 @font-face {
   font-family: 'Plantin MT Pro';
   font-style: normal;

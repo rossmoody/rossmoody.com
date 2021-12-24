@@ -4,25 +4,26 @@ import { Header } from './Header'
 import { Footer } from './Footer'
 import * as themes from './makeTheme'
 
-const initialTheme = Math.floor(Math.random() * (6 - 0) + 0)
 const themeArray = Object.values(themes)
 
+const getRandoTheme = () => {
+  return themeArray[Math.floor(Math.random() * (6 - 0) + 0)]
+}
+
 export const Layout: React.FC = ({ children }) => {
-  const [index, setIndex] = useState(initialTheme)
-  const [themeState, setThemeState] = useState(themeArray[initialTheme])
+  const [theme, setTheme] = useState(getRandoTheme)
 
   const handleSetThemeState = () => {
-    let localIndex = index + 1
-    if (localIndex === themeArray.length) localIndex = 0
-    setIndex(localIndex)
-    setThemeState(themeArray[localIndex])
+    setTheme(getRandoTheme)
   }
 
   return (
-    <ChakraProvider theme={themeState}>
-      <Box px={8} bg="surface" pt="48px" pb="60px">
+    <ChakraProvider theme={theme}>
+      <Box px={8} bg="surface" pt="48px" pb="60px" minHeight="100vh">
         <Header themeToggle={handleSetThemeState} />
-        {children}
+        <Box maxW="4xl" marginX="auto" as="main">
+          {children}
+        </Box>
         <Footer />
       </Box>
     </ChakraProvider>
