@@ -12,7 +12,7 @@ const getRandoTheme = () => {
 }
 
 export const Layout: React.FC = ({ children }) => {
-  const [theme, setTheme] = useState(getRandoTheme)
+  const [theme, setTheme] = useState(themeArray[5])
 
   const themeMemo = useMemo(() => theme, [theme])
 

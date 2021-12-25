@@ -3,9 +3,9 @@ import { Layout, Helmet } from './src/components'
 
 export function wrapPageElement({ element, props }) {
   return (
-    <Layout {...props}>
+    <>
       <Helmet {...props} />
-      {element}
-    </Layout>
+      <Layout {...props}>{element}</Layout>
+    </>
   )
 }
