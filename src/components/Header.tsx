@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { IconButton, Flex, Heading } from '@chakra-ui/react'
 
 import { Logo } from './Logo'
@@ -18,24 +19,26 @@ export const Header = ({ themeToggle }: Toggle): JSX.Element => {
       mb="100px"
       as="header"
     >
-      <Flex mr="8px" alignItems="center">
-        <Logo />
-        <Heading
-          as="span"
-          ml={2}
-          fontWeight="400"
-          fontSize="2xl"
-          lineHeight={1}
-          mt="6px"
-          sx={{
-            '@media screen and (max-width: 500px)': {
-              display: 'none',
-            },
-          }}
-        >
-          Ross Moody
-        </Heading>
-      </Flex>
+      <Link to="/">
+        <Flex mr="8px" alignItems="center">
+          <Logo />
+          <Heading
+            as="span"
+            ml={2}
+            fontWeight="400"
+            fontSize="2xl"
+            lineHeight={1}
+            mt="6px"
+            sx={{
+              '@media screen and (max-width: 500px)': {
+                display: 'none',
+              },
+            }}
+          >
+            Ross Moody
+          </Heading>
+        </Flex>
+      </Link>
       <IconButton
         aria-label="Change theme"
         onClick={themeToggle}

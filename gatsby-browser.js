@@ -1,10 +1,10 @@
 import React from 'react'
 import { Layout, Helmet } from './src/components'
 
-export function wrapRootElement({ element, props }) {
+export function wrapPageElement({ element, props }) {
   return (
     <Layout {...props}>
-      <Helmet />
+      <Helmet {...props} />
       {element}
     </Layout>
   )
