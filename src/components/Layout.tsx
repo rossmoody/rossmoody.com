@@ -7,7 +7,8 @@ import * as themes from './makeTheme'
 const themeArray = Object.values(themes)
 
 const getRandoTheme = () => {
-  return themeArray[Math.floor(Math.random() * (6 - 0) + 0)]
+  const theme = themeArray[Math.floor(Math.random() * (6 - 0) + 0)]
+  return theme
 }
 
 export const Layout: React.FC = ({ children }) => {
