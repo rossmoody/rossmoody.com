@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Divider, Heading } from '@chakra-ui/react'
 
 interface Properties {

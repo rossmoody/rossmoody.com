@@ -1,9 +1,10 @@
-import Link from 'next/link'
-import { IconButton, Flex, Heading } from '@chakra-ui/react'
+import { IconButton, Flex, Heading, Divider } from '@chakra-ui/react'
+import { Link } from './Link'
 import { Logo } from './Logo'
 import { ThemeIcon } from './ThemeIcon'
 import { useTheme } from 'providers/ThemeProvider'
 import { ThemeNumber } from 'utils/createTheme'
+import NextLink from 'next/link'
 
 export const Header = () => {
   const { theme, setTheme } = useTheme()
@@ -15,14 +16,14 @@ export const Header = () => {
 
   return (
     <Flex
+      as="header"
       justifyContent="space-between"
       maxW="5xl"
+      h="12"
       alignItems="center"
       marginX="auto"
-      mb="100px"
-      as="header"
     >
-      <Link href="/" passHref>
+      <NextLink href="/" passHref>
         <Flex mr="8px" alignItems="center" as="a">
           <Logo />
           <Heading
@@ -41,13 +42,21 @@ export const Header = () => {
             Ross Moody
           </Heading>
         </Flex>
-      </Link>
-      <IconButton
-        aria-label="Change theme"
-        onClick={handleClick}
-        icon={<ThemeIcon />}
-        variant="ghost"
-      />
+      </NextLink>
+
+      <Flex gap="5" align="center">
+        <Link path="/snippets" aria-label="Navigate to Snippets">
+          Snippets
+        </Link>
+        <Divider orientation="vertical" h="5" borderColor="divider" />
+        <IconButton
+          aria-label="Change theme"
+          onClick={handleClick}
+          icon={<ThemeIcon />}
+          size="sm"
+          variant="ghost"
+        />
+      </Flex>
     </Flex>
   )
 }

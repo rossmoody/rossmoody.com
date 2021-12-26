@@ -6,6 +6,7 @@ export const Hero = () => (
     as="h1"
     fontWeight="400"
     fontSize={{ base: '36px', sm: '52px', md: '60px' }}
+    mt="100px"
   >
     <LinkTooltip name="intro" /> A product designer, full-stack engineer, and
     systems thinker that loves making things for the web.

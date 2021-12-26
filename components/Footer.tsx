@@ -14,7 +14,7 @@ const Item = ({ href, label }: ItemProperties) => (
 export const Footer = () => (
   <Box maxW="5xl" marginX="auto" as="footer">
     <Divider mt="80px" mb="24px" variant="dashed" borderColor="divider" />
-    <Flex gap="12px">
+    <Flex gap="12px" wrap="wrap">
       <Item
         aria-label="Send email"
         href="mailto:ross@rossmoody.com"
