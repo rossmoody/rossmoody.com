@@ -1,6 +1,0 @@
-export { Favorites } from './Favorites'
-export { Main } from './Main'
-export { Layout } from './Layout'
-export { Projects } from './Projects'
-export { Writing } from './Writing'
-export { Helmet } from './Helmet'

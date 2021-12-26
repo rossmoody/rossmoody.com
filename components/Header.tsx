@@ -1,15 +1,18 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import Link from 'next/link'
 import { IconButton, Flex, Heading } from '@chakra-ui/react'
-
 import { Logo } from './Logo'
 import { ThemeIcon } from './ThemeIcon'
+import { useTheme } from 'providers/ThemeProvider'
+import { ThemeNumber } from 'utils/createTheme'
 
-interface Toggle {
-  themeToggle: React.Dispatch<any>
-}
+export const Header = () => {
+  const { theme, setTheme } = useTheme()
 
-export const Header = ({ themeToggle }: Toggle): JSX.Element => {
+  const handleClick = () => {
+    if (theme === 6) return setTheme(1)
+    setTheme((theme + 1) as ThemeNumber)
+  }
+
   return (
     <Flex
       justifyContent="space-between"
@@ -19,8 +22,8 @@ export const Header = ({ themeToggle }: Toggle): JSX.Element => {
       mb="100px"
       as="header"
     >
-      <Link to="/">
-        <Flex mr="8px" alignItems="center">
+      <Link href="/" passHref>
+        <Flex mr="8px" alignItems="center" as="a">
           <Logo />
           <Heading
             as="span"
@@ -41,7 +44,7 @@ export const Header = ({ themeToggle }: Toggle): JSX.Element => {
       </Link>
       <IconButton
         aria-label="Change theme"
-        onClick={themeToggle}
+        onClick={handleClick}
         icon={<ThemeIcon />}
         variant="ghost"
       />

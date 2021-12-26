@@ -1,4 +1,3 @@
-import React from 'react'
 import { Text, Tooltip } from '@chakra-ui/react'
 import footnotes from '../data/footnotes.json'
 
@@ -6,7 +5,7 @@ export const Footnote = ({
   name,
   children,
 }: {
-  name: string
+  name: keyof typeof footnotes
   children: React.ReactNode
 }) => {
   const label = footnotes[name]

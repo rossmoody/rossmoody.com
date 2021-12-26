@@ -1,4 +1,3 @@
-import React from 'react'
 import { Tooltip, Text, Link } from '@chakra-ui/react'
 import links from '../data/links.json'
 
@@ -14,14 +13,8 @@ const TooltipLabel = (props: TooltipLabelProps) => (
   </>
 )
 
-interface ObjectProperties {
-  label: string
-  link: string
-  text: string
-}
-
-export const LinkTooltip = ({ name }: { name: string }) => {
-  const object: ObjectProperties = links[name]
+export const LinkTooltip = ({ name }: { name: keyof typeof links }) => {
+  const object = links[name]
 
   return (
     <Tooltip

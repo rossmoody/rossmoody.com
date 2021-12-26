@@ -7,8 +7,8 @@ export const Logo = () => {
   return (
     <svg
       viewBox="0 0 24 24"
-      width="24px"
-      height="24px"
+      width="20px"
+      height="20px"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

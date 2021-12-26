@@ -1,11 +1,13 @@
-import React from 'react'
+import type { NextPage } from 'next'
 import { Divider } from '@chakra-ui/react'
-import { Favorites, Main, Projects, Writing } from '../components'
+import { Hero, History, Projects, Writing, Favorites } from '@components'
 
-const IndexPage = () => {
+const Home: NextPage = () => {
   return (
     <>
-      <Main />
+      <Hero />
+      <Divider my="60px" variant="dashed" borderColor="divider" />
+      <History />
       <Divider my="60px" variant="dashed" borderColor="divider" />
       <Projects />
       <Divider my="60px" variant="dashed" borderColor="divider" />
@@ -16,4 +18,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default Home

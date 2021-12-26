@@ -1,37 +1,29 @@
 {
-  "name": "rossmoody.com",
-  "version": "1.0.0",
+  "name": "v3",
   "private": true,
-  "description": "rossmoody.com",
-  "prettier": "prettier-config-rossmoody",
-  "author": "Ross Moody <ross@rossmoody.com>",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
+  "prettier": "prettier-config-rossmoody",
   "dependencies": {
-    "@chakra-ui/react": "^1.7",
-    "@emotion/react": "^11.6",
-    "@emotion/styled": "^11.6",
-    "framer-motion": "^5.0",
-    "gatsby": "^4.4",
-    "gatsby-plugin-google-gtag": "^4.4",
-    "gatsby-plugin-manifest": "^4.4",
-    "gatsby-plugin-react-helmet": "^5.4",
-    "gatsby-plugin-sharp": "^4.4",
-    "gatsby-plugin-sitemap": "^5.4",
-    "gatsby-source-filesystem": "^4.4.0",
-    "gatsby-transformer-sharp": "^4.4.0",
+    "@chakra-ui/react": "^1.7.3",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@netlify/plugin-nextjs": "^4.1.1",
+    "framer-motion": "^4",
+    "next": "12.0.7",
     "prettier-config-rossmoody": "^1.0.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "typescript": "^4.2.4"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@types/react-helmet": "^6.1.4"
+    "@types/node": "17.0.4",
+    "@types/react": "17.0.38",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "typescript": "4.5.4"
   }
 }

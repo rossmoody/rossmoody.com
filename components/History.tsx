@@ -15,7 +15,7 @@ export const History = () => (
     <Footnote name="designer">designer</Footnote>.
     <br />
     <br />
-    It wasn't long before I discovered the magic of programming and started
+    It wasn&apos;t long before I discovered the magic of programming and started
     learning <Footnote name="js">JavaScript</Footnote> while helping launch a
     browser at <LinkTooltip name="brave" /> that was powered by{' '}
     <LinkTooltip name="crypto" />. From there I began focusing on design systems
