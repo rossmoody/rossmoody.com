@@ -1,15 +1,32 @@
-import Head from 'next/head'
+import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
 import { ThemeProvider } from '../providers/ThemeProvider'
-import { Meta, Layout } from '@components'
+import { MdxProvider } from '../providers/MdxProvider'
+import { Layout, Meta } from '@components'
+import * as gtag from '@lib/analytics'
 import '../assets/style.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <ThemeProvider>
       <Meta />
       <Layout>
-        <Component {...pageProps} />
+        <MdxProvider>
+          <Component {...pageProps} />
+        </MdxProvider>
       </Layout>
     </ThemeProvider>
   )

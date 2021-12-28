@@ -1,4 +1,5 @@
 import remarkGfm from 'remark-gfm'
+import { remarkMdxCodeMeta } from 'remark-mdx-code-meta'
 
 export const reactStrictMode = true
 export const experimental = { esmExternals: true }
@@ -12,11 +13,10 @@ export const webpack = (config, options) => {
         loader: '@mdx-js/loader',
         options: {
           providerImportSource: '@mdx-js/react',
-          remarkPlugins: [remarkGfm],
+          remarkPlugins: [remarkGfm, remarkMdxCodeMeta],
         },
       },
     ],
   })
-
   return config
 }

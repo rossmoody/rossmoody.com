@@ -19,7 +19,11 @@ export const Meta = () => {
     <Head>
       <title>{seo.title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+      <link
+        rel="shortcut icon"
+        href={`${seo.baseUrl}/favicon.ico`}
+        type="image/x-icon"
+      />
       <meta name="description" content={seo.description} />
       <meta name="author" content={seo.author} />
       <meta name="twitter:title" content={seo.title} />
