@@ -1,5 +1,5 @@
 import { IconButton, Flex, Heading, Divider } from '@chakra-ui/react'
-import { Link } from './Link'
+import { NavLink } from './NavLink'
 import { Logo } from './Logo'
 import { ThemeIcon } from './ThemeIcon'
 import { useTheme } from 'providers/ThemeProvider'

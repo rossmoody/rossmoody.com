@@ -7,7 +7,7 @@ interface LinkProps {
   path: string
 }
 
-export const Link = ({ children, path }: LinkProps) => {
+export const NavLink = ({ children, path }: LinkProps) => {
   const router = useRouter()
 
   return (
