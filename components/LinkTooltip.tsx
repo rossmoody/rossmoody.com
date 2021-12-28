@@ -13,12 +13,17 @@ const TooltipLabel = (props: TooltipLabelProps) => (
   </>
 )
 
-export const LinkTooltip = ({ name }: { name: keyof typeof links }) => {
-  const object = links[name]
+interface LinkTooltipProps {
+  name: keyof typeof links
+  children: string
+}
+
+export const LinkTooltip = (props: LinkTooltipProps) => {
+  const object = links[props.name]
 
   return (
     <Tooltip
-      label={<TooltipLabel url={object.link} label={object.label} />}
+      label={<TooltipLabel url={object.link} label={props.children} />}
       bg="primary"
       color="surface"
       placement="top"
@@ -28,7 +33,7 @@ export const LinkTooltip = ({ name }: { name: keyof typeof links }) => {
       padding="12px 16px"
     >
       <Link href={object.link} color="primary">
-        {object.text}
+        {props.children}
       </Link>
     </Tooltip>
   )

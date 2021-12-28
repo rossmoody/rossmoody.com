@@ -2,7 +2,7 @@ import Link from 'next/link'
 import getFrontMatter, { type FrontMatter } from '@utils/getFrontMatter'
 
 const Snippets = ({posts}: FrontMatter) => {
-  // console.log(posts)
+  console.log(posts)
 
   return (
     <>

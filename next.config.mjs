@@ -1,5 +1,7 @@
 import remarkGfm from 'remark-gfm'
+import remarkFrontMatter from 'remark-frontmatter'
 import { remarkMdxCodeMeta } from 'remark-mdx-code-meta'
+import { remarkMdxFrontmatter } from 'remark-mdx-frontmatter'
 
 /**
  * @type {import('next').NextConfig}
@@ -17,7 +19,12 @@ const nextConfig = {
           loader: '@mdx-js/loader',
           options: {
             providerImportSource: '@mdx-js/react',
-            remarkPlugins: [remarkGfm, remarkMdxCodeMeta],
+            remarkPlugins: [
+              remarkGfm,
+              remarkMdxCodeMeta,
+              remarkFrontMatter,
+              remarkMdxFrontmatter,
+            ],
           },
         },
       ],

@@ -1,34 +1,35 @@
 import React from 'react'
 import { Heading } from '@chakra-ui/react'
-import { Footnote } from './Footnote'
-import { LinkTooltip } from './LinkTooltip'
+import { Footnote as F } from './Footnote'
+import { LinkTooltip as L } from './LinkTooltip'
 
 export const History = () => (
   <Heading size="lg" as="h2" sx={{ fontWeight: '400' }}>
-    I started my <Footnote name="career">career</Footnote> running a
-    screenprinting <LinkTooltip name="stationery" /> where I printed all kinds
-    of <LinkTooltip name="fun" /> out of a 1-bedroom apartment in{' '}
-    <Footnote name="nyc">NYC</Footnote>. I worked as a{' '}
-    <LinkTooltip name="lettering" />, <LinkTooltip name="illustrator" />, and{' '}
-    <LinkTooltip name="print" /> for a while before trading paper for pixels and
-    moving to <Footnote name="sf">San Francisco</Footnote> to become a product{' '}
-    <Footnote name="designer">designer</Footnote>.
+    I started my <F name="career">career</F> running a screenprinting{' '}
+    <L name="stationery">stationery company</L> where I printed all kinds of{' '}
+    <L name="fun">fun products</L> out of a 1-bedroom apartment in{' '}
+    <F name="nyc">NYC</F>. I worked as a{' '}
+    <L name="lettering">hand-lettering artist</L>,{' '}
+    <L name="illustrator">illustrator</L>, and{' '}
+    <L name="print">print designer</L> for a while before trading paper for
+    pixels and moving to <F name="sf">San Francisco</F> to become a product{' '}
+    <F name="designer">designer</F>.
     <br />
     <br />
     It wasn&apos;t long before I discovered the magic of programming and started
-    learning <Footnote name="js">JavaScript</Footnote> while helping launch a
-    browser at <LinkTooltip name="brave" /> that was powered by{' '}
-    <LinkTooltip name="crypto" />. From there I began focusing on design systems
-    and was fortunate enough to lead the <LinkTooltip name="zendesk" /> team at
-    Zendesk in launching their documentation website.
+    learning <F name="js">JavaScript</F> while helping launch a browser at{' '}
+    <L name="brave">Brave</L> that was powered by{' '}
+    <L name="crypto">cryptocurrency</L>. From there I began focusing on design
+    systems and was fortunate enough to lead the{' '}
+    <L name="zendesk">Garden design system</L> team at Zendesk in launching
+    their documentation website.
     <br />
     <br />
     These days I split my time between being a Principal Design Technologist at{' '}
-    <LinkTooltip name="splunk" /> and studying to get my Masters in Computer
-    Science from Stanford. I like{' '}
-    <Footnote name="french">French Bulldogs</Footnote>,{' '}
-    <Footnote name="cryptocurrency">cryptocurrency</Footnote>
-    , and my <LinkTooltip name="aprilia" /> RS 660. If you let me too close to
-    your closet I’ll <Footnote name="organize">organize it</Footnote>.
+    <L name="splunk">Splunk</L> and studying to get my Masters in Computer
+    Science from Stanford. I like <F name="french">French Bulldogs</F>,{' '}
+    <F name="cryptocurrency">cryptocurrency</F>, and my{' '}
+    <L name="aprilia">Aprilia</L> RS 660. If you let me too close to your closet
+    I&apos;ll <F name="organize">organize it</F>.
   </Heading>
 )
