@@ -17,9 +17,7 @@
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-syntax-highlighter": "^15.4.5",
-    "remark-gfm": "^3.0.1",
-    "remark-mdx-code-meta": "^1.0.0"
+    "react-syntax-highlighter": "^15.4.5"
   },
   "devDependencies": {
     "@mdx-js/loader": "^2.0.0-rc.2",
@@ -31,7 +29,11 @@
     "@types/react-syntax-highlighter": "^13.5.2",
     "eslint": "8.5.0",
     "eslint-config-next": "12.0.7",
+    "gray-matter": "^4.0.3",
     "prettier-config-rossmoody": "^1.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-mdx-code-meta": "^1.0.0",
+    "swr": "^1.1.2",
     "typescript": "4.5.4"
   }
 }

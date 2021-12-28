@@ -1,8 +1,7 @@
-import type { NextPage } from 'next'
 import { Divider } from '@chakra-ui/react'
 import { Hero, History, Projects, Writing, Favorites } from '@components'
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <>
       <Hero />

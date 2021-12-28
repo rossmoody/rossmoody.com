@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { HTMLAttributes, PropsWithoutRef, useState } from 'react'
 import { Box } from '@chakra-ui/react'
 import { Prism } from 'react-syntax-highlighter'
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
@@ -14,7 +14,7 @@ export const SyntaxHighlighter = (props: any) => {
     setHighlightedLines([])
   }, [])
 
-  function setLineRefs(lineNumber: number) {
+  function highlightLines(lineNumber: number) {
     const props = {} as any
     if (highlightedLines.includes(lineNumber)) props.class = 'highlight-line'
     return props
@@ -27,7 +27,7 @@ export const SyntaxHighlighter = (props: any) => {
       customStyle={{ borderRadius: '8px', marginBottom: '32px' }}
       language={language}
       style={dracula}
-      lineProps={setLineRefs}
+      lineProps={highlightLines}
       PreTag={(props: any) => <Box as="pre" ref={ref} {...props} />}
       wrapLongLines
       showLineNumbers
