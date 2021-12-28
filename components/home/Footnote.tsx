@@ -1,5 +1,5 @@
 import { Text, Tooltip } from '@chakra-ui/react'
-import footnotes from '../data/footnotes.json'
+import footnotes from './data/footnotes.json'
 
 export const Footnote = ({
   name,

@@ -1,7 +1,7 @@
 import { Grid, GridItem } from '@chakra-ui/react'
 import { SectionTitle } from './SectionTitle'
 import { SectionItem } from './SectionItem'
-import writing from '../data/writing.json'
+import writing from './data/writing.json'
 
 export const Writing = () => (
   <Grid templateColumns={{ sm: '1fr', md: 'repeat(3, 1fr)' }} gap={4}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid, GridItem } from '@chakra-ui/react'
 
-import favorites from '../data/favorites.json'
+import favorites from './data/favorites.json'
 import { SectionTitle } from './SectionTitle'
 import { SectionFavorite } from './SectionFavorite'
 
