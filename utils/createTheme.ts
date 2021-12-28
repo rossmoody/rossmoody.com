@@ -1,4 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
+import { TinyColor } from '@ctrl/tinycolor'
 
 const themes = {
   1: {
@@ -44,6 +45,8 @@ export type ThemeNumber = keyof typeof themes
 export function createTheme(number: ThemeNumber) {
   const { divider, primary, surface, color } = themes[number]
 
+  const surfaceDark = new TinyColor(surface).darken(4).toHexString()
+
   return extendTheme({
     fonts: {
       heading: 'Plantin MT Pro',
@@ -53,6 +56,7 @@ export function createTheme(number: ThemeNumber) {
       primary,
       surface,
       divider,
+      surfaceDark,
     },
     styles: {
       global: {

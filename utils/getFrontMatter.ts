@@ -2,13 +2,19 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-export type FrontMatter = {
-  posts: {
-    data: {
-      [key: string]: any
-    }
-    slug: string
-  }[]
+export type Frontmatter = {
+  data: {
+    type: string
+    title: string
+    description: string
+    date: string
+    tags: string[]
+  }
+  slug: string
+}
+
+export type Posts = {
+  posts: Frontmatter[]
 }
 
 function getFrontMatter(directory: string) {

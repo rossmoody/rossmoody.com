@@ -1,13 +1,15 @@
-import Link from 'next/link'
-import getFrontMatter, { type FrontMatter } from '@utils/getFrontMatter'
+import { SnippetsPreview } from '@components'
+import getFrontMatter, { Posts } from '@utils/getFrontMatter'
 
-const Snippets = ({posts}: FrontMatter) => {
-  console.log(posts)
+const Snippets = ({ posts }: Posts) => {
+  console.log('post count', posts)
 
   return (
     <>
-      Snippets Overview
-      <Link href="/snippets/test-snippet">Test Snippet</Link>
+      <div>Snippets Overview</div>
+      {posts.map((post) => (
+        <SnippetsPreview {...post} key={post.slug} />
+      ))}
     </>
   )
 }

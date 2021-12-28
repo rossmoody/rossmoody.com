@@ -6,4 +6,5 @@ export * from './home/Writing'
 
 export * from './Layout'
 export * from './Meta'
+export * from './SnippetsPreview'
 export * from './SyntaxHighlighter'
