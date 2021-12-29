@@ -18,8 +18,6 @@ export const SectionItem = (props: SectionItemProperties) => (
         {props.heading}
       </Heading>
     </Link>
-    <Text letterSpacing=".3px" color="textSubdued">
-      {props.description}
-    </Text>
+    <Text letterSpacing=".3px">{props.description}</Text>
   </Box>
 )

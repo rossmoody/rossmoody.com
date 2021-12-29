@@ -1,3 +1,4 @@
+import { SlideFade } from '@chakra-ui/react'
 import {
   DashDivider,
   Hero,
@@ -9,7 +10,7 @@ import {
 
 const Home = () => {
   return (
-    <>
+    <SlideFade in={true} offsetY="20px">
       <Hero />
       <DashDivider my="60px" />
       <History />
@@ -19,7 +20,7 @@ const Home = () => {
       <Writing />
       <DashDivider my="60px" />
       <Favorites />
-    </>
+    </SlideFade>
   )
 }
 

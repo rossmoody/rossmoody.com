@@ -1,10 +1,9 @@
-import { IconButton, Flex, Heading, Divider } from '@chakra-ui/react'
+import { IconButton, Flex, Divider } from '@chakra-ui/react'
 import { NavLink } from './NavLink'
-import { Logo } from './Logo'
 import { ThemeIcon } from './ThemeIcon'
 import { useTheme } from 'providers/ThemeProvider'
 import { ThemeNumber } from 'utils/createTheme'
-import NextLink from 'next/link'
+import { Logo } from './home/Logo'
 
 export const Header = () => {
   const { theme, setTheme } = useTheme()
@@ -23,32 +22,15 @@ export const Header = () => {
       alignItems="center"
       marginX="auto"
     >
-      <NextLink href="/" passHref>
-        <Flex mr="8px" alignItems="center" as="a">
-          <Logo />
-          <Heading
-            as="span"
-            ml={2}
-            fontWeight="400"
-            fontSize="2xl"
-            lineHeight={1}
-            mt="6px"
-            sx={{
-              '@media screen and (max-width: 500px)': {
-                display: 'none',
-              },
-            }}
-          >
-            Ross Moody
-          </Heading>
-        </Flex>
-      </NextLink>
-
+      <Logo />
       <Flex gap="5" align="center">
-        {/* <NavLink path="/snippets" aria-label="Navigate to Snippets">
+        <NavLink path="/writing" aria-label="Navigate to Writing">
+          Writing
+        </NavLink>
+        <NavLink path="/snippets" aria-label="Navigate to Snippets">
           Snippets
         </NavLink>
-        <Divider orientation="vertical" h="5" borderColor="divider" /> */}
+        <Divider orientation="vertical" h="5" borderColor="divider" />
         <IconButton
           aria-label="Change theme"
           onClick={handleClick}

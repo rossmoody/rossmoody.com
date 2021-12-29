@@ -45,8 +45,10 @@ export type ThemeNumber = keyof typeof themes
 export function createTheme(number: ThemeNumber) {
   const { divider, primary, surface, textProminent } = themes[number]
 
-  const surfaceDark = new TinyColor(surface).darken(4).toHexString()
   const text = new TinyColor(textProminent).setAlpha(0.85).toRgbString()
+  const textSubdued = new TinyColor(textProminent).setAlpha(0.7).toRgbString()
+  const surfaceDark = new TinyColor(surface).darken(3).toHexString()
+  const surfaceDarkHover = new TinyColor(surface).darken(2).toHexString()
 
   return extendTheme({
     fonts: {
@@ -58,7 +60,9 @@ export function createTheme(number: ThemeNumber) {
       surface,
       divider,
       surfaceDark,
+      surfaceDarkHover,
       text,
+      textSubdued,
       textProminent,
     },
     styles: {
