@@ -45,10 +45,10 @@ export const Header = () => {
       </NextLink>
 
       <Flex gap="5" align="center">
-        <NavLink path="/snippets" aria-label="Navigate to Snippets">
+        {/* <NavLink path="/snippets" aria-label="Navigate to Snippets">
           Snippets
         </NavLink>
-        <Divider orientation="vertical" h="5" borderColor="divider" />
+        <Divider orientation="vertical" h="5" borderColor="divider" /> */}
         <IconButton
           aria-label="Change theme"
           onClick={handleClick}
