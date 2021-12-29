@@ -3,13 +3,13 @@ import links from './data/links.json'
 
 interface TooltipLabelProps {
   label: string
-  url: string
+  link: string
 }
 
 const TooltipLabel = (props: TooltipLabelProps) => (
   <>
     <Text fontWeight="medium">{props.label}</Text>
-    <Text fontSize="12px">{props.url}</Text>
+    <Text fontSize="12px">{props.link}</Text>
   </>
 )
 
@@ -19,11 +19,11 @@ interface LinkTooltipProps {
 }
 
 export const LinkTooltip = (props: LinkTooltipProps) => {
-  const object = links[props.name]
+  const { label, link } = links[props.name]
 
   return (
     <Tooltip
-      label={<TooltipLabel url={object.link} label={props.children} />}
+      label={<TooltipLabel link={link} label={label} />}
       bg="primary"
       color="surface"
       placement="top"
@@ -32,7 +32,7 @@ export const LinkTooltip = (props: LinkTooltipProps) => {
       fontWeight="400"
       padding="12px 16px"
     >
-      <Link href={object.link} color="primary">
+      <Link href={link} color="primary">
         {props.children}
       </Link>
     </Tooltip>
