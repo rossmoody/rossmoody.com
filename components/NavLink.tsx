@@ -18,6 +18,7 @@ export const NavLink: React.FC<LinkProps> = ({ children, path }) => {
 
   const style = css({
     position: 'relative',
+    display: 'inline-block',
     borderRadius: '4px',
     padding: '2px',
     _hover: {
@@ -26,6 +27,16 @@ export const NavLink: React.FC<LinkProps> = ({ children, path }) => {
       color: textProminent,
     },
     '&::after': {
+      display: 'block',
+      content: `"${children}"`,
+      fontWeight: '500',
+      height: '0',
+      visibility: 'hidden',
+      overflow: 'hidden',
+      userSelect: 'none',
+      pointerEvents: 'none',
+    },
+    '&::before': {
       content: '""',
       backgroundColor: primary,
       height: '4px',
@@ -40,9 +51,9 @@ export const NavLink: React.FC<LinkProps> = ({ children, path }) => {
     },
     '&[aria-current="location"]': {
       color: textProminent,
-      fontWeight: 'bold',
+      fontWeight: 500,
     },
-    '&[aria-current="location"]::after': {
+    '&[aria-current="location"]::before': {
       content: '""',
       bottom: '-8px',
       opacity: 100,

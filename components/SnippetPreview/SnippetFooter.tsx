@@ -1,6 +1,6 @@
-import { Box, Flex, Tag, Text } from '@chakra-ui/react'
-import { DashDivider } from '../DashDivider'
-import { Frontmatter } from '@utils/getFrontMatter'
+import { Box, Flex, Tag } from '@chakra-ui/react'
+import { DashDivider } from 'components/DashDivider'
+import { Frontmatter } from 'utils/getFrontMatter'
 
 export const SnippetFooter = ({ data }: Pick<Frontmatter, 'data'>) => (
   <Box as="footer">

@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useEffect, useState } from 'react'
+import { useCallback, useRef, useEffect, useState } from 'react'
 import { Box } from '@chakra-ui/react'
 import { Prism } from 'react-syntax-highlighter'
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
