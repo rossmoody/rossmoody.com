@@ -4,7 +4,7 @@ import { Footnote as F } from './Footnote'
 import { LinkTooltip as L } from './LinkTooltip'
 
 export const History = () => (
-  <Heading size="lg" as="h2" sx={{ fontWeight: '400' }}>
+  <Heading size="lg" as="span" fontWeight="normal" color="textProminent">
     I started my <F name="career">career</F> running a screenprinting{' '}
     <L name="stationery">stationery company</L> where I printed all kinds of{' '}
     <L name="fun">fun products</L> out of a 1-bedroom apartment in{' '}

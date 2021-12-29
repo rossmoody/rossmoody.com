@@ -14,10 +14,12 @@ export const SectionItem = (props: SectionItemProperties) => (
       {props.pretext}
     </Text>
     <Link color="primary" href={props.link}>
-      <Heading fontWeight="400" as="h4">
+      <Heading fontWeight="400" as="h4" color="inherit">
         {props.heading}
       </Heading>
     </Link>
-    <Text letterSpacing=".3px">{props.description}</Text>
+    <Text letterSpacing=".3px" color="textSubdued">
+      {props.description}
+    </Text>
   </Box>
 )

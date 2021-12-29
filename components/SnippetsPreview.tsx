@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Box, Tag, Text } from '@chakra-ui/react'
+import { Box, Heading, Tag, Text } from '@chakra-ui/react'
 import type { Frontmatter } from '@utils/getFrontMatter'
 import { DashDivider } from '@components'
 
@@ -8,14 +8,15 @@ export const SnippetsPreview = (props: Frontmatter) => {
 
   return (
     <Box p="8" bgColor="surfaceDark" borderRadius="lg">
-      <p style={{ fontWeight: '600' }}>Test</p>
       <NextLink href={`/snippets/${slug}`} passHref>
         <Box as="a">
-          <Text color="primary" fontWeight="600">
+          <Text color="primary" fontWeight="medium" fontSize="sm" mb="2">
             {data.type}
           </Text>
-          <Text>{data.title}</Text>
-          <Text>{data.description}</Text>
+          <Heading fontWeight="normal" fontSize="3xl" mb="2">
+            {data.title}
+          </Heading>
+          <Text color="textSubdued">{data.description}</Text>
           <DashDivider />
           <Box>
             {data.tags.map((tag, index) => (
