@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { GA_TRACKING_ID } from '@utils/analytics'
+import { GA_TRACKING_ID } from 'utils/analytics'
 
 export default class MyDocument extends Document {
   render() {

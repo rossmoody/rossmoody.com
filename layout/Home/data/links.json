@@ -1,0 +1,46 @@
+{
+  "intro": {
+    "link": "https://www.twitter.com/_rossmoody",
+    "label": "Say 👋 on Twitter"
+  },
+  "stationery": {
+    "link": "https://www.55his.com",
+    "label": "55 Hi's"
+  },
+  "fun": {
+    "link": "https://www.55his.com/products/shot-glass-card",
+    "label": "Claim to fame was making a card that turned into a shot glass."
+  },
+  "brave": {
+    "link": "https://www.brave.com",
+    "label": "Brave Browser"
+  },
+  "lettering": {
+    "link": "https://www.instagram.com/_rossmoody",
+    "label": "I have always had an appreciation and admiration for sign painting."
+  },
+  "illustrator": {
+    "link": "https://dribbble.com/_rossmoody",
+    "label": "I don't post to Dribbble much these days but there is past illustration work there."
+  },
+  "print": {
+    "link": "https://www.skillshare.com/classes/Design-for-Print-Stand-Out-with-Specialty-Printing-Techniques/166642129",
+    "label": "I spent some time leading workshops and teaching classes on Skillshare."
+  },
+  "zendesk": {
+    "link": "https://garden.zendesk.com",
+    "label": "Zendesk Garden"
+  },
+  "crypto": {
+    "link": "https://www.basicattentiontoken.com",
+    "label": "Basic Attention Token"
+  },
+  "splunk": {
+    "link": "https://www.splunk.com/",
+    "label": "Splunk"
+  },
+  "aprilia": {
+    "link": "https://www.aprilia.com/us_EN/models/rs-660/",
+    "label": "Aprilia"
+  }
+}

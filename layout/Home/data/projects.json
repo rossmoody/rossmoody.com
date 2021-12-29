@@ -1,0 +1,20 @@
+{
+  "svgGobbler": {
+    "pretext": "Browser Extension",
+    "heading": "SVG Gobbler",
+    "link": "https://www.svggobbler.com",
+    "description": "SVG Gobbler is a browser extension that finds the vector content on the page you're viewing and gives you the option to download, optimize, copy, view the code, or export it as an image. Proud to say there are over 8k people gobbling SVGs with this extension."
+  },
+  "fomo": {
+    "pretext": "Web App",
+    "heading": "Fomo Crypto Calculator",
+    "link": "https://www.fomocryptocalculator.com",
+    "description": "A fun little web app for accurately calculating the dollar amount of regret you should feel for not investing in cryptocurrency sooner."
+  },
+  "fiftyfivehis": {
+    "pretext": "Online Stationery Business",
+    "heading": "Fifty Five Hi's",
+    "link": "https://www.55his.com",
+    "description": "55 Hi's was a company I owned and operated for several years that closed up shop in 2014. The claim to fame was making a card that turned into a shot glass. Though the business is now defunct, I leave the website up because it gives a good glimpse into how effective I am at writing bad jokes."
+  }
+}

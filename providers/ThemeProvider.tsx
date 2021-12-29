@@ -1,6 +1,6 @@
 import React from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
-import { createTheme, ThemeNumber } from '../utils/createTheme'
+import { createTheme, ThemeNumber } from 'utils/createTheme'
 
 interface ThemeContextProps {
   theme: ThemeNumber

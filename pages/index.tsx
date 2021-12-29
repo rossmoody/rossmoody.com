@@ -1,12 +1,6 @@
 import { SlideFade } from '@chakra-ui/react'
-import {
-  DashDivider,
-  Hero,
-  History,
-  Projects,
-  Writing,
-  Favorites,
-} from '@components'
+import { DashDivider } from 'components/DashDivider'
+import { Hero, History, Projects, Writing, Favorites } from 'layout'
 
 const Home = () => {
   return (

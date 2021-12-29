@@ -1,0 +1,38 @@
+{
+  "stitches": {
+    "pretext": "2022",
+    "heading": "Setting up Dark Theme with Remix & Stitches",
+    "link": "https://moodyrooster.medium.com/itchsetting-up-dark-theme-with-remix-and-stitches-6de0225972c7",
+    "description": "A short walkthrough of setting up CSS-in-JS theming functionality with Stitches and Remix leveraging SSR color-scheme preferences."
+  },
+  "favorite": {
+    "pretext": "2022",
+    "heading": "My Favorite Discoveries in Q4 2021",
+    "link": "https://moodyrooster.medium.com/my-favorite-discoveries-in-q4-2021-7f60d5a65398",
+    "description": "The first post in a running series where I catalog my favorite discoveries of the past quarter. Primarily apps, books, programming tools, and a sprinkle of every-day-carry."
+  },
+  "product": {
+    "pretext": "2021",
+    "heading": "The Product Idea List",
+    "link": "https://moodyrooster.medium.com/the-product-idea-list-c7280097147d",
+    "description": "A design retrospective with the best product ideas from a year of scraping people’s tweets on Twitter."
+  },
+  "ethereum": {
+    "pretext": "2021",
+    "heading": "A Gentle Introduction to Staking ETH 2.0",
+    "link": "https://medium.datadriveninvestor.com/a-gentle-introduction-to-staking-eth-2-0-d262496a9e21",
+    "description": "A beginner’s journey to discovering the different methods and resources available for staking Eth2."
+  },
+  "principles": {
+    "pretext": "2021",
+    "heading": "Defining Design System Principles",
+    "link": "https://medium.com/p/69e4790b95b0",
+    "description": "My iterative set of standards for building and maintaining empowering design systems."
+  },
+  "documentation": {
+    "pretext": "2020",
+    "heading": "6 Tips for Effective Design System Documentation",
+    "link": "https://medium.com/zendesk-creative-blog/6-tips-for-writing-effective-design-system-documentation-11c35b44169",
+    "description": "Practical tactics for writing helpful design system documentation."
+  }
+}

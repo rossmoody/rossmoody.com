@@ -71,7 +71,17 @@ export function createTheme(number: ThemeNumber) {
           backgroundColor: surface,
           color: text,
         },
-        'h1, h2, h3, h4, h5, h6': { color: textProminent },
+        'h1, h2, h3, h4, h5, h6': {
+          fontFamily: 'Plantin MT Pro',
+          color: textProminent,
+          fontWeight: '400',
+        },
+      },
+    },
+    textStyles: {
+      h1: {
+        fontSize: ['36px', '52px', '60px'],
+        lineHeight: '1.3',
       },
     },
   })

@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { type AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { ThemeProvider } from '../providers/ThemeProvider'
-import { MdxProvider } from '../providers/MdxProvider'
-import { Layout, Meta } from '@components'
-import * as gtag from '@utils/analytics'
+import { ThemeProvider } from 'providers/ThemeProvider'
+import { MdxProvider } from 'providers/MdxProvider'
+import { Layout } from 'layout'
+import {  Meta } from 'components'
+import * as gtag from 'utils/analytics'
 import '../public/style.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
