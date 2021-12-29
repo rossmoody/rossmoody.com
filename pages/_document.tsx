@@ -22,6 +22,13 @@ export default class MyDocument extends Document {
                     });`,
             }}
           />
+          <link
+            rel="preload"
+            href="/fonts/apercu-bold-pro.otf"
+            as="font"
+            type="font/opentype"
+            crossOrigin="true"
+          />
         </Head>
         <body>
           <Main />

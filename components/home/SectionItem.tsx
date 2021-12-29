@@ -10,7 +10,7 @@ interface SectionItemProperties {
 
 export const SectionItem = (props: SectionItemProperties) => (
   <Box mb={props.marginBottom ? '0' : '60px'}>
-    <Text fontWeight="500" mb="8px" letterSpacing=".5px">
+    <Text fontWeight="medium" mb="8px" letterSpacing=".5px">
       {props.pretext}
     </Text>
     <Link color="primary" href={props.link}>

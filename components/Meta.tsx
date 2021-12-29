@@ -6,7 +6,7 @@ const seo = {
   description:
     'Product designer, full-stack engineer, and systems thinker that loves making things for the web.',
   baseUrl: 'https://rossmoody.com',
-  imagePath: `/open-graph.png`,
+  imagePath: `/assets/open-graph.png`,
   author: '@_rossmoody',
   website: 'website',
 }

@@ -5,7 +5,7 @@ import { ThemeProvider } from '../providers/ThemeProvider'
 import { MdxProvider } from '../providers/MdxProvider'
 import { Layout, Meta } from '@components'
 import * as gtag from '@utils/analytics'
-import '../assets/style.css'
+import '../public/style.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

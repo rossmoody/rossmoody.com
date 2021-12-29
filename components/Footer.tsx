@@ -1,4 +1,5 @@
-import { Box, Divider, Link, Flex } from '@chakra-ui/react'
+import { Box, Link, Flex } from '@chakra-ui/react'
+import { DashDivider } from '@components'
 
 interface ItemProperties {
   href: string
@@ -13,7 +14,7 @@ const Item = ({ href, label }: ItemProperties) => (
 
 export const Footer = () => (
   <Box maxW="5xl" marginX="auto" as="footer">
-    <Divider mt="80px" mb="24px" variant="dashed" borderColor="divider" />
+    <DashDivider mt="80px" mb="24px" />
     <Flex gap="12px" wrap="wrap">
       <Item
         aria-label="Send email"
