@@ -18,7 +18,7 @@ export const Aside: React.FC<AsideProps> = (props) => {
       py="8"
       pl="10"
       pr="8"
-      mt="12"
+      mt="14"
       _before={{
         content: `'${label}'`,
         position: 'absolute',

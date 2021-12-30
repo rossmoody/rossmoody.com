@@ -1,8 +1,8 @@
 import { Box, SimpleGrid, SlideFade, Text } from '@chakra-ui/react'
 import { WritingPreview, DashDivider } from 'components'
-import getFrontMatter, { Posts } from 'utils/getFrontMatter'
+import getFrontMatter, { WritingPosts } from 'utils/getFrontMatter'
 
-const Writing = ({ posts }: Posts) => {
+const Writing = ({ posts }: WritingPosts) => {
   return (
     <SlideFade in={true} offsetY="12px">
       <Box as="h1" textStyle="h1">

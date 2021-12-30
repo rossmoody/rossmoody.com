@@ -7,17 +7,27 @@ export type Frontmatter = {
     title: string
     description: string
     date: string
-    type?: string
-    tags?: string[]
   }
   slug: string
 }
 
-export type Posts = {
-  posts: Frontmatter[]
+export type WritingFrontmatter = Frontmatter & {
+  data: {
+    image: 'effective-ds'
+  }
 }
 
-function getFrontMatter(directory: string) {
+export type SnippetsFrontmatter = Frontmatter & {
+  type: string
+  tags: string[]
+}
+
+export type SnippetsPosts = { posts: SnippetsFrontmatter[] }
+export type WritingPosts = { posts: WritingFrontmatter[] }
+
+type DirectoryPaths = '/pages/snippets' | '/pages/writing'
+
+function getFrontMatter(directory: DirectoryPaths) {
   const dir = path.join(process.cwd(), directory)
   const files = fs.readdirSync(dir)
 

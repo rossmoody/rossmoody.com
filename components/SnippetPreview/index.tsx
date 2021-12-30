@@ -1,9 +1,9 @@
 import { Heading, Spacer, Text } from '@chakra-ui/react'
 import { Well } from 'components/Well'
-import type { Frontmatter } from 'utils/getFrontMatter'
+import type { SnippetsFrontmatter } from 'utils/getFrontMatter'
 import { SnippetFooter } from './SnippetFooter'
 
-export const SnippetsPreview = (props: Frontmatter) => {
+export const SnippetsPreview = (props: SnippetsFrontmatter) => {
   const { data, slug } = props
 
   return (

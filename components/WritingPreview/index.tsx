@@ -1,27 +1,24 @@
-import { Heading, Box, Text, SlideFade } from '@chakra-ui/react'
-import type { Frontmatter } from 'utils/getFrontMatter'
-import { Well } from 'components'
 import React from 'react'
+import NextImage from 'next/image'
+import { Heading, Box, Text, SlideFade } from '@chakra-ui/react'
+import { Well } from 'components'
+import { ArrowRight } from './ArrowRight'
+import type { WritingFrontmatter } from 'utils/getFrontMatter'
+import one from 'images/effective-ds-documentation/one.png'
 
-const ArrowRight = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={16}
-    height={16}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={2}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden
-  >
-    <path d="M5 12h14m-7-7 7 7-7 7" />
-  </svg>
-)
+type WritingPreviewImages = Record<
+  WritingFrontmatter['data']['image'],
+  StaticImageData
+>
 
-export const WritingPreview = (props: Frontmatter) => {
+const writingPreviewImages: WritingPreviewImages = {
+  'effective-ds': one,
+}
+
+export const WritingPreview = (props: WritingFrontmatter) => {
   const [isHover, setIsHover] = React.useState(false)
+
+  const previewImage = writingPreviewImages[props.data.image]
 
   return (
     <Well
@@ -30,13 +27,25 @@ export const WritingPreview = (props: Frontmatter) => {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <Text color="primary" fontWeight="medium" fontSize="sm" mb="3">
-        {props.data.date}
-      </Text>
-      <Heading fontWeight="normal" fontSize="3xl" mb="2">
-        {props.data.title}
-      </Heading>
-      <Text mb="4">{props.data.description}</Text>
+      <Box h="200px" bg="blue" position="relative">
+        <NextImage
+          src={previewImage}
+          alt="Writing image preview graphic"
+          loading="lazy"
+          placeholder="blur"
+          layout="fill"
+          objectFit="cover"
+        />
+      </Box>
+      <Box>
+        <Text color="primary" fontWeight="medium" fontSize="sm" mb="3" mt="5">
+          {props.data.date}
+        </Text>
+        <Heading fontWeight="normal" fontSize="3xl" mb="2">
+          {props.data.title}
+        </Heading>
+        <Text mb="4">{props.data.description}</Text>
+      </Box>
       <Box
         display="inline-flex"
         alignItems="center"

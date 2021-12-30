@@ -1,8 +1,8 @@
 import { Box, SimpleGrid, SlideFade, Text } from '@chakra-ui/react'
 import { SnippetsPreview, DashDivider } from 'components'
-import getFrontMatter, { Posts } from 'utils/getFrontMatter'
+import getFrontMatter, { SnippetsPosts } from 'utils/getFrontMatter'
 
-const Snippets = ({ posts }: Posts) => {
+const Snippets = ({ posts }: SnippetsPosts) => {
   return (
     <SlideFade in={true} offsetY="12px">
       <Box as="h1" textStyle="h1">

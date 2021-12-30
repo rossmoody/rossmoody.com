@@ -26,7 +26,11 @@ const StyledLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
 
 export const Link: React.FC<LinkProps> = ({ children, href }) => {
   if (href?.includes('http'))
-    return <StyledLink href={href}>{children}</StyledLink>
+    return (
+      <StyledLink href={href} target="_blank">
+        {children}
+      </StyledLink>
+    )
 
   return (
     <NextLink href={href ?? '/'} passHref>
