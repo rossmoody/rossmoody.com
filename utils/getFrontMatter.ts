@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-export type Frontmatter = {
+export type CoreFrontmatter = {
   data: {
     title: string
     description: string
@@ -11,21 +11,25 @@ export type Frontmatter = {
   slug: string
 }
 
-export type WritingFrontmatter = Frontmatter & {
+export type SnippetsFrontmatter = CoreFrontmatter & {
   data: {
-    image: 'effective-ds'
+    type: string
+    tags: string[]
   }
 }
 
-export type SnippetsFrontmatter = Frontmatter & {
-  type: string
-  tags: string[]
+export type Images = 'Effective Design System Documentation'
+
+export type WritingFrontmatter = CoreFrontmatter & {
+  data: {
+    image: Images
+  }
 }
 
 export type SnippetsPosts = { posts: SnippetsFrontmatter[] }
 export type WritingPosts = { posts: WritingFrontmatter[] }
 
-type DirectoryPaths = '/pages/snippets' | '/pages/writing'
+export type DirectoryPaths = '/pages/snippets' | '/pages/writing'
 
 function getFrontMatter(directory: DirectoryPaths) {
   const dir = path.join(process.cwd(), directory)

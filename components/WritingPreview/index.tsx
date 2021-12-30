@@ -3,16 +3,13 @@ import NextImage from 'next/image'
 import { Heading, Box, Text, SlideFade } from '@chakra-ui/react'
 import { Well } from 'components'
 import { ArrowRight } from './ArrowRight'
-import type { WritingFrontmatter } from 'utils/getFrontMatter'
+import type { WritingFrontmatter, Images } from 'utils/getFrontMatter'
 import one from 'images/effective-ds-documentation/one.png'
 
-type WritingPreviewImages = Record<
-  WritingFrontmatter['data']['image'],
-  StaticImageData
->
+type WritingPreviewImages = Record<Images, StaticImageData>
 
 const writingPreviewImages: WritingPreviewImages = {
-  'effective-ds': one,
+  'Effective Design System Documentation': one,
 }
 
 export const WritingPreview = (props: WritingFrontmatter) => {
