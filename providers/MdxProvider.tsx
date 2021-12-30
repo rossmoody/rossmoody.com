@@ -4,19 +4,16 @@ import {
   UnorderedList,
   Box,
   Kbd,
-  KbdProps,
-  DividerProps,
   BoxProps,
   ListProps,
 } from '@chakra-ui/react'
 import {
   PageHeader,
-  PageHeaderProps,
   DashDivider,
   SyntaxHighlighter,
   Aside,
-  AsideProps,
   Link,
+  Image,
 } from 'components'
 
 type ComponentKeys = keyof HTMLElementTagNameMap & 'PageHeader'
@@ -27,17 +24,18 @@ const components: Components = {
   h2: (props: BoxProps) => <Box as="h2" textStyle="h2" {...props} />,
   h3: (props: BoxProps) => <Box as="h3" textStyle="h3" {...props} />,
   p: (props: BoxProps) => <Box as="p" textStyle="p" {...props} />,
-  a: (props: any) => <Link {...props} />,
   li: (props: BoxProps) => <Box as="li" ml="4" {...props} />,
   ul: (props: ListProps) => <UnorderedList mt="6" {...props} />,
   ol: (props: ListProps) => <OrderedList mt="6" {...props} />,
-  hr: (props: DividerProps) => <DashDivider {...props} />,
-  kbd: (props: KbdProps) => <Kbd {...props} />,
-  code: (props: any) => <SyntaxHighlighter {...props} />,
-  Aside: (props: AsideProps) => <Aside {...props} />,
-  PageHeader: (props: PageHeaderProps) => <PageHeader {...props} />,
+  hr: DashDivider,
+  code: SyntaxHighlighter,
+  PageHeader: PageHeader,
+  Image: Image,
+  Aside: Aside,
+  a: Link,
+  kbd: Kbd,
 }
 
-export const MdxProvider: React.FC = ({ children }) => (
-  <MDX components={components}>{children}</MDX>
+export const MdxProvider: React.FC = (props) => (
+  <MDX components={components} {...props} />
 )

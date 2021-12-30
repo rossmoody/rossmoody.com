@@ -36,8 +36,8 @@ const BreadcrumbItem = () => {
 export const Breadcrumbs = () => {
   return (
     <Breadcrumb
-      mb="5"
-      fontSize="sm"
+      mb="3"
+      fontSize="md"
       fontWeight="medium"
       color="primary"
       css={{ '& a': { textDecoration: 'none' } }}

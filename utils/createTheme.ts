@@ -81,8 +81,11 @@ export function createTheme(number: ThemeNumber) {
         'b, i, em, strong': {
           color: textProminent,
         },
-        'ul, ol, li': {
-          lineHeight: '2',
+        'ul, ol': {
+          lineHeight: '1.6',
+        },
+        li: {
+          marginBottom: '12px',
         },
       },
     },

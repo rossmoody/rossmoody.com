@@ -22,14 +22,15 @@ export const Aside: React.FC<AsideProps> = (props) => {
       _before={{
         content: `'${label}'`,
         position: 'absolute',
-        top: '-24px',
+        top: '-30px',
         right: '40px',
-        backgroundColor: 'inherit',
+        backgroundColor: 'primary',
         borderRadius: 'inherit',
-        padding: '4px 12px',
-        color: 'primary',
+        padding: '4px 16px 24px',
+        color: 'surfaceDark',
         fontWeight: 'medium',
         fontSize: 'md',
+        zIndex: '-1',
       }}
       sx={{
         'p:last-child': {
