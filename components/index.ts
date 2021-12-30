@@ -1,3 +1,4 @@
+export * from './Aside'
 export * from './DashDivider'
 export * from './Meta'
 export * from './SnippetPreview'

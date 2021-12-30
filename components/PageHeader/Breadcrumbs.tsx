@@ -35,7 +35,13 @@ const BreadcrumbItem = () => {
 
 export const Breadcrumbs = () => {
   return (
-    <Breadcrumb mb="5" fontSize="sm" fontWeight="medium" color="primary">
+    <Breadcrumb
+      mb="5"
+      fontSize="sm"
+      fontWeight="medium"
+      color="primary"
+      css={{ '& a': { textDecoration: 'none' } }}
+    >
       <ChakraBreadcrumbItem>
         <BreadcrumbLink as={Link} href="/">
           Home

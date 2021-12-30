@@ -70,11 +70,19 @@ export function createTheme(number: ThemeNumber) {
         body: {
           backgroundColor: surface,
           color: text,
+          fontSize: '18px',
+          lineHeight: '1.6',
         },
         'h1, h2, h3, h4, h5, h6': {
           fontFamily: 'Plantin MT Pro',
           color: textProminent,
           fontWeight: '400',
+        },
+        'b, i, em, strong': {
+          color: textProminent,
+        },
+        'ul, ol, li': {
+          lineHeight: '2',
         },
       },
     },
@@ -98,9 +106,8 @@ export function createTheme(number: ThemeNumber) {
         marginBottom: '12px',
       },
       p: {
-        fontSize: '18px',
-        lineHeight: '1.55',
         marginBottom: '32px',
+        letterSpacing: '.4px',
       },
     },
   })

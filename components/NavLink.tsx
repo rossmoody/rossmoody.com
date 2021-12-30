@@ -26,7 +26,7 @@ export const NavLink: React.FC<LinkProps> = ({ children, path }) => {
       fontWeight: '500',
       color: textProminent,
     },
-    '&::after': {
+    _after: {
       display: 'block',
       content: `"${children}"`,
       fontWeight: '500',
@@ -36,7 +36,7 @@ export const NavLink: React.FC<LinkProps> = ({ children, path }) => {
       userSelect: 'none',
       pointerEvents: 'none',
     },
-    '&::before': {
+    _before: {
       content: '""',
       backgroundColor: primary,
       height: '4px',

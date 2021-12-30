@@ -24,8 +24,8 @@ export const Footnote = ({
       <Text
         display="inline-block"
         textDecoration="underline dotted"
-        textDecorationThickness="2px"
-        textUnderlineOffset="4px"
+        textDecorationThickness="1px"
+        textUnderlineOffset="8px"
         textDecorationColor="primary"
         _hover={{ cursor: 'help' }}
         tabIndex={0}

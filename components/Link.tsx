@@ -1,19 +1,28 @@
+import React from 'react'
 import NextLink from 'next/link'
-import { Link as ChakraLink } from '@chakra-ui/react'
-import { useRouter } from 'next/router'
+import { Link as ChakraLink, LinkProps } from '@chakra-ui/react'
 
-interface LinkProps {
-  href: string
-}
+const StyledLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, ref) => {
+    return (
+      <ChakraLink
+        ref={ref}
+        textDecorationColor="primary"
+        textUnderlineOffset="4px"
+        textDecoration="underline 1px dashed"
+        {...props}
+      />
+    )
+  }
+)
 
 export const Link: React.FC<LinkProps> = ({ children, href }) => {
-  const { pathname } = useRouter()
-
-  console.log(pathname, href)
+  if (href?.includes('http'))
+    return <StyledLink href={href}>{children}</StyledLink>
 
   return (
-    <NextLink href={href} passHref>
-      <ChakraLink>{children}</ChakraLink>
+    <NextLink href={href ?? '/'} passHref>
+      <StyledLink>{children}</StyledLink>
     </NextLink>
   )
 }
