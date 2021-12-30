@@ -4,7 +4,13 @@ import { useToken } from '@chakra-ui/react'
 
 export const Logo = () => (
   <NextLink href="/" passHref>
-    <Link mr="8px" display="flex" alignItems="center" borderRadius="base">
+    <Link
+      mr="8px"
+      display="flex"
+      alignItems="center"
+      borderRadius="base"
+      _hover={{ textDecoration: 'none' }}
+    >
       <LogoIcon />
       <Heading
         as="span"

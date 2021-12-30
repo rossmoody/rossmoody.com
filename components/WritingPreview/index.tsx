@@ -30,7 +30,7 @@ export const WritingPreview = (props: Frontmatter) => {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <Text color="primary" fontWeight="medium" fontSize="sm" mb="2">
+      <Text color="primary" fontWeight="medium" fontSize="sm" mb="3">
         {props.data.date}
       </Text>
       <Heading fontWeight="normal" fontSize="3xl" mb="2">

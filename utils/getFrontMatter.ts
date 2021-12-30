@@ -4,11 +4,11 @@ import matter from 'gray-matter'
 
 export type Frontmatter = {
   data: {
-    type: string
     title: string
     description: string
     date: string
-    tags: string[]
+    type?: string
+    tags?: string[]
   }
   slug: string
 }

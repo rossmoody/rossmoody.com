@@ -9,7 +9,7 @@ interface LinkProps {
 export const Link: React.FC<LinkProps> = ({ children, href }) => {
   const { pathname } = useRouter()
 
-  console.log(pathname)
+  console.log(pathname, href)
 
   return (
     <NextLink href={href} passHref>

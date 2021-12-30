@@ -80,8 +80,27 @@ export function createTheme(number: ThemeNumber) {
     },
     textStyles: {
       h1: {
-        fontSize: ['36px', '52px', '60px'],
-        lineHeight: '1.3',
+        fontSize: ['32px', '48px', '52px'],
+        lineHeight: '1.25',
+      },
+      h2: {
+        fontFamily: 'Apercu Pro',
+        fontWeight: '500',
+        fontSize: ['2xl', '3xl', '4xl'],
+        marginTop: '64px',
+        marginBottom: '16px',
+      },
+      h3: {
+        fontFamily: 'Apercu Pro',
+        fontWeight: '600',
+        fontSize: ['lg', 'xl', '2xl'],
+        marginTop: '48px',
+        marginBottom: '12px',
+      },
+      p: {
+        fontSize: '18px',
+        lineHeight: '1.55',
+        marginBottom: '32px',
       },
     },
   })

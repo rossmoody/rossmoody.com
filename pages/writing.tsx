@@ -13,7 +13,7 @@ const Writing = ({ posts }: Posts) => {
         everyday-carry, and other interests.
       </Text>
       <DashDivider my="8" />
-      <SimpleGrid columns={[1, 2]} spacing="8">
+      <SimpleGrid columns={[1, 2]} minChildWidth="300px" spacing="8">
         {posts.map((post) => (
           <WritingPreview {...post} key={post.slug} />
         ))}
@@ -23,7 +23,7 @@ const Writing = ({ posts }: Posts) => {
 }
 
 export const getStaticProps = async () => {
-  return getFrontMatter('/pages/snippets')
+  return getFrontMatter('/pages/writing')
 }
 
 export default Writing
