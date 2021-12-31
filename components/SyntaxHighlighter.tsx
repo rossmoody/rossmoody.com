@@ -6,15 +6,17 @@ import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
 
 type HighlighterProps = SyntaxHighlighterProps & {
   highlightedLines?: string // String should resolve to number[]
-  fileNamePath?: string
+  filename?: string
 }
 
 export const SyntaxHighlighter = (props: HighlighterProps) => {
-  const { children, fileNamePath, highlightedLines, ...rest } = props
+  const { children, filename, highlightedLines, ...rest } = props
 
   const language = getLanguage(children.props.className)
   const linesToHighlight = getLinesToHighlight(highlightedLines)
   const bgColors = getBgColors(dracula)
+
+  console.log('lin', linesToHighlight)
 
   const highlightLines = useCallback(
     (lineNumber: number) => {
@@ -22,7 +24,6 @@ export const SyntaxHighlighter = (props: HighlighterProps) => {
       const props = {} as any
       if (linesToHighlight.includes(lineNumber))
         props.style = { backgroundColor: bgColors.lineHighlights }
-
       return props
     },
     [linesToHighlight, bgColors.lineHighlights]
@@ -34,6 +35,7 @@ export const SyntaxHighlighter = (props: HighlighterProps) => {
       language={language}
       style={dracula}
       showLineNumbers
+      wrapLines
       PreTag={(props: any) => (
         <Box as="pre">
           <Box position="relative">
@@ -48,15 +50,11 @@ export const SyntaxHighlighter = (props: HighlighterProps) => {
             >
               {props.children}
             </Box>
-            <FileNamePath
-              fileNamePath={fileNamePath}
-              bgColor={bgColors.fileName}
-            />
+            <FileNamePath fileNamePath={filename} bgColor={bgColors.fileName} />
           </Box>
-          {fileNamePath && <Box as="span" display="block" h="8" />}
+          {filename && <Box as="span" display="block" h="8" />}
         </Box>
       )}
-      // wrapLongLines
       {...rest}
     >
       {children.props.children}
@@ -71,7 +69,7 @@ function getLanguage(className: HighlighterProps['language']) {
 
 function getBgColors(theme: typeof dracula) {
   const pre = theme['pre[class*="language-"]'].background
-  const lineHighlights = new TinyColor(pre).lighten(5).toRgbString()
+  const lineHighlights = new TinyColor(pre).lighten(8).toRgbString()
   const fileName = new TinyColor(pre).lighten(2).toRgbString()
   return { pre, lineHighlights, fileName }
 }
@@ -87,7 +85,7 @@ function FileNamePath({
   fileNamePath,
   bgColor,
 }: {
-  fileNamePath: HighlighterProps['fileNamePath']
+  fileNamePath: HighlighterProps['filename']
   bgColor: string
 }) {
   if (!fileNamePath) return null

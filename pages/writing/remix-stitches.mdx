@@ -22,9 +22,11 @@ I have been working on a side project called [Cryptocons.io](https://github.com/
 
 Setting up a Remix project was really easy. I remarked about this on Twitter and how excited I am for how Remix prompts a different component/project structure approach.
 
+## Initial Remix Reaction
+
 So far it feels like Remix blurs the line between pages, components, and state in how the structure of the project’s folder architecture dictates the actual UI. Typically I set up a project by creating a page layout and passing components in willy-nilly. I then handle each component child’s data and state via some form of Context Provider.
 
-Remix feels conceptually similar but where files live and how they are named seem to play a much more significant role. I like this about it so far (time will tell long-term). It inherently encourages me to be consistent and intentional about my project's structure. Not solving every problem in the context of a React hook has already caused me to learn quite a lot about web development and how web pages are fundamentally created.
+Remix feels conceptually similar but where files live and how they are named seem to play a much more significant role. I like this about it so far (time will tell long-term). It inherently encourages me to be **consistent and intentional about my project's structure**. Not solving every problem in the context of a React hook has already caused me to learn quite a lot about web development and how web pages are fundamentally created.
 
 ## Setting Up Stitches and Remix
 
@@ -40,11 +42,83 @@ I was about to start following the [CSS-in-JS instructions on Remix’s site](ht
 
 Anthony on [Twitter](https://twitter.com/garand/status/1470408716981837834) suggested loading the CSS via a loader function in the `root.tsx` server file. This eliminated the hydration warning, but I got a FART on my screen during refreshes.
 
+```tsx filename="root.tsx"
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  LoaderFunction,
+  useLoaderData,
+} from 'remix'
+
+import { getCssText } from 'path/to/stitches.config'
+
+export const loader: LoaderFunction = async () => {
+  return new Response(getCssText(), {
+    headers: { 'Content-Type': 'text/css; charset=UTF-8' },
+  })
+}
+
+export default function App() {
+  const styles = useLoaderData()
+
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <Meta />
+        <Links />
+        <style id="stitches">{styles}</style>
+      </head>
+      <body>
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
+      </body>
+    </html>
+  )
+}
+```
+
 ### 🎉 Winning Attempt #3
 
 [Jenna Smith](https://twitter.com/jjenzz) from Modulz hopped in [with a simple gist](https://twitter.com/jjenzz/status/1472500698185191428) that worked like a charm. I have to imagine altering the head tag via regex isn’t the ideal solution, but it works. Speculating from the tweet, Stitches may be hot on the trail of a static CSS mechanism, which will make all this a whole lot easier.
 
-If you want one theme without a color scheme and no FART, your work is done 🎉. Altering the head element from the server loads all the necessary styles ahead of paint.
+```tsx filename="entry.server.tsx" highlightedLines="[14]"
+import type { EntryContext } from 'remix'
+import ReactDOMServer from 'react-dom/server'
+import { RemixServer } from 'remix'
+import { getCssText } from '../stitches.config'
+
+export default function handleRequest(
+  request: Request,
+  responseStatusCode: number,
+  responseHeaders: Headers,
+  remixContext: EntryContext
+) {
+  const markup = ReactDOMServer.renderToString(
+    <RemixServer context={remixContext} url={request.url} />
+  ).replace(/<\/head>/, `<style id="stitches">${getCssText()}</style></head>`)
+
+  return new Response('<!DOCTYPE html>' + markup, {
+    status: responseStatusCode,
+    headers: {
+      ...Object.fromEntries(responseHeaders),
+      'Content-Type': 'text/html',
+    },
+  })
+}
+```
+
+<Aside>
+  If you want one theme without a color scheme and no FART, your work is done
+  🎉. Altering the head element from the server loads all the necessary styles
+  ahead of paint.
+</Aside>
 
 ## Stitches and Remix Color Scheme Theme Setup
 
@@ -56,6 +130,40 @@ This was a unique opportunity to learn how to lean on the [browser’s Sec-CH-Pr
 
 For our example, let’s set up the minimal theme functionality for a demo. This means setting color aliases for text color, anchor color, and our body’s background color in both light and dark themes.
 
+```tsx filename="stitches.config.ts"
+import { createStitches } from '@stitches/react'
+
+export const { styled, createTheme, globalCss, getCssText, theme } =
+  createStitches({
+    theme: {
+      colors: {
+        text: '#191919',
+        bgBody: '#f8f9fa',
+        anchor: 'DarkGoldenRod',
+      },
+    },
+  })
+
+export const darkTheme = createTheme('dark', {
+  colors: {
+    text: '#f8f9fa',
+    bgBody: '#191919',
+    anchor: 'BlanchedAlmond',
+  },
+})
+
+export const globalStyles = globalCss({
+  body: {
+    color: '$text',
+    backgroundColor: '$bgBody',
+  },
+
+  a: {
+    color: '$anchor',
+  },
+})
+```
+
 ### 2\. Tracking Color Scheme State
 
 We want our theming functionality to have pretty simple logic:
@@ -63,6 +171,29 @@ We want our theming functionality to have pretty simple logic:
 1.  If the user has set a theme manually for the site (determined by a theme cookie we will create), we set the selected theme
 2.  If the user hasn’t set a theme manually and has a user `prefers-color-mode` preference, we grab it from the request header (so we can process it server-side) and set the theme accordingly
 3.  If neither of these is true, we set to our default theme: `light`
+
+```ts filename="cookies.ts"
+import { createCookie } from 'remix'
+
+// Create a cookie to track color scheme state
+export let colorSchemeCookie = createCookie('color-scheme')
+
+// Helper function to get the value of the color scheme cookie
+export const getColorSchemeToken = async (request: Request) =>
+  await colorSchemeCookie.parse(request.headers.get('Cookie'))
+
+export const getColorScheme = async (request: Request) => {
+  // Manually selected theme
+  const userSelectedColorScheme = await getColorSchemeToken(request)
+  // System preferred color scheme header
+  const systemPreferredColorScheme = request.headers.get(
+    'Sec-CH-Prefers-Color-Scheme'
+  )
+
+  // Return the manually selected theme or system preferred theme or default theme
+  return userSelectedColorScheme ?? systemPreferredColorScheme ?? 'light'
+}
+```
 
 ### 3\. Setting the correct theme
 
@@ -87,9 +218,72 @@ I love how simple this is. The default theme’s `:root` css color alias variabl
 
 Stitches generates a unique class hash for the default theme (which is light in our case) and we specify `class="dark"`for our `darkTheme` class to override it.
 
+```tsx filename="root.tsx"
+import {
+  LiveReload,
+  LoaderFunction,
+  Outlet,
+  useLoaderData,
+  HeadersFunction,
+} from 'remix'
+import { getColorScheme } from './cookies'
+
+export const headers: HeadersFunction = () => ({
+  'Accept-CH': 'Sec-CH-Prefers-Color-Scheme',
+})
+
+export const loader: LoaderFunction = async ({ request }) => ({
+  colorScheme: await getColorScheme(request),
+})
+
+export default function App() {
+  const { colorScheme } = useLoaderData()
+
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+      </head>
+      <body className={colorScheme}>
+        <Outlet />
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
+      </body>
+    </html>
+  )
+}
+```
+
 ## Set up the theme switcher
 
 The last piece of the puzzle is to put a Button on a route that changes the cookie’s `theme-token` value. This is the code snippet I used in my `index.tsx` file but I imagine there are lots of ways you could do this.
+
+```tsx filename="index.tsx"
+import { Button } from '~/components/Button'
+import { ActionFunction, Form, redirect, Link } from 'remix'
+import { colorSchemeCookie, getColorScheme } from '../cookies'
+
+export const action: ActionFunction = async ({ request }) => {
+  const currentColorScheme = await getColorScheme(request)
+  const newColorScheme = currentColorScheme === 'light' ? 'dark' : 'light'
+
+  return redirect(request.url, {
+    headers: {
+      'Set-Cookie': await colorSchemeCookie.serialize(newColorScheme),
+    },
+  })
+}
+
+export default function Index() {
+  return (
+    <div>
+      <Form method="post">
+        <Button type="submit">Change Theme</Button>
+      </Form>
+    </div>
+  )
+}
+```
 
 If you have any suggestions for ways to improve this documentation or the [GitHub example repo](https://github.com/rossmoody/stitches-remix/blob/main/stitches.config.ts), lemme have ‘em.
 
