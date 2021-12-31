@@ -4,11 +4,10 @@ import NextImage, { ImageProps } from 'next/image'
 export type StaticImageProps = ImageProps & {
   src: StaticImageData
   maxWidth: string
-  showAlt: boolean
 }
 
 export const Image = (props: StaticImageProps) => {
-  const { alt, showAlt, maxWidth, ...rest } = props
+  const { alt, maxWidth, children, ...rest } = props
 
   const isGif = props.src.src.includes('.gif')
 
@@ -22,7 +21,7 @@ export const Image = (props: StaticImageProps) => {
           placeholder={isGif ? 'empty' : 'blur'}
           {...rest}
         />
-        {showAlt && (
+        {props.children && (
           <Box
             bg="surfaceDark"
             py="3"
@@ -30,8 +29,14 @@ export const Image = (props: StaticImageProps) => {
             textAlign="center"
             fontSize="sm"
             borderBottomRadius="lg"
+            sx={{
+              '& p': { display: 'inline-block' },
+              '& a': {
+                color: 'primary',
+              },
+            }}
           >
-            {props.alt}
+            {props.children}
           </Box>
         )}
       </Box>

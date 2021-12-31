@@ -1,6 +1,5 @@
 import { Box, SimpleGrid, SlideFade, Text } from '@chakra-ui/react'
 import { WritingPreview, DashDivider } from 'components'
-import { MdxProvider } from 'providers/MdxProvider'
 import getFrontMatter, {
   WritingPosts,
   PreviewImageKeys,
@@ -8,10 +7,16 @@ import getFrontMatter, {
 
 import dsDocumentation from 'images/effective-ds-documentation/one.png'
 import dsPrinciples from 'images/ds-principles/one.png'
+import stakingEth2 from 'images/staking-eth-2/one.png'
+import favorites from 'images/awesome-list/one.png'
+import remix from 'images/remix-stitches/one.png'
 
 const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
   dsDocumentation,
   dsPrinciples,
+  stakingEth2,
+  favorites,
+  remix,
 }
 
 const Writing = ({ posts }: WritingPosts) => {

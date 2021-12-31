@@ -18,7 +18,12 @@ export type SnippetsFrontmatter = CoreFrontmatter & {
   }
 }
 
-export type PreviewImageKeys = 'dsDocumentation' | 'dsPrinciples'
+export type PreviewImageKeys =
+  | 'dsDocumentation'
+  | 'dsPrinciples'
+  | 'stakingEth2'
+  | 'favorites'
+  | 'remix'
 
 export type WritingFrontmatter = CoreFrontmatter & {
   data: {

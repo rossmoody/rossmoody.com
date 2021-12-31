@@ -1,0 +1,137 @@
+---
+title: A Gentle Introduction to Staking ETH 2.0
+description: >-
+  A beginner’s journey to discovering the different methods and resources
+  available for staking Ethereum 2.0.
+date: Feb 2021
+image: stakingEth2
+---
+
+import one from 'images/staking-eth-2/one.png'
+import two from 'images/staking-eth-2/two.jpg'
+import three from 'images/staking-eth-2/three.png'
+import four from 'images/staking-eth-2/four.png'
+import five from 'images/staking-eth-2/five.png'
+
+<PageHeader title={title} description={description} />
+
+<Image src={one} alt={description} />
+
+I’m a [HODLer](https://en.wikipedia.org/wiki/Hodl#:~:text=Hodl%20%28%2F%CB%88h%C9%92d,is%20known%20as%20a%20Hodler.) of cryptocurrency but event after years of regular reading and even being directly involved [in the application of one](https://basicattentiontoken.org/), I still regularly feel like I don’t understand what’s going on. The space is moving so fast and in so many directions that it’s hard to keep up and even harder to find an entry-level foothold.
+
+I want to be involved and participate because cryptocurrency is such a unique and exciting development in my lifetime but if you are reading this it’s likely you discovered what I did: the learning curve is steep and unforgiving. It only took me sending Bitcoin Cash to a Bitcoin address once to realize that money is gone and there are no safety nets.
+
+To help others interested in getting involved I will be documenting my journey to staking ETH 2.0. Thankfully, [there is a lot of documentation](https://ethereum.org/en/eth2/staking/#stake) that exists already so this may become a bit of a link aggregate but I hope it provides you with a jumpstart for participating in your own way.
+
+---
+
+## What is staking?
+
+Staking is when you put up a certain amount of cryptocurrency as collateral to participate in validating transactions on the network to obtain a reward in return.
+
+### Why stake ETH now?
+
+Up until very recently (and still the case for Bitcoin), transactions on the blockchain were validated using a consensus model called [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work).
+
+<Image src={three} alt={'A powerful proof-of-work staking rig'} />
+
+The PoW model needs tremendous computing power to win rewards because winning the reward was determined by who could solve complex math problems the fastest. This results in several nasty side effects that has traditionally made crypto mining difficult:
+
+- [High](https://www.bbc.com/news/technology-48853230#:~:text=Currently%2C%20the%20tool%20estimates%20that,same%20power%20consumption%20as%20Switzerland.) electricity costs
+- [Considerable upfront hardware costs](https://www.buybitcoinworldwide.com/mining/hardware/) for computing power
+- An intimidating technical knowledge barrier
+
+With the introduction of Proof of Stake (PoS) consensus model in ETH 2.0, those barriers have been removed. The proof of stake consensus model addresses this issue by attributing mining power that is reflective of his or her ownership stake.
+
+Put plainly, a miner can win rewards by putting up a large amount of personal cryptocurrency as collateral instead of needing to have the strongest computer on the block.
+
+---
+
+## So, where to start?
+
+I wish the beginning was more glamorous, but (unsurprisingly) the first step to learning something new is reading… a lot. I began on the [ethereum.org](ethereum.org) website going through the articles. There is no point reiterating all that content here but I will outline the most helpful content for me and why.
+
+<Image src={five} alt={'Ethereum home page'} />
+
+[**Gentle Introduction to Ethereum**](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/)**:** An ELI5 article that gives an approachable introduction to fundamental concepts. The most helpful article from a practical standpoint that I have encountered with great content to learn more about [bitcoin](https://bitsonblocks.net/2015/09/01/gentle-introduction-bitcoin/) and [blockchain](https://bitsonblocks.net/2015/09/09/gentle-introduction-blockchain-technology/) as well.
+
+[**Why Decentralization Matters**](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e)**:** Decentralization portrayed against the backdrop to the founding principles of the internet. I enjoyed this article for the higher level view it brought with hindsight in mind. There were some [interesting arguments](https://medium.com/@wolfgarbe/i-love-the-idea-of-distribution-and-the-rediscovery-of-the-founding-principle-of-the-internet-and-91ec5ffbb5c3) in the comments as well.
+
+[**Ethereum is game-changing technology, literally.**](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8)**:** Interesting game theory models like Prisoner’s Dilemma and Stag Hunt. A little over my head but I enjoyed the psychology of the principles.
+
+## How much ETH do I need to stake?
+
+There is a fundamental qualifier that is becoming increasingly hard to reach and that is **whether or not you have 32 ETH** (_$51,600 in ETH at the time of writing this_).
+
+<Aside>
+  If you don’t have 32 ETH the decision is forced — you can only [stake via
+  staking
+  services](https://blog.shrimpy.io/blog/the-best-ethereum-20-staking-pools). If
+  you have 32 ETH you can become a full validator and the possibilities open up
+  a bit more.
+</Aside>
+
+## How much can I earn staking?
+
+It depends so heavily on the way you decide to stake. From what I’m reading you can expect to earn **2–20% annually**. The average annual rate of return at the time of writing this is 9% on [stakingrewards.com](https://www.stakingrewards.com/earn/ethereum-2-0) but that number will go down in time as more people stake. Staking services typically have recurring fees but running your own validator node will have upfront hardware costs.
+
+## What are my staking options?
+
+Staking can be done in one of two ways: **staking services** or **running a validator client**.
+
+### Staking Services
+
+[Staking services](https://beaconcha.in/stakingServices) are more beginner friendly but charge fees. A few big benefits are:
+
+- You don’t need 32 ETH to participate
+- Your ETH won’t be locked up until phase 1.5
+
+<Image src={two} alt="Staking rewards graphic" />
+
+<Aside label="">
+  Honestly, stop reading this article and go to the [Ultimate Ethereum 2.0
+  Guide](https://medium.com/r?url=https%3A%2F%2Fwww.stakingrewards.com%2Fjournal%2Fultimate-ethereum-2-0-staking-guide)
+  where this graphic comes from. It's amazing.
+</Aside>
+
+When considering which one to go with it is important to understand how these services manage your private keys. Running an ETH 2 validator requires validator keys and withdrawal keys. If a staking service own both keys they are considered “Custodial”. This is because they have “custody” of your keys.
+
+<Image src={four} alt="Custodial options" />
+
+A major downside of custodial staking services is it promotes centralization of control and weakens the strength of the network. If a custodial service were to control more than 2/3 of validators that entity has the power to control the network.
+
+Staking on exchanges like Coinbase, Binance and Kraken aren’t available [at the moment but articles are claiming it will be available some time in 2021.](https://cointelegraph.com/news/ethereum-2-0-staking-is-coming-to-coinbase)
+
+_Good reference sites:_ [_Beaconcha.in_](https://beaconcha.in/stakingServices)_,_ [_Shrimpy.io_](https://blog.shrimpy.io/blog/the-best-ethereum-20-staking-pools#:~:text=An%20Ethereum%202.0%20staking%20pool,by%20joining%20a%20staking%20pool.) _and_ [_BloxStaking.com_](https://www.bloxstaking.com/blog/general/all-the-ways-to-stake-your-eth/)_._
+
+## Running a validator
+
+If you have 32 ETH you can consider running your own validator. There are several options in this category.
+
+## Validator as a service
+
+The VaaS model is great for those that don’t want to buy their own hardware or aren’t technically savvy. The premise is you are renting the validator hardware and software from a company and paying an operating fee. [Finding the right service can be tricky](https://cryptomode.com/should-you-use-ethereum-2-0-validator-as-a-service-nodes/) but for people with 32 ETH and are ok being in it for the long haul, VaaS can be a great option.
+
+## Pre-configured validator node
+
+For staking enthusiasts that want the experience of setting up a node but don’t have a ton of technical knowledge, a pre-configured validator node can be a nice plug-and-play option. An [Avado node](https://ava.do/) comes with the hardware and the software pre-installed so the initial setup is much more streamlined.
+
+Another benefit to this approach is node operators support the ETH 2 network overall in terms of security and decentralization. 24/7 power and a stable internet connection are very important.
+
+## Mini CPU validator node
+
+For the most technically inclined stakers: buying, setting up and configuring your own hardware is the way to go. This avenue is out of my wheelhouse [even after reading guides on it](https://someresat.medium.com/guide-to-staking-on-ethereum-2-0-ubuntu-prysm-56f681646f74) but a great option if you know what you’re doing.
+
+---
+
+## Helpful reference
+
+100% of the content in this article I learned from reading other articles. Below are some of the more helpful ones. If you have tips or want to point out mistakes I made, [please say hi on Twitter.](https://twitter.com/_rossmoody)
+
+- [**Ultimate Ethereum 2.0 Staking Guide**](https://www.stakingrewards.com/journal/ultimate-ethereum-2-0-staking-guide): The single best article for an approachable introduction to Ethereum staking I have found.
+- [**Designer’s Guide to Running an Eth 2 Validator**](https://www.argent.xyz/blog/eth-2-validator-setup/): 2nd most helpful article I have read on this subject. It was the perfect amount of technical documentation for me to be challenged but not overwhelmed.
+- [**ETH 2.0 Staking for All Levels**](https://medium.com/coinmonks/eth-2-0-staking-how-to-stake-for-all-levels-77e6440cd39a): A great beginner article.
+- [**Ethereum.org Staking**](https://ethereum.org/en/eth2/staking/): The official source for staking information.
+- [**/r/Ethstaker**](https://www.reddit.com/r/ethstaker/): The subreddit for staking Ethereum.
+- [**Launchpad**](https://launchpad.ethereum.org/)**:** The step by step process for becoming a validator on the Ethereum network. I am looking forward to going through the process on this site.
+- [**BloxStaking.com**](https://www.bloxstaking.com/blog/general/all-the-ways-to-stake-your-eth/)**:** Lots of really helpful documentation on staking. Very approachable.
