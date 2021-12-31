@@ -7,6 +7,8 @@ image: dsPrinciples
 
 import one from 'images/ds-principles/one.png'
 import two from 'images/ds-principles/two.gif'
+import three from 'images/ds-principles/three.jpeg'
+import four from 'images/ds-principles/four.png'
 
 <PageHeader title={title} description={description} />
 
@@ -39,20 +41,20 @@ Values are qualities that drive principles. They are the small carefully chosen 
 
 Principles are the practical, stern, opinionated standards that guide decision making. They reinforce the core values and help decisions move in a consistent direction.
 
-They are catchy, memorable, and specific sentiments that unify the product experience under varying circumstances.
+<Aside>
+  Most importantly, they are catchy, memorable, and specific sentiments that
+  unify the product experience under varying circumstances.
+</Aside>
 
 I’ve been curating my personal values (and principles) over the years to be more conscious of what I value when maintaining a design system. I didn’t even call them “principles” until recently. They were always just my “opinions” that I didn’t write down.
 
-For me, they apply to component creation, governance, maintenance, and being a supportive design systems teammate. They aren’t written in stone. They are a baseline for me to measure against so I can be deliberate about change as I mature in my role.
+For me, they apply to component creation, governance, maintenance, and being a supportive design systems teammate. They aren’t written in stone. **They are a baseline for me to measure against so I can be deliberate about change as I mature in my role.**
 
 If I’m honest, they shift monthly (just like a design system). Some weeks I’m a hammer of righteous indignation, some weeks I’m Mother Teresa.
 
 ## My Values
 
-- Simple
-- Intuitive
-- Flexible
-- Inclusive
+Simple, Intuitive, Flexible, Inclusive
 
 ## My Principles
 
@@ -62,9 +64,9 @@ Think of the system as a toolbox, not an instruction manual. Support the communi
 
 ### 2. Lead by example, not by explanation
 
-Show best practices with real examples, not instructions on how to recreate them. Writing an instruction manual on design patterns is laborious to write and read. It’s significantly easier to adopt, understand, update, maintain and implement from live examples.
+Show best practices with real examples, not instructions on how to recreate them. Writing an instruction manual on design patterns is laborious to write and read. **It’s significantly easier to adopt, understand, update, maintain and implement from live examples.**
 
-Leading by example vs leading by instruction cartoon
+<Image src={three} alt="Leading by example vs leading by instruction cartoon" />
 
 Also, a system can’t, and shouldn’t, try to predict every situation a component will be used in with documentation. [In my experience, trying to document every scenario](https://medium.com/zendesk-creative-blog/6-tips-for-writing-effective-design-system-documentation-11c35b44169) ends up creating a laundry list of exceptions. For example:
 Buttons always lead with a verb… except for common actions like “Done”, “Cancel” or “OK” … but OK is only permitted in mobile applications… and this doesn’t apply to Button Groups… and not when button length might cause problems in compact UIs.
@@ -79,7 +81,10 @@ Consistency is a result of efficiency, not the other way around. **When the syst
 
 It’s very easy to add. It’s almost impossible to remove. Every addition should fight to be included. This is a difficult line to draw but complexities that creep into the foundation of a design system propagate out and become much harder to amend if users get accustomed to it.
 
-The more you add, the more you maintain. **Each time something new is adopted into the system, it becomes a pattern to follow in subsequent definitions**.
+<Aside>
+  The more you add, the more you maintain. **Each time something new is adopted
+  into the system, it becomes a pattern to follow in subsequent definitions**.
+</Aside>
 
 ### 5. Think inclusively
 
@@ -104,17 +109,21 @@ Animated example of Design Token implementation
 
 This is more of a north star than a principle but I find it to be a particularly useful periodic gut check. The system succeeds when it equips others with the principles, knowledge, and tools to solve problems without the design systems team.
 
-I think about this principle a lot like the proverb “Give a person a fish and you feed them for a day; teach a person to fish and you feed them for a lifetime.” I find it to be a much more rewarding experience when the system strives to inspire the approach to solving problems vs being the catalog of previous solutions to them.
+I think about this principle a lot like the proverb _“Give a person a fish and you feed them for a day; teach a person to fish and you feed them for a lifetime.”_ I find it to be a much more rewarding experience when the system strives to inspire the approach to solving problems vs being the catalog of previous solutions to them.
 
 ### 8. Flexible enough for different scenarios, specific enough to be useful
 
-This principle is a work in progress for me cause it’s not an easy one to follow from a practical standpoint. There is a strong tension best illustrated by a favorite principle of mine from Nathan Curtis:
+This principle is a work in progress for me cause it’s not an easy one to follow from a practical standpoint.
+
+> Design system principle #5: Favor elegance of simple things over flexibility of complex things.
 
 Modularity is important (especially to encourage adoption) but too much and it starts to feel like a puzzle, too little and it doesn’t leave enough room for flexibility. Finding the sweet spot depends on the team, business, product, and component.
 
-Component implementation variations
-
-These variations produce a button with an icon. What is the best balance between simplicity and modularity?
+<Image
+  src={four}
+  showAlt
+  alt="These variations produce a button with an icon. What is the best balance between simplicity and modularity?"
+/>
 
 This topic is incredibly interesting to me. I think it could be several blog posts just by itself. Defining the appropriate level of customization is where design systems get to flex their influence the most but it’s also the most heavily opinionated.
 
