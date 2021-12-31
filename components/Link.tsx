@@ -13,6 +13,7 @@ const StyledLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
           textUnderlineOffset="4px"
           textDecoration="underline 1px dashed"
           borderRadius="base"
+          color="textProminent"
           _hover={{
             textDecorationColor: 'primary',
             color: 'primary',

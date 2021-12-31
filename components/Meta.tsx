@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 const seo = {
-  title: 'Ross Moody • 👋',
+  title: 'Ross Moody • ',
   description:
     'Product designer, full-stack engineer, and systems thinker that loves making things for the web.',
   baseUrl: 'https://rossmoody.com',
@@ -14,10 +14,25 @@ const seo = {
 export const Meta = () => {
   const { asPath: url } = useRouter()
 
-  // TODO: Unique Title Strings
+  function getTitleSuffix() {
+    switch (true) {
+      case url.includes('/writing'):
+        return 'Writing'
+
+      case url.includes('/snippets'):
+        return 'Snippets'
+
+      default:
+        return '👋'
+    }
+  }
+
   return (
     <Head>
-      <title>{seo.title}</title>
+      <title>
+        {seo.title}
+        {getTitleSuffix()}
+      </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link
         rel="shortcut icon"

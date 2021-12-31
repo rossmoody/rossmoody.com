@@ -18,11 +18,11 @@ export type SnippetsFrontmatter = CoreFrontmatter & {
   }
 }
 
-export type Images = 'Effective Design System Documentation'
+export type PreviewImageKeys = 'dsDocumentation' | 'dsPrinciples'
 
 export type WritingFrontmatter = CoreFrontmatter & {
   data: {
-    image: Images
+    image: PreviewImageKeys
   }
 }
 

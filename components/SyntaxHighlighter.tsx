@@ -1,43 +1,54 @@
-import { useCallback, useRef, useEffect, useState } from 'react'
-import { Box } from '@chakra-ui/react'
+import { useCallback } from 'react'
+import { useToken } from '@chakra-ui/react'
+import { TinyColor } from '@ctrl/tinycolor'
 import { Prism } from 'react-syntax-highlighter'
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
 
-type LineNumbers = number[]
-
 export const SyntaxHighlighter = (props: any) => {
-  const [highlightedLines, setHighlightedLines] = useState<LineNumbers>([])
-  const ref = useRef<HTMLPreElement>()
+  const { children, highlightedLines, ...rest } = props
 
-  const language = props.className.replace(/language-/, '')
-
-  useEffect(() => {
-    const lineHighlights = JSON.parse(
-      ref.current?.parentElement?.getAttribute('data-highlight-lines') ?? '[]'
-    )
-    setHighlightedLines(lineHighlights)
-  }, [])
+  const language = getLanguage(children.props.className)
+  const highlightBgColor = getHighlightBgColor(dracula)
+  const linesToHighlight = getLinesToHighlight(highlightedLines)
 
   const highlightLines = useCallback(
     (lineNumber: number) => {
+      if (!linesToHighlight) return {}
+
       const props = {} as any
-      if (highlightedLines.includes(lineNumber))
-        props.style = { backgroundColor: 'blue' }
+      if (linesToHighlight.includes(lineNumber))
+        props.style = { backgroundColor: highlightBgColor }
       return props
     },
-    [highlightedLines]
+    [linesToHighlight, highlightBgColor]
   )
 
   return (
     <Prism
       customStyle={{ borderRadius: '8px', marginBottom: '32px' }}
+      lineProps={highlightLines}
       language={language}
       style={dracula}
-      lineProps={highlightLines}
-      PreTag={(props: any) => <Box as="pre" ref={ref} {...props} />}
       wrapLongLines
       showLineNumbers
-      {...props}
-    />
+      {...rest}
+    >
+      {children.props.children}
+    </Prism>
   )
+}
+
+function getLanguage(className?: string) {
+  if (!className) return 'jsx'
+  return className.replace(/language-/, '')
+}
+
+function getHighlightBgColor(theme: typeof dracula) {
+  const backgroundColor = theme['pre[class*="language-"]'].background
+  return new TinyColor(backgroundColor).lighten(5).toRgbString()
+}
+
+function getLinesToHighlight(highlightedLines?: string) {
+  if (!highlightedLines) return false
+  return JSON.parse(highlightedLines) as number[]
 }

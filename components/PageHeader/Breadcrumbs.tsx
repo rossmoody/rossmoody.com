@@ -1,10 +1,9 @@
-import React from 'react'
+import Link from 'next/link'
 import {
   Breadcrumb,
   BreadcrumbItem as ChakraBreadcrumbItem,
   BreadcrumbLink,
 } from '@chakra-ui/react'
-import { Link } from 'components'
 import { useRouter } from 'next/router'
 
 const BreadcrumbItem = () => {
@@ -35,13 +34,7 @@ const BreadcrumbItem = () => {
 
 export const Breadcrumbs = () => {
   return (
-    <Breadcrumb
-      mb="3"
-      fontSize="md"
-      fontWeight="medium"
-      color="primary"
-      css={{ '& a': { textDecoration: 'none' } }}
-    >
+    <Breadcrumb mb="0" fontSize="md" fontWeight="medium" color="primary">
       <ChakraBreadcrumbItem>
         <BreadcrumbLink as={Link} href="/">
           Home

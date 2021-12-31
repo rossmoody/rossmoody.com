@@ -1,0 +1,129 @@
+---
+title: Defining Design System Principles
+description: An iterative set of 8 standards for building and maintaining effective design systems.
+date: Sep 2020
+image: dsPrinciples
+---
+
+import one from 'images/ds-principles/one.png'
+import two from 'images/ds-principles/two.gif'
+
+<PageHeader title={title} description={description} />
+
+<Image src={one} alt="Design System Principles Graphic" />
+
+What is a good design system? `Depending` on who you ask, it can mean different things. Good for who? In what way is it good? How do I measure its goodness? I think this is normally where someone peeks in and yells: “You need values!”. But here’s the thing: I never found it helpful to refer to a set of broad or obvious buzz words like **“Simple, Valuable, and Clear”**.
+
+<Aside label="💡 Insight">
+  When faced with a difficult choice while designing, broad adjectives aren’t
+  helpful. “Simple” can mean drastically different things depending on the
+  person and the product.
+</Aside>
+
+Turns out what I really needed was a set of **principles**. In my experience, [companies interchange the terms principles, standards, and values](https://principles.adactio.com/) so allow me to elaborate on how I have come to use them.
+
+<Image
+  src={two}
+  maxWidth="400px"
+  alt="My reaction when a company value is Valuable"
+  showAlt
+/>
+
+---
+
+## What are Values?
+
+Values are qualities that drive principles. They are the small carefully chosen subset of intentionally broad (bordering on obvious) adjectives that serve as a mechanism to inform principles. They describe how a product should feel when using it. Values are helpful, but in my opinion, not on their own.
+
+## What are Principles?
+
+Principles are the practical, stern, opinionated standards that guide decision making. They reinforce the core values and help decisions move in a consistent direction.
+
+They are catchy, memorable, and specific sentiments that unify the product experience under varying circumstances.
+
+I’ve been curating my personal values (and principles) over the years to be more conscious of what I value when maintaining a design system. I didn’t even call them “principles” until recently. They were always just my “opinions” that I didn’t write down.
+
+For me, they apply to component creation, governance, maintenance, and being a supportive design systems teammate. They aren’t written in stone. They are a baseline for me to measure against so I can be deliberate about change as I mature in my role.
+
+If I’m honest, they shift monthly (just like a design system). Some weeks I’m a hammer of righteous indignation, some weeks I’m Mother Teresa.
+
+## My Values
+
+- Simple
+- Intuitive
+- Flexible
+- Inclusive
+
+## My Principles
+
+### 1. Tools over rules
+
+Think of the system as a toolbox, not an instruction manual. Support the community, don’t block them. Design systems are about empowering others with tools and information to improve upon what has already been built — not police against it.
+
+### 2. Lead by example, not by explanation
+
+Show best practices with real examples, not instructions on how to recreate them. Writing an instruction manual on design patterns is laborious to write and read. It’s significantly easier to adopt, understand, update, maintain and implement from live examples.
+
+Leading by example vs leading by instruction cartoon
+
+Also, a system can’t, and shouldn’t, try to predict every situation a component will be used in with documentation. [In my experience, trying to document every scenario](https://medium.com/zendesk-creative-blog/6-tips-for-writing-effective-design-system-documentation-11c35b44169) ends up creating a laundry list of exceptions. For example:
+Buttons always lead with a verb… except for common actions like “Done”, “Cancel” or “OK” … but OK is only permitted in mobile applications… and this doesn’t apply to Button Groups… and not when button length might cause problems in compact UIs.
+
+### 3. The goal is efficiency, not consistency
+
+There are a lot of goals of a design system: consistency, usability, coherence, consolidation, accessibility, efficiency… the list goes on. The point of this principle is to remember the primary driver for a design system is not to enforce consistency.
+
+Consistency is a result of efficiency, not the other way around. **When the system is intuitive and empowering to use, consistency becomes an automatic by-product of adoption**. Sure, consistency is a key consideration but when it’s the main priority of the system it becomes a self-governing restriction that causes stagnation.
+
+## 4. Remove what’s not absolutely necessary and perfect what remains
+
+It’s very easy to add. It’s almost impossible to remove. Every addition should fight to be included. This is a difficult line to draw but complexities that creep into the foundation of a design system propagate out and become much harder to amend if users get accustomed to it.
+
+The more you add, the more you maintain. **Each time something new is adopted into the system, it becomes a pattern to follow in subsequent definitions**.
+
+### 5. Think inclusively
+
+Accessibility is an [integrated part of design system development](https://medium.com/thinking-design/building-accessibility-into-design-systems-db9062893079), not a box to check at the end. Inclusivity is imperative for building successful, ethical products that scale. Not to mention, accessibility is hard and design systems are in the unique position to champion it as a fundamental standard for design, development and content strategy.
+
+### 6. Design systems speak in tokens
+
+How a system defines, references, talks about, and curates its design tokens (of all tiers) is very important. [They are the soul of your system’s aesthetic](https://www.lightningdesignsystem.com/design-tokens/), the most fundamental visual building block, and the glue that holds the system together in a way no other part can. It’s also frequently the code most likely to be leveraged across code bases.
+
+For instance, a color is very rarely only a “color” when in a design system. It’s much more likely an abstracted token like “primary-color” or “text-color”.
+Thinking this way helps abstract the visual aesthetic away from the raw values to [how design attributes get applied to the context of the entire system](https://designsystem.digital.gov/design-tokens/#using-design-tokens). This is particularly helpful (a requirement, really) when designing with themes in mind.
+
+Animated example of Design Token implementation
+
+<Aside>
+  Adobe Spectrum’s [documentation on Design
+  Tokens](https://spectrum.adobe.com/page/design-tokens/) is particularly
+  wonderful.
+</Aside>
+
+### 7. The system succeeds when it can be used independent of its creators
+
+This is more of a north star than a principle but I find it to be a particularly useful periodic gut check. The system succeeds when it equips others with the principles, knowledge, and tools to solve problems without the design systems team.
+
+I think about this principle a lot like the proverb “Give a person a fish and you feed them for a day; teach a person to fish and you feed them for a lifetime.” I find it to be a much more rewarding experience when the system strives to inspire the approach to solving problems vs being the catalog of previous solutions to them.
+
+### 8. Flexible enough for different scenarios, specific enough to be useful
+
+This principle is a work in progress for me cause it’s not an easy one to follow from a practical standpoint. There is a strong tension best illustrated by a favorite principle of mine from Nathan Curtis:
+
+Modularity is important (especially to encourage adoption) but too much and it starts to feel like a puzzle, too little and it doesn’t leave enough room for flexibility. Finding the sweet spot depends on the team, business, product, and component.
+
+Component implementation variations
+
+These variations produce a button with an icon. What is the best balance between simplicity and modularity?
+
+This topic is incredibly interesting to me. I think it could be several blog posts just by itself. Defining the appropriate level of customization is where design systems get to flex their influence the most but it’s also the most heavily opinionated.
+
+---
+
+## Credits
+
+Full disclosure: I appropriated 50% of these principles and internalized them at various points in my career. Some sources I remember, some I don’t. It’s highly unlikely I wrote a single one of these solely from my own head.
+
+- “Tools not rules” is [from a talk by Jess Clark](https://www.rethinkhq.com/videos/elevating-the-experience-of-your-design-system-jess-clark). To my defense, she said she stole it from a coworker. Originally I was saying “Guidance not governance” and I tried to change it up to “Rationale not rules” but let’s be honest, both are shit in comparison.
+- “The system succeeds when it can be used independent of its creators” is from an [incredible talk by Rich Fulcher](https://www.rethinkhq.com/videos/communicating-design-principles-at-scale-rich-fulcher-material-design-google).
+- “Flexible enough to fit different scenarios, specific enough to be useful” is from my [favorite DS talk of all time](https://vimeo.com/345902050) by Inayaili de León Persson.

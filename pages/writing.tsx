@@ -1,6 +1,18 @@
 import { Box, SimpleGrid, SlideFade, Text } from '@chakra-ui/react'
 import { WritingPreview, DashDivider } from 'components'
-import getFrontMatter, { WritingPosts } from 'utils/getFrontMatter'
+import { MdxProvider } from 'providers/MdxProvider'
+import getFrontMatter, {
+  WritingPosts,
+  PreviewImageKeys,
+} from 'utils/getFrontMatter'
+
+import dsDocumentation from 'images/effective-ds-documentation/one.png'
+import dsPrinciples from 'images/ds-principles/one.png'
+
+const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
+  dsDocumentation,
+  dsPrinciples,
+}
 
 const Writing = ({ posts }: WritingPosts) => {
   return (
@@ -15,7 +27,11 @@ const Writing = ({ posts }: WritingPosts) => {
       <DashDivider my="8" />
       <SimpleGrid columns={[1, 2]} minChildWidth="300px" spacing="8">
         {posts.map((post) => (
-          <WritingPreview {...post} key={post.slug} />
+          <WritingPreview
+            {...post}
+            previewImage={WritingImages[post.data.image]}
+            key={post.slug}
+          />
         ))}
       </SimpleGrid>
     </SlideFade>

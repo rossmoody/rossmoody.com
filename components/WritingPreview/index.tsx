@@ -1,21 +1,16 @@
-import React from 'react'
 import NextImage from 'next/image'
+import { useState } from 'react'
 import { Heading, Box, Text, SlideFade } from '@chakra-ui/react'
 import { Well } from 'components'
 import { ArrowRight } from './ArrowRight'
-import type { WritingFrontmatter, Images } from 'utils/getFrontMatter'
-import one from 'images/effective-ds-documentation/one.png'
+import type { WritingFrontmatter } from 'utils/getFrontMatter'
 
-type WritingPreviewImages = Record<Images, StaticImageData>
-
-const writingPreviewImages: WritingPreviewImages = {
-  'Effective Design System Documentation': one,
+type WritingPreviewProps = WritingFrontmatter & {
+  previewImage: StaticImageData
 }
 
-export const WritingPreview = (props: WritingFrontmatter) => {
-  const [isHover, setIsHover] = React.useState(false)
-
-  const previewImage = writingPreviewImages[props.data.image]
+export const WritingPreview = (props: WritingPreviewProps) => {
+  const [isHover, setIsHover] = useState(false)
 
   return (
     <Well
@@ -24,9 +19,9 @@ export const WritingPreview = (props: WritingFrontmatter) => {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <Box h="200px" bg="blue" position="relative">
+      <Box h="200px" position="relative">
         <NextImage
-          src={previewImage}
+          src={props.previewImage}
           alt="Writing image preview graphic"
           loading="lazy"
           placeholder="blur"
