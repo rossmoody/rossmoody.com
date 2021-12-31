@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, BoxProps } from '@chakra-ui/react'
 
 export interface AsideProps {
   label?: string
@@ -22,15 +22,14 @@ export const Aside: React.FC<AsideProps> = (props) => {
       _before={{
         content: `'${label}'`,
         position: 'absolute',
-        top: '-30px',
+        top: '-20px',
         right: '40px',
         backgroundColor: 'primary',
         borderRadius: 'inherit',
-        padding: '4px 16px 24px',
+        padding: '4px 12px',
         color: 'surfaceDark',
         fontWeight: 'medium',
         fontSize: 'md',
-        zIndex: '-1',
       }}
       sx={{
         'p:last-child': {

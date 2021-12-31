@@ -10,6 +10,13 @@ import two from 'images/ds-principles/two.gif'
 import three from 'images/ds-principles/three.jpeg'
 import four from 'images/ds-principles/four.png'
 
+```ts fileNamePath=".../index.tsx"
+const props = {} as any
+if (linesToHighlight.includes(lineNumber))
+  props.style = { backgroundColor: highlightBgColor }
+return props
+```
+
 <PageHeader title={title} description={description} />
 
 <Image src={one} alt="Design System Principles Graphic" />
