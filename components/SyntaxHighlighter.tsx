@@ -1,5 +1,4 @@
 import { useCallback } from 'react'
-import { useToken } from '@chakra-ui/react'
 import { TinyColor } from '@ctrl/tinycolor'
 import { Prism } from 'react-syntax-highlighter'
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
