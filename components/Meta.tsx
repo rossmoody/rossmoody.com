@@ -6,7 +6,7 @@ const seo = {
   description:
     'Product designer, full-stack engineer, and systems thinker that loves making things for the web.',
   baseUrl: 'https://rossmoody.com',
-  imagePath: `/assets/open-graph.png`,
+  imagePath: `/open-graph.png`,
   author: '@_rossmoody',
   website: 'website',
 }
@@ -33,12 +33,13 @@ export const Meta = () => {
         {seo.title}
         {getTitleSuffix()}
       </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link
         rel="shortcut icon"
         href={`${seo.baseUrl}/favicon.ico`}
         type="image/x-icon"
       />
+      <link rel="canonical" href={`${seo.baseUrl}${url}`} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content={seo.description} />
       <meta name="author" content={seo.author} />
       <meta name="twitter:title" content={seo.title} />
