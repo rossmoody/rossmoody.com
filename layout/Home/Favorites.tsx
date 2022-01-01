@@ -12,16 +12,14 @@ export const Favorites = () => (
     <GridItem colSpan={[1, 2, 1]} rowSpan={[1, 3]}>
       <SectionTitle title="Favorites" />
     </GridItem>
-    {Object.values(favorites).map((favorite) => {
-      return (
-        <GridItem colSpan={1} key={favorite.title}>
-          <SectionFavorite
-            pretext={favorite.pretext}
-            heading={favorite.title}
-            items={favorite.items}
-          />
-        </GridItem>
-      )
-    })}
+    {Object.values(favorites).map((favorite) => (
+      <GridItem colSpan={1} key={favorite.title}>
+        <SectionFavorite
+          pretext={favorite.pretext}
+          heading={favorite.title}
+          items={favorite.items}
+        />
+      </GridItem>
+    ))}
   </Grid>
 )

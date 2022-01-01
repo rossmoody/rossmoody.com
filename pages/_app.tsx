@@ -6,7 +6,7 @@ import { MdxProvider } from 'providers/MdxProvider'
 import { Layout } from 'layout'
 import {  Meta } from 'components'
 import * as gtag from 'utils/analytics'
-import '../public/style.css'
+import '../public/fonts.css'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -16,7 +16,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       gtag.pageview(url)
     }
     router.events.on('routeChangeComplete', handleRouteChange)
-    
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange)
     }

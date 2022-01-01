@@ -8,7 +8,7 @@
       "layout": ["layout"],
       "utils/*": ["utils/*"],
       "providers/*": ["providers/*"],
-      "images/*": ["images/*"]
+      "images/*": ["public/images/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

@@ -71,13 +71,13 @@ export function createTheme(number: ThemeNumber) {
         body: {
           backgroundColor: surface,
           color: text,
-          fontSize: '18px',
           lineHeight: '1.6',
         },
         'h1, h2, h3, h4, h5, h6': {
           fontFamily: 'Plantin MT Pro',
           color: textProminent,
           fontWeight: '400',
+          lineHeight: '1.3',
         },
         'b, i, em, strong': {
           color: textProminent,
@@ -93,7 +93,6 @@ export function createTheme(number: ThemeNumber) {
     textStyles: {
       h1: {
         fontSize: ['32px', '48px', '52px'],
-        lineHeight: '1.25',
       },
       h2: {
         fontFamily: 'Apercu Pro',
@@ -112,6 +111,7 @@ export function createTheme(number: ThemeNumber) {
       p: {
         marginBottom: '32px',
         letterSpacing: '.4px',
+        fontSize: ['16px', '18px'],
       },
     },
   })
