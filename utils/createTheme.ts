@@ -54,6 +54,7 @@ export function createTheme(number: ThemeNumber) {
     fonts: {
       heading: 'Plantin MT Pro',
       body: 'Apercu Pro',
+      mono: 'Mona Lisa',
     },
     colors: {
       primary,

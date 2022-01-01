@@ -190,33 +190,34 @@ export const getColorScheme = async (request: Request) => {
     'Sec-CH-Prefers-Color-Scheme'
   )
 
-  // Return the manually selected theme or system preferred theme or default theme
+  // Return the manually selected theme
+  // or system preferred theme or default theme
   return userSelectedColorScheme ?? systemPreferredColorScheme ?? 'light'
 }
 ```
 
 ### 3\. Setting the correct theme
 
-I borrowed an approach I picked up from [Radix Design System GitHub](https://github.com/radix-ui/design-system/blob/master/custom/DarkThemeButton.tsx). They have a DarkMode button component that essentially adds or removes the `darkTheme` class name to the body element.
+```css filename="styles.css"
+:root,
+.t-cIBkYY {
+  --colors-text: #191919;
+  --colors-bgBody: #f8f9fa;
+  --colors-anchor: DarkGoldenRod;
+}
 
-```css
-[@media](http://twitter.com/media 'Twitter profile for @media') {
- :root,.t-cIBkYY {
- --colors-text: #191919;
- --colors-bgBody: #f8f9fa;
- --colors-anchor: DarkGoldenRod
- }
-
- .dark {
- --colors-text: #f8f9fa;
- --colors-bgBody: #191919;
- --colors-anchor: BlanchedAlmond
- }
+.dark {
+  --colors-text: #f8f9fa;
+  --colors-bgBody: #191919;
+  --colors-anchor: BlanchedAlmond;
+}
 ```
 
-I love how simple this is. The default theme’s `:root` css color alias variables are overridden via specificity by using the className of the dark theme. In our case, we are aligning the names of the themes to the browser’s `color-scheme` strings but really the `class="light"`has no effect.
+I borrowed an approach I picked up from [Radix Design System GitHub](https://github.com/radix-ui/design-system/blob/master/custom/DarkThemeButton.tsx). They have a DarkMode button component that essentially adds or removes the `darkTheme` class name to the body element.
 
-Stitches generates a unique class hash for the default theme (which is light in our case) and we specify `class="dark"`for our `darkTheme` class to override it.
+I love how simple this is. The default theme’s `:root` css color alias variables are overridden via specificity by using the className of the dark theme. In our case, we are aligning the names of the themes to the browser’s `color-scheme` strings but really the `class="light"` has no effect.
+
+Stitches generates a unique class hash for the default theme (which is light in our case) and we specify `class="dark"` for our `darkTheme` class to override it.
 
 ```tsx filename="root.tsx"
 import {

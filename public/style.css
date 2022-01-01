@@ -109,3 +109,45 @@
   font-weight: 600;
   src: url(fonts/apercu/apercu-bold-italic.woff2) format('woff2');
 }
+
+@font-face {
+  font-family: Mona Lisa;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/monalisa/MonoLisa-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Mona Lisa;
+  font-style: italic;
+  font-weight: 400;
+  src: url(fonts/monalisa/MonoLisa-RegularItalic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Mona Lisa;
+  font-style: normal;
+  font-weight: 500 800;
+  src: url(fonts/monalisa/MonoLisa-Bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Mona Lisa;
+  font-style: italic;
+  font-weight: 500 800;
+  src: url(fonts/monalisa/MonoLisa-BoldItalic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Mona Lisa;
+  font-style: normal;
+  font-weight: 100 300;
+  src: url(fonts/monalisa/MonoLisa-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: Mona Lisa;
+  font-style: italic;
+  font-weight: 100 300;
+  src: url(fonts/monalisa/MonoLisa-LightItalic.woff2) format('woff2');
+}
