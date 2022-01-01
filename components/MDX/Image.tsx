@@ -30,7 +30,7 @@ export const Image = (props: StaticImageProps) => {
             fontSize="sm"
             borderBottomRadius="lg"
             sx={{
-              '& p': { display: 'inline-block' },
+              '& p': { display: 'inline-block', mb: '0' },
               '& a': {
                 color: 'primary',
               },
