@@ -32,7 +32,7 @@ export const Aside: React.FC<AsideProps> = (props) => {
         fontSize: 'md',
       }}
       sx={{
-        'p:last-child': {
+        p: {
           marginBottom: '0',
         },
       }}
