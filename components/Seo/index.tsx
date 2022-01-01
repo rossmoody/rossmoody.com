@@ -5,7 +5,7 @@ const seo = {
   title: 'Ross Moody • ',
   description:
     'Product designer, full-stack engineer, and systems thinker that loves making things for the web.',
-  baseUrl: 'https://rossmoody.com',
+  baseUrl: process.env.BASE_URL ?? 'https://rossmoody.com',
   imagePath: `/open-graph.png`,
   author: '@_rossmoody',
   website: 'website',
