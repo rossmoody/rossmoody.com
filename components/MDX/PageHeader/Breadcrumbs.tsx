@@ -8,12 +8,17 @@ import { useRouter } from 'next/router'
 
 export const Breadcrumbs = () => {
   const { asPath } = useRouter()
-  console.log('asPat', asPath)
 
   const isWriting = asPath.includes('/writing')
 
   return (
-    <Breadcrumb mb="0" fontSize="md" fontWeight="medium" color="primary">
+    <Breadcrumb
+      mb="0"
+      fontSize="md"
+      fontWeight="medium"
+      color="primary"
+      sx={{ span: { color: 'text' } }}
+    >
       <ChakraBreadcrumbItem>
         <NextLink href="/" passHref>
           <BreadcrumbLink>Home</BreadcrumbLink>

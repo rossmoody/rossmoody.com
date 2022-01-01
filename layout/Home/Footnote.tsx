@@ -3,10 +3,10 @@ import footnotes from './data/footnotes.json'
 
 export const Footnote = ({
   name,
-  children,
+  words,
 }: {
   name: keyof typeof footnotes
-  children: React.ReactNode
+  words: string
 }) => {
   const label = footnotes[name]
 
@@ -30,7 +30,7 @@ export const Footnote = ({
         _hover={{ cursor: 'help' }}
         tabIndex={0}
       >
-        {children}
+        {words}
       </Text>
     </Tooltip>
   )

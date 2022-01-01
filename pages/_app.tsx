@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
-import { type AppProps } from 'next/app'
+import React, { useEffect } from 'react'
+import Head from 'next/head'
+import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { ThemeProvider } from 'providers/ThemeProvider'
 import { MdxProvider } from 'providers/MdxProvider'
 import { Layout } from 'layout'
-import {  Meta } from 'components'
+import { DefaultSeo } from 'components'
 import * as gtag from 'utils/analytics'
 import '../public/fonts.css'
 
@@ -22,13 +23,18 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }, [router.events])
 
   return (
-    <ThemeProvider>
-      <Meta />
-      <Layout>
-        <MdxProvider>
-          <Component {...pageProps} />
-        </MdxProvider>
-      </Layout>
-    </ThemeProvider>
+    <React.Fragment>
+      <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+      </Head>
+      <DefaultSeo />
+      <ThemeProvider>
+        <Layout>
+          <MdxProvider>
+            <Component {...pageProps} />
+          </MdxProvider>
+        </Layout>
+      </ThemeProvider>
+    </React.Fragment>
   )
 }
