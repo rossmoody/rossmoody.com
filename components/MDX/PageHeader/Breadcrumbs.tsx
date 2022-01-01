@@ -3,31 +3,27 @@ import {
   Breadcrumb,
   BreadcrumbItem as ChakraBreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbLinkProps,
-  BreadcrumbSeparator,
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
-const BreadcrumbItem: React.FC<BreadcrumbLinkProps> = (props) => (
-  <ChakraBreadcrumbItem>
-    <NextLink href={props.href ?? '/'} passHref>
-      <BreadcrumbLink>{props.children}</BreadcrumbLink>
-    </NextLink>
-  </ChakraBreadcrumbItem>
-)
-
 export const Breadcrumbs = () => {
   const { asPath } = useRouter()
+  console.log('asPat', asPath)
 
-  const isWriting = asPath === '/writing'
+  const isWriting = asPath.includes('/writing')
 
   return (
     <Breadcrumb mb="0" fontSize="md" fontWeight="medium" color="primary">
-      <BreadcrumbItem href="/">Home</BreadcrumbItem>
-      <BreadcrumbSeparator color="text">/</BreadcrumbSeparator>
-      <BreadcrumbItem href={isWriting ? '/writing' : '/snippets'}>
-        {isWriting ? 'Writing' : 'Snippets'}
-      </BreadcrumbItem>
+      <ChakraBreadcrumbItem>
+        <NextLink href="/" passHref>
+          <BreadcrumbLink>Home</BreadcrumbLink>
+        </NextLink>
+      </ChakraBreadcrumbItem>
+      <ChakraBreadcrumbItem>
+        <NextLink href={isWriting ? '/writing' : '/snippets'} passHref>
+          <BreadcrumbLink>{isWriting ? 'Writing' : 'Snippets'}</BreadcrumbLink>
+        </NextLink>
+      </ChakraBreadcrumbItem>
     </Breadcrumb>
   )
 }
