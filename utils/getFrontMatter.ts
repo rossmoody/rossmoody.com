@@ -34,7 +34,7 @@ export type WritingFrontmatter = CoreFrontmatter & {
 export type SnippetsPosts = { posts: SnippetsFrontmatter[] }
 export type WritingPosts = { posts: WritingFrontmatter[] }
 
-export type DirectoryPaths = '/pages/snippets' | '/pages/writing'
+export type DirectoryPaths = '/posts/snippets' | '/posts/writing'
 
 function getFrontMatter(directory: DirectoryPaths) {
   const dir = path.join(process.cwd(), directory)

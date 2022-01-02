@@ -1,4 +1,3 @@
-import { MDXProvider as MDX } from '@mdx-js/react'
 import { OrderedList, UnorderedList, Box, Kbd, Code } from '@chakra-ui/react'
 import {
   PageHeader,
@@ -23,7 +22,7 @@ const customComponents = {
   PageHeader,
 }
 
-const components: Partial<Components> = {
+export const components: Partial<Components> = {
   h1: (props) => <Box as="h1" textStyle="h1" {...props} />,
   h2: (props) => <Box as="h2" textStyle="h2" {...props} />,
   h3: (props) => <Box as="h3" textStyle="h3" {...props} />,
@@ -40,7 +39,3 @@ const components: Partial<Components> = {
   a: Link,
   ...customComponents,
 }
-
-export const MdxProvider: React.FC = (props) => (
-  <MDX components={components} {...props} />
-)

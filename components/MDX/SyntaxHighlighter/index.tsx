@@ -43,15 +43,18 @@ export const SyntaxHighlighter = (props: HighlighterProps) => {
       showInlineLineNumbers
       wrapLines
       CodeTag={CustomCodeElement}
-      PreTag={(props: any) => (
-        <CustomPreElement
-          language={language}
-          bgColors={bgColors}
-          filename={filename}
-        >
-          {props.children}
-        </CustomPreElement>
-      )}
+      PreTag={(props: any) => {
+        console.log(props)
+        return (
+          <CustomPreElement
+            language={language}
+            bgColors={bgColors}
+            filename={filename}
+          >
+            {props.children}
+          </CustomPreElement>
+        )
+      }}
     >
       {children.props.children}
     </Prism>

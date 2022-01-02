@@ -5,14 +5,12 @@ date: Sep 2020
 image: dsPrinciples
 ---
 
-import one from 'images/ds-principles/one.png'
-import two from 'images/ds-principles/two.gif'
-import three from 'images/ds-principles/three.jpeg'
-import four from 'images/ds-principles/four.png'
-
-<PageHeader title={title} description={description} />
-
-<Image src={one} alt="Design System Principles Graphic" />
+<Image
+  src={`/images/defining-ds-principles/one.png`}
+  alt="Design System Principles Graphic"
+  height="700px"
+  width="1400px"
+/>
 
 What is a good design system? Depending on who you ask, it can mean different things. Good for who? In what way is it good? How do I measure its goodness? I think this is normally where someone peeks in and yells: “You need values!”. But here’s the thing: I never found it helpful to refer to a set of broad or obvious buzz words like **“Simple, Valuable, and Clear”**.
 
@@ -25,9 +23,10 @@ What is a good design system? Depending on who you ask, it can mean different th
 Turns out what I really needed was a set of **principles**. In my experience, [companies interchange the terms principles, standards, and values](https://principles.adactio.com/) so allow me to elaborate on how I have come to use them.
 
 <Image
-  src={two}
-  maxWidth="400px"
+  src="/images/defining-ds-principles/two.gif"
   alt="My reaction when a company value is Valuable"
+  width="350px"
+  height="233px"
 >
   My reaction when a company value is Valuable
 </Image>
@@ -67,10 +66,15 @@ Think of the system as a toolbox, not an instruction manual. Support the communi
 
 Show best practices with real examples, not instructions on how to recreate them. Writing an instruction manual on design patterns is laborious to write and read. **It’s significantly easier to adopt, understand, update, maintain and implement from live examples.**
 
-<Image src={three} alt="Leading by example vs leading by instruction" />
-
 Also, a system can’t, and shouldn’t, try to predict every situation a component will be used in with documentation. [In my experience, trying to document every scenario](https://medium.com/zendesk-creative-blog/6-tips-for-writing-effective-design-system-documentation-11c35b44169) ends up creating a laundry list of exceptions. For example:
 Buttons always lead with a verb… except for common actions like “Done”, “Cancel” or “OK” … but OK is only permitted in mobile applications… and this doesn’t apply to Button Groups… and not when button length might cause problems in compact UIs.
+
+<Image
+  src="/images/defining-ds-principles/three.jpeg"
+  alt="Leading by example vs leading by instruction"
+  width="1400px"
+  height="977px"
+/>
 
 ### 3. The goal is efficiency, not consistency
 
@@ -101,9 +105,11 @@ Thinking this way helps abstract the visual aesthetic away from the raw values t
 Animated example of Design Token implementation
 
 <Aside>
-  Adobe Spectrum’s [documentation on Design
-  Tokens](https://spectrum.adobe.com/page/design-tokens/) is particularly
-  wonderful.
+  Adobe Spectrum’s{' '}
+  <a href="https://spectrum.adobe.com/page/design-tokens/">
+    documentation on Design Tokens
+  </a>{' '}
+  is particularly wonderful.
 </Aside>
 
 ### 7. The system succeeds when it can be used independent of its creators
@@ -120,7 +126,12 @@ This principle is a work in progress for me cause it’s not an easy one to foll
 
 Modularity is important (especially to encourage adoption) but too much and it starts to feel like a puzzle, too little and it doesn’t leave enough room for flexibility. Finding the sweet spot depends on the team, business, product, and component.
 
-<Image src={four} alt="Component variations">
+<Image
+  src="/images/defining-ds-principles/four.png"
+  alt="Variation"
+  width="582"
+  height="725"
+>
   These variations produce a button with an icon. What is the best balance
   between simplicity and modularity?
 </Image>

@@ -8,11 +8,9 @@ export const Footnote = ({
   name: keyof typeof footnotes
   words: string
 }) => {
-  const label = footnotes[name]
-
   return (
     <Tooltip
-      label={label}
+      label={footnotes[name]}
       bg="primary"
       color="surface"
       placement="top"
@@ -22,6 +20,7 @@ export const Footnote = ({
       padding="12px 16px"
     >
       <Text
+        as="span"
         display="inline-block"
         textDecoration="underline dotted"
         textDecorationThickness="1px"

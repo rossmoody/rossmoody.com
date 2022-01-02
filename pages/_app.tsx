@@ -3,7 +3,6 @@ import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { ThemeProvider } from 'providers/ThemeProvider'
-import { MdxProvider } from 'providers/MdxProvider'
 import { Layout } from 'layout'
 import { DefaultSeo } from 'components'
 import * as gtag from 'utils/analytics'
@@ -30,9 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <DefaultSeo />
       <ThemeProvider>
         <Layout>
-          <MdxProvider>
-            <Component {...pageProps} />
-          </MdxProvider>
+          <Component {...pageProps} />
         </Layout>
       </ThemeProvider>
     </React.Fragment>
