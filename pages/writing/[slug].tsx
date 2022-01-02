@@ -1,10 +1,10 @@
 import React from 'react'
+import getPostData from 'utils/getPostData'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { components } from 'providers/MdxProvider'
 import { WritingFrontmatter } from 'utils/getFrontMatter'
 import { writingFiles } from 'utils/filePaths'
-import getPostData from 'utils/getPostData'
 import { PageHeader } from 'components'
 import { serialize } from 'next-mdx-remote/serialize'
 
@@ -22,8 +22,8 @@ export default function Post(props: PostPageProps) {
       />
       <MDXRemote
         {...props.source}
-        scope={props.frontMatter}
         components={components}
+        scope={props.frontMatter}
       />
     </React.Fragment>
   )
