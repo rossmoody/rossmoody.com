@@ -66,18 +66,22 @@ export function createTheme(number: ThemeNumber) {
       textSubdued,
       textProminent,
     },
+    components: {
+      Heading: {
+        baseStyle: {
+          fontFamily: 'Plantin MT Pro',
+          color: textProminent,
+          fontWeight: '400',
+          lineHeight: '1.3',
+        },
+      },
+    },
     styles: {
       global: {
         body: {
           backgroundColor: surface,
           color: text,
           lineHeight: '1.6',
-        },
-        'h1, h2, h3, h4, h5, h6': {
-          fontFamily: 'Plantin MT Pro',
-          color: textProminent,
-          fontWeight: '400',
-          lineHeight: '1.3',
         },
         'b, i, em, strong': {
           color: textProminent,
@@ -90,30 +94,6 @@ export function createTheme(number: ThemeNumber) {
         li: {
           marginBottom: '12px',
         },
-      },
-    },
-    textStyles: {
-      h1: {
-        fontSize: ['32px', '48px', '52px'],
-      },
-      h2: {
-        fontFamily: 'Apercu Pro',
-        fontWeight: '500',
-        fontSize: ['2xl', '3xl', '4xl'],
-        marginTop: '64px',
-        marginBottom: '16px',
-      },
-      h3: {
-        fontFamily: 'Apercu Pro',
-        fontWeight: '600',
-        fontSize: ['lg', 'xl', '2xl'],
-        marginTop: '48px',
-        marginBottom: '12px',
-      },
-      p: {
-        marginBottom: '32px',
-        letterSpacing: '.4px',
-        fontSize: ['16px', '18px'],
       },
     },
   })
