@@ -22,7 +22,7 @@ const customComponents = {
   PageHeader,
 }
 
-export const components: Partial<Components> = {
+const components: Partial<Components> = {
   h1: (props) => <Box as="h1" textStyle="h1" {...props} />,
   h2: (props) => <Box as="h2" textStyle="h2" {...props} />,
   h3: (props) => <Box as="h3" textStyle="h3" {...props} />,
@@ -39,3 +39,5 @@ export const components: Partial<Components> = {
   a: Link,
   ...customComponents,
 }
+
+export default components

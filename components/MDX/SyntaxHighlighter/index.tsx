@@ -42,9 +42,14 @@ export const SyntaxHighlighter = (props: HighlighterProps) => {
       showLineNumbers
       showInlineLineNumbers
       wrapLines
-      CodeTag={CustomCodeElement}
+      CodeTag={(props: any) => {
+        console.log(props, 'Custom Code Element')
+
+        return <CustomCodeElement {...props} />
+      }}
       PreTag={(props: any) => {
-        console.log(props)
+        console.log(props, 'Custom Pre')
+
         return (
           <CustomPreElement
             language={language}
