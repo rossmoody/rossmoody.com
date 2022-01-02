@@ -83,16 +83,13 @@ export function createTheme(number: ThemeNumber) {
           color: text,
           lineHeight: '1.6',
         },
-        'b, i, em, strong': {
-          color: textProminent,
-        },
         'p, ul, ol': {
           lineHeight: '1.6',
           fontSize: ['16px', '18px'],
           letterSpacing: '.4px',
         },
-        li: {
-          marginBottom: '12px',
+        'b, i, em, strong, a': {
+          color: textProminent,
         },
       },
     },

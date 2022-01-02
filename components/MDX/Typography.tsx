@@ -38,15 +38,7 @@ export const H3 = (props: HeadingProps) => (
   />
 )
 
-export const P = (props: TextProps) => (
-  <Text
-    as="p"
-    fontSize={['16px', '18px']}
-    mb="8"
-    letterSpacing=".4px"
-    {...props}
-  />
-)
+export const P = (props: TextProps) => <Text as="p" mb="8" {...props} />
 
 export const Li = (props: TextProps) => <P as="li" ml="4" mb="4" {...props} />
 
