@@ -1,5 +1,5 @@
-import { NextSeo, ArticleJsonLd } from 'next-seo'
 import React from 'react'
+import { NextSeo, ArticleJsonLd } from 'next-seo'
 import config from './config'
 
 interface Props {

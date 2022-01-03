@@ -7,6 +7,8 @@ export type CoreFrontmatter = {
     title: string
     description: string
     date: string
+    path: string
+    ogImage: string
   }
   slug: string
 }

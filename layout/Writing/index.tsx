@@ -15,24 +15,26 @@ const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
   remix,
 }
 
-export const WritingLayout = ({ posts }: WritingPosts) => (
-  <SlideFade in={true} offsetY="12px">
-    <Heading as="h1" fontSize={['32px', '48px', '52px']}>
-      Writing
-    </Heading>
-    <Text>
-      Thoughts in written form on design systems, programming, cryptocurrency,
-      everyday-carry, and other interests.
-    </Text>
-    <DashDivider my="8" />
-    <SimpleGrid columns={[1, 2]} minChildWidth="300px" spacing="8">
-      {posts.map((post) => (
-        <WritingPreview
-          {...post}
-          previewImage={WritingImages[post.data.image]}
-          key={post.slug}
-        />
-      ))}
-    </SimpleGrid>
-  </SlideFade>
-)
+export const WritingLayout = ({ posts }: WritingPosts) => {
+  return (
+    <SlideFade in={true} offsetY="12px">
+      <Heading as="h1" fontSize={['32px', '48px', '52px']}>
+        Writing
+      </Heading>
+      <Text>
+        Thoughts in written form on design systems, programming, cryptocurrency,
+        everyday-carry, and other interests.
+      </Text>
+      <DashDivider my="8" />
+      <SimpleGrid columns={[1, 2]} minChildWidth="300px" spacing="8">
+        {posts.map((post) => (
+          <WritingPreview
+            {...post}
+            previewImage={WritingImages[post.data.image]}
+            key={post.slug}
+          />
+        ))}
+      </SimpleGrid>
+    </SlideFade>
+  )
+}
