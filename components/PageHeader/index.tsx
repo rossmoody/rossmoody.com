@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@chakra-ui/react'
 import { DashDivider } from 'components'
 import { Breadcrumbs } from './Breadcrumbs'
-import { H1 } from '../Typography'
+import { H1 } from '../Mdx/Typography'
 
 export interface PageHeaderProps {
   title: string

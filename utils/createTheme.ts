@@ -69,10 +69,16 @@ export function createTheme(number: ThemeNumber) {
     components: {
       Heading: {
         baseStyle: {
-          fontFamily: 'Plantin MT Pro',
           color: textProminent,
           fontWeight: '400',
           lineHeight: '1.3',
+        },
+        Text: {
+          baseStyle: {
+            fontSize: ['16px', '18px'],
+            lineHeight: '1.6',
+            letterSpacing: '.4px',
+          },
         },
       },
     },

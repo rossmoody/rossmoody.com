@@ -33,7 +33,6 @@ export type WritingFrontmatter = CoreFrontmatter & {
 
 export type SnippetsPosts = { posts: SnippetsFrontmatter[] }
 export type WritingPosts = { posts: WritingFrontmatter[] }
-
 export type DirectoryPaths = '/posts/snippets' | '/posts/writing'
 
 function getFrontMatter(directory: DirectoryPaths) {

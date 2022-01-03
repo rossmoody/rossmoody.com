@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import { Header } from 'layout/Header'
-import { Footer } from 'layout/Footer'
+import { Header, Footer } from 'components'
 
 export const Layout: React.FC = ({ children }) => (
   <Box px={[4, 8]} pt="9" pb="16" minHeight="100vh">

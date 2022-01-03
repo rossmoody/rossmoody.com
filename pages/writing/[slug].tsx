@@ -1,12 +1,11 @@
 import React from 'react'
-import getPostData from 'utils/getPostData'
-import components from 'components/Mdx'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { WritingFrontmatter } from 'utils/getFrontMatter'
-import { writingFiles } from 'utils/filePaths'
-import { PageHeader } from 'components'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
+import { PostLayout } from 'layout'
+import getPostData from 'utils/getPostData'
+import { WRITING_MDX_FILES } from 'utils/constants'
+import { WritingFrontmatter } from 'utils/getFrontMatter'
 
 type PostPageProps = {
   source: MDXRemoteSerializeResult
@@ -14,19 +13,7 @@ type PostPageProps = {
 }
 
 export default function Post(props: PostPageProps) {
-  return (
-    <React.Fragment>
-      <PageHeader
-        title={props.frontMatter.title}
-        description={props.frontMatter.description}
-      />
-      <MDXRemote
-        {...props.source}
-        components={components}
-        scope={props.frontMatter}
-      />
-    </React.Fragment>
-  )
+  return <PostLayout {...props} />
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -48,9 +35,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = writingFiles
-    .map((path) => path.replace(/\.mdx?$/, ''))
-    .map((slug) => ({ params: { slug } }))
+  const paths = WRITING_MDX_FILES.map((path) =>
+    path.replace(/\.mdx?$/, '')
+  ).map((slug) => ({ params: { slug } }))
 
   return {
     paths,
