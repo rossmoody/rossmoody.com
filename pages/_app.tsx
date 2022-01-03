@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import type { AppProps } from 'next/app'
+import type { AppProps, NextWebVitalsMetric } from 'next/app'
 import { useRouter } from 'next/router'
 import { ThemeProvider } from 'providers/ThemeProvider'
 import { Layout } from 'layout'
@@ -30,4 +30,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </React.Fragment>
   )
+}
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  console.log(metric)
 }
