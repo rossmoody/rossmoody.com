@@ -1,7 +1,6 @@
-import type { HighlighterProps } from '.'
 import { TinyColor } from '@ctrl/tinycolor'
 
-export function getLanguage(className: HighlighterProps['language']) {
+export function getLanguage(className: string) {
   if (!className) return 'jsx'
   return className.replace(/language-/, '')
 }
@@ -13,9 +12,7 @@ export function getBgColors(theme: any) {
   return { pre, lineHighlights, fileName }
 }
 
-export function getLinesToHighlight(
-  highlightedLines: HighlighterProps['highlightedLines']
-) {
+export function getLinesToHighlight(highlightedLines?: string) {
   if (!highlightedLines) return false
   return JSON.parse(highlightedLines) as number[]
 }

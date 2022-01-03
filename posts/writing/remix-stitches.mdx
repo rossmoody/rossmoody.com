@@ -45,7 +45,7 @@ I was about to start following the [CSS-in-JS instructions on Remix’s site](ht
 
 Anthony on [Twitter](https://twitter.com/garand/status/1470408716981837834) suggested loading the CSS via a loader function in the `root.tsx` server file. This eliminated the hydration warning, but I got a FART on my screen during refreshes.
 
-```tsx filename="root.tsx"
+```tsx filename=root.tsx
 import {
   Links,
   LiveReload,
@@ -91,7 +91,7 @@ export default function App() {
 
 [Jenna Smith](https://twitter.com/jjenzz) from Modulz hopped in [with a simple gist](https://twitter.com/jjenzz/status/1472500698185191428) that worked like a charm. I have to imagine altering the head tag via regex isn’t the ideal solution, but it works. Speculating from the tweet, Stitches may be hot on the trail of a static CSS mechanism, which will make all this a whole lot easier.
 
-```tsx filename="entry.server.tsx" highlightedLines="[14]"
+```tsx filename=entry.server.tsx highlightedLines=[14]
 import type { EntryContext } from 'remix'
 import ReactDOMServer from 'react-dom/server'
 import { RemixServer } from 'remix'
@@ -133,7 +133,7 @@ This was a unique opportunity to learn how to lean on the [browser’s Sec-CH-Pr
 
 For our example, let’s set up the minimal theme functionality for a demo. This means setting color aliases for text color, anchor color, and our body’s background color in both light and dark themes.
 
-```tsx filename="stitches.config.ts"
+```tsx filename=stitches.config.ts
 import { createStitches } from '@stitches/react'
 
 export const { styled, createTheme, globalCss, getCssText, theme } =
@@ -175,7 +175,7 @@ We want our theming functionality to have pretty simple logic:
 2.  If the user hasn’t set a theme manually and has a user `prefers-color-mode` preference, we grab it from the request header (so we can process it server-side) and set the theme accordingly
 3.  If neither of these is true, we set to our default theme: `light`
 
-```ts filename="cookies.ts"
+```ts filename=cookies.ts
 import { createCookie } from 'remix'
 
 // Create a cookie to track color scheme state
@@ -201,7 +201,7 @@ export const getColorScheme = async (request: Request) => {
 
 ### 3\. Setting the correct theme
 
-```css filename="styles.css"
+```css filename=styles.css
 :root,
 .t-cIBkYY {
   --colors-text: #191919;
@@ -222,7 +222,7 @@ I love how simple this is. The default theme’s `:root` css color alias variabl
 
 Stitches generates a unique class hash for the default theme (which is light in our case) and we specify `class="dark"` for our `darkTheme` class to override it.
 
-```tsx filename="root.tsx"
+```tsx filename=root.tsx
 import {
   LiveReload,
   LoaderFunction,
@@ -262,7 +262,7 @@ export default function App() {
 
 The last piece of the puzzle is to put a Button on a route that changes the cookie’s `theme-token` value. This is the code snippet I used in my `index.tsx` file but I imagine there are lots of ways you could do this.
 
-```tsx filename="index.tsx"
+```tsx filename=index.tsx
 import { Button } from '~/components/Button'
 import { ActionFunction, Form, redirect, Link } from 'remix'
 import { colorSchemeCookie, getColorScheme } from '../cookies'

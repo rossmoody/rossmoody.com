@@ -45,20 +45,16 @@ export const SyntaxHighlighter = (props: SyntaxHighlighter) => {
       showLineNumbers
       showInlineLineNumbers
       wrapLines
-      CodeTag={(props: any) => {
-        return <CustomCodeElement {...props} />
-      }}
-      PreTag={(props: any) => {
-        return (
-          <CustomPreElement
-            language={language}
-            bgColors={bgColors}
-            filename={filename}
-          >
-            {props.children}
-          </CustomPreElement>
-        )
-      }}
+      CodeTag={CustomCodeElement}
+      PreTag={(props: any) => (
+        <CustomPreElement
+          language={language}
+          bgColors={bgColors}
+          filename={filename}
+        >
+          {props.children}
+        </CustomPreElement>
+      )}
     >
       {props.children}
     </Prism>

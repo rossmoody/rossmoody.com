@@ -5,6 +5,9 @@ import { Image } from './Image'
 import { SyntaxHighlighter } from './SyntaxHighlighter'
 import * as T from './Typography'
 
+// import dynamic from 'next/dynamic'
+// const Component = dynamic(() => import('./Path'))
+
 const customComponents = {
   Aside,
   PageHeader,
