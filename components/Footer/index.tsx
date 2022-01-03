@@ -1,5 +1,5 @@
 import { Box, Link, Flex } from '@chakra-ui/react'
-import { DashDivider } from 'components'
+import { DashDivider } from '../DashDivider'
 
 interface ItemProperties {
   href: string

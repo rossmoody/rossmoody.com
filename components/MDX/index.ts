@@ -1,5 +1,7 @@
 import { Kbd } from '@chakra-ui/react'
-import { DashDivider, Link, PageHeader } from 'components'
+import { DashDivider } from '../DashDivider'
+import { PageHeader } from '../PageHeader'
+import { Link } from '../Link'
 import { Aside } from './Aside'
 import { Image } from './Image'
 import { SyntaxHighlighter } from './SyntaxHighlighter'

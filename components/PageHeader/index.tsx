@@ -1,5 +1,5 @@
 import { Box, Heading } from '@chakra-ui/react'
-import { DashDivider } from 'components'
+import { DashDivider } from '../DashDivider'
 import { Breadcrumbs } from './Breadcrumbs'
 
 export interface PageHeaderProps {

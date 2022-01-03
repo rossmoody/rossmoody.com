@@ -8,20 +8,22 @@ export type PostPageProps = {
   frontMatter: WritingFrontmatter['data']
 }
 
-export const PostLayout = ({ frontMatter, source }: PostPageProps) => (
-  <React.Fragment>
-    <Seo
-      title={frontMatter.title}
-      desc={frontMatter.description}
-      image={frontMatter.ogImage}
-      path={frontMatter.path}
-      date={frontMatter.date}
-      // updated={updated}
-    />
-    <PageHeader
-      title={frontMatter.title}
-      description={frontMatter.description}
-    />
-    <MDXRemote {...source} components={components} scope={frontMatter} />
-  </React.Fragment>
-)
+export const PostLayout = ({ frontMatter, source }: PostPageProps) => {
+  return (
+    <React.Fragment>
+      <Seo
+        title={frontMatter.title}
+        desc={frontMatter.description}
+        image={frontMatter.ogImage}
+        path={frontMatter.path}
+        date={frontMatter.date}
+        // updated={updated}
+      />
+      <PageHeader
+        title={frontMatter.title}
+        description={frontMatter.description}
+      />
+      <MDXRemote {...source} components={components} scope={frontMatter} />
+    </React.Fragment>
+  )
+}
