@@ -68,7 +68,7 @@ const Seo = ({ title, desc, image, path, date, updated }: Props) => {
         datePublished={formattedDate}
         description={seo.description}
         images={[seo.image]}
-        publisherLogo="/favicon.ico"
+        publisherLogo="/logo.png"
         publisherName={author}
         title={seo.title}
         url={seo.url}

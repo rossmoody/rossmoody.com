@@ -51,12 +51,11 @@ export const SyntaxHighlighter = (props: SyntaxHighlighter) => {
           language={language}
           bgColors={bgColors}
           filename={filename}
-        >
-          {props.children}
-        </CustomPreElement>
+          {...props}
+        />
       )}
     >
-      {props.children}
+      {children}
     </Prism>
   )
 }
