@@ -18,7 +18,7 @@ const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
 export const WritingLayout = ({ posts }: WritingPosts) => {
   return (
     <SlideFade in={true} offsetY="12px">
-      <Heading as="h1" fontSize={['32px', '48px', '52px']}>
+      <Heading as="h1" fontSize={['40px', '48px', '56px']}>
         Writing
       </Heading>
       <Text>

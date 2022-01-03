@@ -9,6 +9,8 @@ export type PostPageProps = {
 }
 
 export const PostLayout = ({ frontMatter, source }: PostPageProps) => {
+  if (!frontMatter || !source) return <div>...Loading post</div>
+
   return (
     <React.Fragment>
       <Seo
