@@ -7,12 +7,12 @@ export type StaticImageProps = ImageProps & {
 }
 
 export const Image = (props: StaticImageProps) => {
-  const { alt, maxWidth, children, ...rest } = props
+  const { alt, width, children, ...rest } = props
 
   return (
     <Center my="12">
-      <Box>
-        <NextImage alt={props.alt} {...rest} />
+      <Box width={`${width}px`}>
+        <NextImage alt={props.alt} width={width} {...rest} />
         {props.children && (
           <Box
             as="figcaption"

@@ -1,7 +1,7 @@
 import { IconButton, Flex, Divider } from '@chakra-ui/react'
 import { ThemeNumber } from 'utils/createTheme'
 import { useTheme } from 'providers/ThemeProvider'
-import { NavLink } from 'components'
+import { NavLink } from './NavLink'
 import { ThemeIcon } from './ThemeIcon'
 import { Logo } from './Logo'
 
