@@ -1,8 +1,7 @@
 import React from 'react'
-import components from 'components/Mdx'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { WritingFrontmatter } from 'utils/getFrontMatter'
-import { PageHeader, Seo } from 'components'
+import { components, PageHeader, Seo } from 'components'
 
 export type PostPageProps = {
   source: MDXRemoteSerializeResult

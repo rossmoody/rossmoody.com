@@ -16,7 +16,7 @@ const customComponents = {
 
 type Components = Record<any, (props: any) => any>
 
-const components: Partial<Components> = {
+export const components: Partial<Components> = {
   h1: T.H1,
   h2: T.H2,
   h3: T.H3,
@@ -31,5 +31,3 @@ const components: Partial<Components> = {
   a: Link,
   ...customComponents,
 }
-
-export default components

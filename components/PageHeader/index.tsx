@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Heading } from '@chakra-ui/react'
 import { DashDivider } from 'components'
 import { Breadcrumbs } from './Breadcrumbs'

@@ -1,6 +1,6 @@
+import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
 import { useCallback } from 'react'
 import { Prism } from 'react-syntax-highlighter'
-import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
 import { CustomPreElement } from './CustomPreElement'
 import { CustomCodeElement } from './CustomCodeElement'
 import * as utils from './utils'
