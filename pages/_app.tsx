@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { ThemeProvider } from 'providers/ThemeProvider'
@@ -23,9 +22,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <React.Fragment>
-      <Head>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-      </Head>
       <DefaultSeo />
       <ThemeProvider>
         <Layout>

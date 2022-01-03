@@ -17,6 +17,7 @@ export default function Post(props: PostPageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // Per docs for tree shaking, keep all mdx-remote logic in this file
   const { content, frontMatter } = await getPostData(params!.slug as string)
 
   const source = await serialize(content, {
