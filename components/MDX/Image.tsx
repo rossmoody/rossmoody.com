@@ -6,7 +6,7 @@ export const Image = (props: ImageProps) => {
 
   return (
     <Center my="12">
-      <Box width={`${width}px`}>
+      <Box width={width}>
         <NextImage alt={props.alt} width={width} {...rest} />
         {props.children && (
           <Box
