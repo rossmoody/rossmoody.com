@@ -1,18 +1,13 @@
 import { Box, Center } from '@chakra-ui/react'
 import NextImage, { ImageProps } from 'next/image'
 
-export type StaticImageProps = ImageProps & {
-  src: string
-  maxWidth: string
-}
-
-export const Image = (props: StaticImageProps) => {
+export const Image = (props: ImageProps) => {
   const { alt, width, children, ...rest } = props
 
   return (
     <Center my="12">
       <Box width={`${width}px`}>
-        <NextImage alt={props.alt} width={width} {...rest} />
+        <NextImage alt={props.alt} {...rest} />
         {props.children && (
           <Box
             as="figcaption"
