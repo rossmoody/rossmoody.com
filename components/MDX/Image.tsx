@@ -7,7 +7,7 @@ export const Image = (props: ImageProps) => {
   return (
     <Center my="12">
       <Box width={`${width}px`}>
-        <NextImage alt={props.alt} {...rest} />
+        <NextImage alt={props.alt} width={width} {...rest} />
         {props.children && (
           <Box
             as="figcaption"
