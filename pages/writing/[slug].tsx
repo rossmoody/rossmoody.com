@@ -15,13 +15,13 @@ export type PostPageProps = {
 export default function Post(props: PostPageProps) {
   return (
     <React.Fragment>
-      <Seo
+      {/* <Seo
         title={props.frontMatter.title}
         desc={props.frontMatter.description}
         image={props.frontMatter.ogImage}
         path={props.frontMatter.path}
         date={props.frontMatter.date}
-      />
+      /> */}
       <PageHeader
         title={props.frontMatter.title}
         description={props.frontMatter.description}
