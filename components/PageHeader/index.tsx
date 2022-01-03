@@ -1,8 +1,7 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 import { DashDivider } from 'components'
 import { Breadcrumbs } from './Breadcrumbs'
-import { H1 } from '../Mdx/Typography'
 
 export interface PageHeaderProps {
   title: string
@@ -13,7 +12,9 @@ export const PageHeader = (props: PageHeaderProps) => (
   <Box>
     <Box maxW="720px">
       <Breadcrumbs />
-      <H1>{props.title}</H1>
+      <Heading as="h1" fontSize={['32px', '48px', '52px']} lineHeight={1.2}>
+        {props.title}
+      </Heading>
       <Box as="p" mt="2" fontSize="xl">
         {props.description}
       </Box>
