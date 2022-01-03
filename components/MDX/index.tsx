@@ -7,18 +7,11 @@ import * as T from './Typography'
 
 const customComponents = {
   Aside,
-  SyntaxHighlighter,
   PageHeader,
   Image,
 }
 
-type ComponentKeys =
-  | keyof HTMLElementTagNameMap
-  | 'PageHeader'
-  | 'Image'
-  | 'SyntaxHighlighter'
-
-type Components = Record<ComponentKeys, (props: any) => any>
+type Components = Record<any, (props: any) => any>
 
 const components: Partial<Components> = {
   h1: T.H1,
@@ -28,8 +21,8 @@ const components: Partial<Components> = {
   li: T.Li,
   ul: T.Ul,
   ol: T.Ol,
-  code: T.Code,
-  pre: SyntaxHighlighter,
+  code: SyntaxHighlighter,
+  inlineCode: T.Code,
   hr: DashDivider,
   kbd: Kbd,
   a: Link,

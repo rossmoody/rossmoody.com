@@ -1,20 +1,22 @@
 import { useCallback } from 'react'
-import { Prism, SyntaxHighlighterProps } from 'react-syntax-highlighter'
+import { Prism } from 'react-syntax-highlighter'
 import dracula from 'react-syntax-highlighter/dist/cjs/styles/prism/dracula'
 import { CustomPreElement } from './CustomPreElement'
 import { CustomCodeElement } from './CustomCodeElement'
 import * as utils from './utils'
 
-export type HighlighterProps = SyntaxHighlighterProps & {
-  highlightedLines?: string // String should resolve to number[]
+type SyntaxHighlighter = {
+  children: string
+  className: string
   filename?: string
+  metastring?: string
+  highlightedLines?: string
 }
 
-export const SyntaxHighlighter = (props: HighlighterProps) => {
-  console.log(props, 'rest of the props')
-  const { children, filename, highlightedLines } = props
+export const SyntaxHighlighter = (props: SyntaxHighlighter) => {
+  const { children, className, filename, highlightedLines } = props
 
-  const language = utils.getLanguage(children.props.className)
+  const language = utils.getLanguage(className)
   const linesToHighlight = utils.getLinesToHighlight(highlightedLines)
   const bgColors = utils.getBgColors(dracula)
 
@@ -58,7 +60,7 @@ export const SyntaxHighlighter = (props: HighlighterProps) => {
         )
       }}
     >
-      {children.props.children}
+      {props.children}
     </Prism>
   )
 }
