@@ -11,6 +11,7 @@ export type HighlighterProps = SyntaxHighlighterProps & {
 }
 
 export const SyntaxHighlighter = (props: HighlighterProps) => {
+  console.log(props, 'rest of the props')
   const { children, filename, highlightedLines } = props
 
   const language = utils.getLanguage(children.props.className)
@@ -43,13 +44,9 @@ export const SyntaxHighlighter = (props: HighlighterProps) => {
       showInlineLineNumbers
       wrapLines
       CodeTag={(props: any) => {
-        console.log(props, 'Custom Code Element')
-
         return <CustomCodeElement {...props} />
       }}
       PreTag={(props: any) => {
-        console.log(props, 'Custom Pre')
-
         return (
           <CustomPreElement
             language={language}

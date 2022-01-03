@@ -7,6 +7,48 @@ date: Jan 2022
 image: favorites
 ---
 
+```tsx filename="root.tsx" otherprops="hello there"
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  LoaderFunction,
+  useLoaderData,
+} from 'remix'
+
+import { getCssText } from 'path/to/stitches.config'
+
+export const loader: LoaderFunction = async () => {
+  return new Response(getCssText(), {
+    headers: { 'Content-Type': 'text/css; charset=UTF-8' },
+  })
+}
+
+export default function App() {
+  const styles = useLoaderData()
+
+  return (
+    <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <Meta />
+        <Links />
+        <style id="stitches">{styles}</style>
+      </head>
+      <body>
+        <Outlet />
+        <ScrollRestoration />
+        <Scripts />
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
+      </body>
+    </html>
+  )
+}
+```
+
 <Image
   height="447"
   width="800"
