@@ -1,13 +1,38 @@
 import React from 'react'
-import { useRouter } from 'next/router'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { serialize } from 'next-mdx-remote/serialize'
-import { PostLayout, PostPageProps } from 'layout'
 import getPostData from 'utils/getPostData'
 import { WRITING_MDX_FILES } from 'utils/constants'
+import { components, PageHeader, Seo } from 'components'
+import { MDXRemoteSerializeResult, MDXRemote } from 'next-mdx-remote'
+import { WritingFrontmatter } from 'utils/getFrontMatter'
+
+export type PostPageProps = {
+  source: MDXRemoteSerializeResult
+  frontMatter: WritingFrontmatter['data']
+}
 
 export default function Post(props: PostPageProps) {
-  return <PostLayout {...props} />
+  return (
+    <React.Fragment>
+      <Seo
+        title={props.frontMatter.title}
+        desc={props.frontMatter.description}
+        image={props.frontMatter.ogImage}
+        path={props.frontMatter.path}
+        date={props.frontMatter.date}
+      />
+      <PageHeader
+        title={props.frontMatter.title}
+        description={props.frontMatter.description}
+      />
+      <MDXRemote
+        {...props.source}
+        components={components}
+        scope={props.frontMatter}
+      />
+    </React.Fragment>
+  )
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
