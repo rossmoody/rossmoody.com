@@ -8,8 +8,12 @@ interface TooltipLabelProps {
 
 const TooltipLabel = (props: TooltipLabelProps) => (
   <>
-    <Text fontWeight="medium">{props.label}</Text>
-    <Text fontSize="12px">{props.link}</Text>
+    <Text fontWeight="medium" fontSize="md" lineHeight={1.25}>
+      {props.label}
+    </Text>
+    <Text fontSize="sm" lineHeight={1}>
+      {props.link}
+    </Text>
   </>
 )
 

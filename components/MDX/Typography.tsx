@@ -11,7 +11,12 @@ import {
 } from '@chakra-ui/react'
 
 export const H1 = (props: HeadingProps) => (
-  <Heading as="h1" fontSize={['32px', '48px', '52px']} {...props} />
+  <Heading
+    as="h1"
+    fontSize={['32px', '48px', '52px']}
+    lineHeight={1.2}
+    {...props}
+  />
 )
 
 export const H2 = (props: HeadingProps) => (
@@ -22,6 +27,7 @@ export const H2 = (props: HeadingProps) => (
     fontWeight={500}
     mt="64px"
     mb="16px"
+    lineHeight={1.3}
     {...props}
   />
 )
@@ -30,10 +36,11 @@ export const H3 = (props: HeadingProps) => (
   <Heading
     as="h3"
     fontFamily="body"
-    fontSize={['lg', 'xl', '2xl']}
+    fontSize={['xl', '2xl']}
     fontWeight={600}
     mt="48px"
     mb="12px"
+    lineHeight={1.3}
     {...props}
   />
 )

@@ -12,13 +12,7 @@ export const Breadcrumbs = () => {
   const isWriting = asPath.includes('/writing')
 
   return (
-    <Breadcrumb
-      mb="0"
-      fontSize="md"
-      fontWeight="medium"
-      color="primary"
-      sx={{ span: { color: 'text' } }}
-    >
+    <Breadcrumb mb="3" color="primary" sx={{ span: { color: 'text' } }}>
       <ChakraBreadcrumbItem>
         <NextLink href="/" passHref>
           <BreadcrumbLink>Home</BreadcrumbLink>

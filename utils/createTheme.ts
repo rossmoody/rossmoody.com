@@ -71,7 +71,6 @@ export function createTheme(number: ThemeNumber) {
         baseStyle: {
           color: textProminent,
           fontWeight: '400',
-          lineHeight: '1.3',
         },
         Text: {
           baseStyle: {
