@@ -12,25 +12,21 @@ export type PostPageProps = {
   frontMatter: WritingFrontmatter['data']
 }
 
-export default function Post(props: PostPageProps) {
+export default function Post({ frontMatter, source }: PostPageProps) {
   return (
     <React.Fragment>
       <Seo
-        title={props.frontMatter.title}
-        desc={props.frontMatter.description}
-        image={props.frontMatter.ogImage}
-        path={props.frontMatter.path}
-        date={props.frontMatter.date}
+        title={frontMatter.title}
+        desc={frontMatter.description}
+        image={frontMatter.ogImage}
+        path={frontMatter.path}
+        // date={frontMatter.date}
       />
       <PageHeader
-        title={props.frontMatter.title}
-        description={props.frontMatter.description}
+        title={frontMatter.title}
+        description={frontMatter.description}
       />
-      <MDXRemote
-        {...props.source}
-        components={components}
-        scope={props.frontMatter}
-      />
+      <MDXRemote {...source} components={components} scope={frontMatter} />
     </React.Fragment>
   )
 }
