@@ -19,13 +19,12 @@ export const PostLayout = ({ frontMatter, source }: PostPageProps) => {
         image={frontMatter.ogImage}
         path={frontMatter.path}
         date={frontMatter.date}
-        // updated={updated}
       />
       <PageHeader
         title={frontMatter.title}
         description={frontMatter.description}
       />
-      <MDXRemote {...source} components={components} scope={frontMatter} />
+      {/* <MDXRemote {...source} components={components} scope={frontMatter} /> */}
     </React.Fragment>
   )
 }

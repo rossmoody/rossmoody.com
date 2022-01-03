@@ -7,12 +7,6 @@ import getPostData from 'utils/getPostData'
 import { WRITING_MDX_FILES } from 'utils/constants'
 
 export default function Post(props: PostPageProps) {
-  const { isFallback } = useRouter()
-
-  if (isFallback || !props.source) {
-    return <div>Loading...</div>
-  }
-
   return <PostLayout {...props} />
 }
 
