@@ -1,9 +1,9 @@
 import { Kbd } from '@chakra-ui/react'
-import { DashDivider } from '../DashDivider'
-import { PageHeader } from '../PageHeader'
-import { Link } from '../Link'
 import { Aside } from './Aside'
+import { DashDivider } from '../DashDivider'
 import { Image } from './Image'
+import { Link } from '../Link'
+import { PageHeader } from '../PageHeader'
 import { SyntaxHighlighter } from './SyntaxHighlighter'
 import * as T from './Typography'
 
@@ -26,6 +26,7 @@ export const components: Partial<Components> = {
   li: T.Li,
   ul: T.Ul,
   ol: T.Ol,
+  blockquote: T.Blockquote,
   code: SyntaxHighlighter,
   inlineCode: T.Code,
   hr: DashDivider,

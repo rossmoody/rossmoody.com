@@ -1,21 +1,25 @@
+import React from 'react'
 import NextLink from 'next/link'
 import { Box, Link as ChakraLink, LinkProps } from '@chakra-ui/react'
 import { Tooltip } from 'components'
 import { prettifyLink } from 'utils/prettyLinks'
 
-const StyledLink = (props: LinkProps) => (
-  <Tooltip label={prettifyLink(props.href)}>
-    <ChakraLink
-      textDecorationColor="primary"
-      textUnderlineOffset="4px"
-      textDecorationLine="underline"
-      textDecorationStyle="dashed"
-      textDecorationThickness="1px"
-      borderRadius="base"
-      color="textProminent"
-      {...props}
-    />
-  </Tooltip>
+const StyledLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (props, ref) => (
+    <Tooltip label={prettifyLink(props.href)}>
+      <ChakraLink
+        ref={ref}
+        textDecorationColor="primary"
+        textUnderlineOffset="4px"
+        textDecorationLine="underline"
+        textDecorationStyle="dashed"
+        textDecorationThickness="1px"
+        borderRadius="base"
+        color="textProminent"
+        {...props}
+      />
+    </Tooltip>
+  )
 )
 
 export const Link: React.FC<LinkProps> = (props) => {
@@ -35,8 +39,6 @@ export const Link: React.FC<LinkProps> = (props) => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="inherit"
-          height="inherit"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

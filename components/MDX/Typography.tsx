@@ -59,3 +59,22 @@ export const Ol = (props: ListProps) => (
 export const Code = (props: CodeProps) => (
   <CCode px="1.5" variant="outline" color="primary" {...props} />
 )
+
+export const Blockquote = (props: any) => {
+  const content = props.children.props.children
+
+  return (
+    <Heading
+      as="blockquote"
+      pl="6"
+      borderLeft="4px solid"
+      borderColor="primary"
+      fontStyle="italic"
+      fontSize={['3xl', '4xl']}
+      my="16"
+      maxWidth="720px"
+    >
+      {content}
+    </Heading>
+  )
+}
