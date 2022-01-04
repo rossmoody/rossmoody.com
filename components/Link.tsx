@@ -1,15 +1,18 @@
 import NextLink from 'next/link'
 import { Box, Link as ChakraLink, LinkProps } from '@chakra-ui/react'
 import { Tooltip } from 'components'
+import { prettifyLink } from 'utils/prettyLinks'
 
 const StyledLink = (props: LinkProps) => (
-  <Tooltip label={props.href}>
+  <Tooltip label={prettifyLink(props.href)}>
     <ChakraLink
       textDecorationColor="primary"
       textUnderlineOffset="4px"
-      textDecoration="underline 1px dashed"
+      textDecorationLine="underline"
+      textDecorationStyle="dashed"
+      textDecorationThickness="1px"
       borderRadius="base"
-      color="primary"
+      color="textProminent"
       {...props}
     />
   </Tooltip>

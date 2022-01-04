@@ -10,14 +10,19 @@ type CustomPreTag = React.FC<{
 
 export const CustomPreElement: CustomPreTag = (props) => {
   return (
-    <Box position="relative" fontSize={['14px', '16px']} mb="20">
-      <CodeTypeTab language={props.language} />
+    <Box position="relative" fontSize={['14px', '16px']} mb="20" mt="12">
+      <CodeTypeTab language={props.language} bg={props.bgColors.pre} />
       <Box
         py="6"
         borderRadius="lg"
         maxH="70vh"
         overflow="auto"
         bgColor={props.bgColors.pre}
+        sx={{
+          '.linenumber': {
+            minWidth: '3.25em !important', // Fix odd changing minwidth
+          },
+        }}
       >
         {props.children}
       </Box>

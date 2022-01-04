@@ -1,15 +1,21 @@
 import { Box } from '@chakra-ui/react'
 
-export const CodeTypeTab = ({ language }: { language: string }) => (
+export const CodeTypeTab = ({
+  language,
+  bg,
+}: {
+  language: string
+  bg: string
+}) => (
   <Box
     position="absolute"
     fontFamily="body"
-    top="-16px"
+    top="-24px"
     right="40px"
-    backgroundColor="primary"
+    backgroundColor={bg}
     borderRadius="lg"
-    padding="2px 8px"
-    color="surfaceDark"
+    padding="4px 12px"
+    color="primary"
     fontWeight="medium"
     fontSize="md"
   >
