@@ -20,6 +20,7 @@ export type PreviewImageKeys =
   | 'stakingEth2'
   | 'favorites'
   | 'remix'
+  | 'vscodeSnippets'
 
 export type SnippetsFrontmatter = CoreFrontmatter & {
   data: {
