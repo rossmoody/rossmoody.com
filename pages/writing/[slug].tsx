@@ -1,11 +1,13 @@
 import React from 'react'
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { serialize } from 'next-mdx-remote/serialize'
 import getPostData from 'utils/getPostData'
-import { WRITING_MDX_FILES } from 'utils/constants'
-import { components, PageHeader, Seo } from 'components'
+import rehypePlugins from 'utils/rehypePlugins'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import { MDXRemoteSerializeResult, MDXRemote } from 'next-mdx-remote'
-import { WritingFrontmatter } from 'utils/getFrontMatter'
+import { serialize } from 'next-mdx-remote/serialize'
+import { WRITING_MDX_FILE_SLUGS } from 'utils/constants'
+import { components, PageHeader, Seo } from 'components'
+
+import type { WritingFrontmatter } from 'utils/getFrontMatter'
 
 export type PostPageProps = {
   source: MDXRemoteSerializeResult
@@ -32,32 +34,25 @@ export default function Post({ frontMatter, source }: PostPageProps) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  try {
-    const { content, frontMatter } = await getPostData(params!.slug as string)
+  const { content, frontMatter } = await getPostData(params!.slug as string)
 
-    const source = await serialize(content, {
-      mdxOptions: {
-        remarkPlugins: [],
-        rehypePlugins: [],
-      },
-    })
+  const source = await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [],
+      rehypePlugins,
+    },
+  })
 
-    return {
-      props: {
-        source,
-        frontMatter,
-      },
-    }
-  } catch (error) {
-    console.log(error)
-    return { notFound: true }
+  return {
+    props: {
+      source,
+      frontMatter,
+    },
   }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = WRITING_MDX_FILES.map((path) =>
-    path.replace(/\.mdx?$/, '')
-  ).map((slug) => ({ params: { slug } }))
+  const paths = WRITING_MDX_FILE_SLUGS
 
   return {
     paths,
