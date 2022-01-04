@@ -21,26 +21,29 @@ export const CustomPreElement: CustomPreTag = (props) => {
         sx={{
           '.linenumber': {
             minWidth: '3.25em !important', // Fix odd changing minwidth
+            marginRight: '.5em !important', // Fix odd changing minwidth
           },
         }}
       >
         {props.children}
       </Box>
-      <Box
-        pt="4"
-        pb="2"
-        px="4"
-        borderRadius="lg"
-        position="absolute"
-        transform="translateY(100%)"
-        bottom="2"
-        right="0"
-        left="0"
-        bgColor={props.bgColors.fileName}
-        zIndex="-1"
-      >
-        {props.filename}
-      </Box>
+      {props.filename && (
+        <Box
+          pt="4"
+          pb="2"
+          px="4"
+          borderRadius="lg"
+          position="absolute"
+          transform="translateY(100%)"
+          bottom="2"
+          right="0"
+          left="0"
+          bgColor={props.bgColors.fileName}
+          zIndex="-1"
+        >
+          {props.filename}
+        </Box>
+      )}
     </Box>
   )
 }

@@ -1,8 +1,10 @@
 ---
 title: Defining Design System Principles
-description: An iterative set of 8 standards for building and maintaining effective design systems.
-date: Sep 2020
-image: dsPrinciples
+description: >-
+  An iterative set of 8 standards for building and maintaining effective design systems.
+date: Sep 01 2020 00:00:00 GMT-0700
+lastUpdated: Dec 01 2021 00:00:00 GMT-0700
+previewImage: dsPrinciples
 ogImage: /images/defining-ds-principles/one.png
 path: /writing/defining-ds-principles
 ---
@@ -89,8 +91,12 @@ Consistency is a result of efficiency, not the other way around. **When the syst
 It’s very easy to add. It’s almost impossible to remove. Every addition should fight to be included. This is a difficult line to draw but complexities that creep into the foundation of a design system propagate out and become much harder to amend if users get accustomed to it.
 
 <Aside>
-  The more you add, the more you maintain. **Each time something new is adopted
-  into the system, it becomes a pattern to follow in subsequent definitions**.
+  The more you add, the more you maintain.{' '}
+  <b>
+    Each time something new is adopted into the system, it becomes a pattern to
+    follow in subsequent definitions
+  </b>
+  .
 </Aside>
 
 ### 5. Think inclusively
@@ -124,19 +130,32 @@ I think about this principle a lot like the proverb _“Give a person a fish and
 
 This principle is a work in progress for me cause it’s not an easy one to follow from a practical standpoint.
 
-> Design system principle #5: Favor elegance of simple things over flexibility of complex things.
-
 Modularity is important (especially to encourage adoption) but too much and it starts to feel like a puzzle, too little and it doesn’t leave enough room for flexibility. Finding the sweet spot depends on the team, business, product, and component.
 
-<Image
-  src="/images/defining-ds-principles/four.png"
-  alt="Variation"
-  width="582px"
-  height="725px"
->
-  These variations produce a button with an icon. What is the best balance
-  between simplicity and modularity?
-</Image>
+```jsx
+// These variations produce a button with an icon.
+// What is the best balance between simplicity and modularity?
+
+// Configuration via properties
+<Button startIcon={Icon} label="Label" />
+
+// Configuration via children and properties
+<Button startIcon={Icon}>Label</Button>
+
+// Configuration via children and other components
+<Button>
+  <Icon/>
+  Label
+</Button>
+
+// Configuration via subcomponents
+<Button>
+  <Button.StartIcon>
+    <Icon/>
+  </Button.StartIcon>
+  Label
+</Button>
+```
 
 This topic is incredibly interesting to me. I think it could be several blog posts just by itself. Defining the appropriate level of customization is where design systems get to flex their influence the most but it’s also the most heavily opinionated.
 

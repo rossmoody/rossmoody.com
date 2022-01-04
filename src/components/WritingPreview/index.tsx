@@ -12,6 +12,10 @@ type WritingPreviewProps = WritingFrontmatter & {
 export const WritingPreview = (props: WritingPreviewProps) => {
   const [isHover, setIsHover] = useState(false)
 
+  const [, month, , year] = new Date(props.data.lastUpdated)
+    .toDateString()
+    .split(' ')
+
   return (
     <Well
       slug={props.slug}
@@ -31,7 +35,7 @@ export const WritingPreview = (props: WritingPreviewProps) => {
       </Box>
       <Box>
         <Text color="primary" fontWeight="medium" fontSize="sm" mb="3" mt="5">
-          {props.data.date}
+          {month} {year}
         </Text>
         <Heading fontWeight="normal" fontSize="3xl" mb="2">
           {props.data.title}

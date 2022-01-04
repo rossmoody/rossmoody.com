@@ -1,13 +1,9 @@
 import { Box, Heading } from '@chakra-ui/react'
+import { CoreFrontmatter } from 'utils/getFrontMatter'
 import { DashDivider } from '../DashDivider'
 import { Breadcrumbs } from './Breadcrumbs'
 
-export interface PageHeaderProps {
-  title: string
-  description: string
-}
-
-export const PageHeader = (props: PageHeaderProps) => (
+export const PageHeader = (props: CoreFrontmatter['data']) => (
   <Box>
     <Box maxW="720px">
       <Breadcrumbs />
@@ -16,6 +12,9 @@ export const PageHeader = (props: PageHeaderProps) => (
       </Heading>
       <Box as="p" mt="2" fontSize="xl">
         {props.description}
+      </Box>
+      <Box as="p" mt="4" color="textSubdued" fontSize="sm">
+        <b>Last updated:</b> {new Date(props.lastUpdated).toDateString()}
       </Box>
     </Box>
     <DashDivider my="8" />

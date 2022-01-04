@@ -9,13 +9,9 @@ const StyledLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
     <Tooltip label={prettifyLink(props.href)}>
       <ChakraLink
         ref={ref}
-        textDecorationColor="primary"
-        textUnderlineOffset="4px"
-        textDecorationLine="underline"
-        textDecorationStyle="dashed"
-        textDecorationThickness="1px"
         borderRadius="base"
-        color="textProminent"
+        color="primary"
+        _hover={{ color: 'textProminent' }}
         {...props}
       />
     </Tooltip>

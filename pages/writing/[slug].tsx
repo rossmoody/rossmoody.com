@@ -21,12 +21,10 @@ export default function Post({ frontMatter, source }: PostPageProps) {
         desc={frontMatter.description}
         image={frontMatter.ogImage}
         path={frontMatter.path}
-        // date={frontMatter.date}
+        date={frontMatter.date}
+        updated={frontMatter.lastUpdated}
       />
-      <PageHeader
-        title={frontMatter.title}
-        description={frontMatter.description}
-      />
+      <PageHeader {...frontMatter} />
       <MDXRemote {...source} components={components} scope={frontMatter} />
     </React.Fragment>
   )

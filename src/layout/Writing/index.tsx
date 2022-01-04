@@ -29,9 +29,9 @@ export const WritingLayout = ({ posts }: WritingPosts) => {
       <SimpleGrid columns={[1, 2]} minChildWidth="300px" spacing="8">
         {posts.map((post) => (
           <WritingPreview
-            {...post}
-            previewImage={WritingImages[post.data.image]}
+            previewImage={WritingImages[post.data.previewImage]}
             key={post.slug}
+            {...post}
           />
         ))}
       </SimpleGrid>

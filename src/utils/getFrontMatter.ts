@@ -7,17 +7,11 @@ export type CoreFrontmatter = {
     title: string
     description: string
     date: string
+    lastUpdated: string
     path: string
     ogImage: string
   }
   slug: string
-}
-
-export type SnippetsFrontmatter = CoreFrontmatter & {
-  data: {
-    type: string
-    tags: string[]
-  }
 }
 
 export type PreviewImageKeys =
@@ -27,9 +21,16 @@ export type PreviewImageKeys =
   | 'favorites'
   | 'remix'
 
+export type SnippetsFrontmatter = CoreFrontmatter & {
+  data: {
+    type: string
+    tags: string[]
+  }
+}
+
 export type WritingFrontmatter = CoreFrontmatter & {
   data: {
-    image: PreviewImageKeys
+    previewImage: PreviewImageKeys
   }
 }
 
