@@ -11,7 +11,7 @@ export const HomeLayout = () => (
     <Heading
       as="h1"
       pt="8"
-      fontSize={['32px', '48px', '52px']}
+      fontSize={['32px', '48px', '64px']}
       lineHeight={1.2}
     >
       <LinkTooltip name="intro">Hi, I&apos;m Ross.</LinkTooltip> A product
