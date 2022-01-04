@@ -1,4 +1,4 @@
-import { background, extendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import { TinyColor } from '@ctrl/tinycolor'
 
 const themes = {
@@ -93,7 +93,7 @@ export function createTheme(number: ThemeNumber) {
           fontSize: ['16px', '18px'],
           letterSpacing: '.4px',
         },
-        'b, i, em, strong, a': {
+        'b, i, em, strong': {
           color: textProminent,
         },
       },

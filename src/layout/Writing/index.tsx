@@ -6,7 +6,7 @@ import dsPrinciples from 'images/defining-ds-principles/one.png'
 import stakingEth2 from 'images/staking-eth-2/one.png'
 import favorites from 'images/favorites-q4-2021/one.png'
 import remix from 'images/remix-stitches/one.png'
-// import vscodeSnippets from 'images/how-to-vscode-snippets/carbon.png'
+import vscodeSnippets from 'images/how-to-vscode-snippets/carbon.png'
 
 const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
   dsDocumentation,
@@ -14,7 +14,7 @@ const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
   stakingEth2,
   favorites,
   remix,
-  // vscodeSnippets,
+  vscodeSnippets,
 }
 
 export const WritingLayout = ({ posts }: WritingPosts) => {
@@ -29,13 +29,17 @@ export const WritingLayout = ({ posts }: WritingPosts) => {
       </Text>
       <DashDivider my="8" />
       <SimpleGrid columns={[1, 2]} minChildWidth="300px" spacing="8">
-        {posts.map((post) => (
-          <WritingPreview
-            previewImage={WritingImages[post.data.previewImage]}
-            key={post.slug}
-            {...post}
-          />
-        ))}
+        {posts.map((post) => {
+          if (post.data.flag) return null // Story in progress
+
+          return (
+            <WritingPreview
+              previewImage={WritingImages[post.data.previewImage]}
+              key={post.slug}
+              {...post}
+            />
+          )
+        })}
       </SimpleGrid>
     </SlideFade>
   )

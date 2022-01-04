@@ -10,6 +10,7 @@ export type CoreFrontmatter = {
     lastUpdated: string
     path: string
     ogImage: string
+    flag: boolean
   }
   slug: string
 }
@@ -20,7 +21,7 @@ export type PreviewImageKeys =
   | 'stakingEth2'
   | 'favorites'
   | 'remix'
-// | 'vscodeSnippets'
+  | 'vscodeSnippets'
 
 export type SnippetsFrontmatter = CoreFrontmatter & {
   data: {
