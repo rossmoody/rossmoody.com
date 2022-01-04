@@ -1,13 +1,12 @@
 import React from 'react'
 import getPostData from 'utils/getPostData'
 import rehypePlugins from 'utils/rehypePlugins'
+import { WRITING_MDX_FILE_SLUGS } from 'utils/constants'
+import type { WritingFrontmatter } from 'utils/getFrontMatter'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { MDXRemoteSerializeResult, MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { WRITING_MDX_FILE_SLUGS } from 'utils/constants'
 import { components, PageHeader, Seo } from 'components'
-
-import type { WritingFrontmatter } from 'utils/getFrontMatter'
 
 export type PostPageProps = {
   source: MDXRemoteSerializeResult

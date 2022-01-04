@@ -7,7 +7,9 @@ export const SnippetsLayout = ({ posts }: SnippetsPosts) => (
     <Box as="h1" textStyle="h1">
       Snippets
     </Box>
-    <Text>Helpful code snippets I find myself repeatedly referencing.</Text>
+    <Text>
+      Helpful code snippets I find myself repeatedly referencing and using.
+    </Text>
     <DashDivider my="8" />
     <SimpleGrid columns={[1, 2, 3]} spacing="6">
       {posts.map((post) => (
