@@ -6,7 +6,7 @@ import dsPrinciples from 'images/defining-ds-principles/one.png'
 import stakingEth2 from 'images/staking-eth-2/one.png'
 import favorites from 'images/favorites-q4-2021/one.png'
 import remix from 'images/remix-stitches/one.png'
-import vscodeSnippets from 'images/how-to-vscode-snippets/carbon.png'
+// import vscodeSnippets from 'images/how-to-vscode-snippets/carbon.png'
 
 const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
   dsDocumentation,
@@ -14,7 +14,7 @@ const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
   stakingEth2,
   favorites,
   remix,
-  vscodeSnippets,
+  // vscodeSnippets,
 }
 
 export const WritingLayout = ({ posts }: WritingPosts) => {
