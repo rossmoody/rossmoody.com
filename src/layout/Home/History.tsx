@@ -1,11 +1,11 @@
-import React from 'react'
 import { Heading } from '@chakra-ui/react'
+import React from 'react'
 import { Footnote as Note } from './Footnote'
 import { LinkTooltip as Tip } from './LinkTooltip'
 
 export const History = () => (
   <Heading
-    fontSize={['xl', '2xl', '3xl']}
+    fontSize={['lg', 'xl', '2xl']}
     lineHeight="1.4"
     as="p"
     fontWeight="normal"
@@ -32,8 +32,8 @@ export const History = () => (
     <br />
     <br />
     These days I split my time between being a Principal Design Technologist at{' '}
-    <Tip name="splunk">Splunk</Tip> and studying to get my Masters in Computer
-    Science from Stanford. I like <Note name="french" words="French Bulldogs" />
+    <Tip name="splunk">Splunk</Tip> and pursuing a Masters in Computer Science
+    from Stanford. I like <Note name="french" words="French Bulldogs" />
     , <Note name="cryptocurrency" words="cryptocurrency" />, and my{' '}
     <Tip name="aprilia">Aprilia</Tip> RS 660. If you let me too close to your
     closet I&apos;ll <Note name="organize" words="organize it" />.
