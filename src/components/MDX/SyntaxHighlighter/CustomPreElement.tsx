@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react'
+import { ScrollArea } from 'components'
 import { CodeTypeTab } from './CodeTypeTab'
 import { getBgColors } from './utils'
 
@@ -12,21 +13,24 @@ export const CustomPreElement: CustomPreTag = (props) => {
   return (
     <Box position="relative" fontSize={['14px', '16px']} mb="20" mt="12">
       <CodeTypeTab language={props.language} bg={props.bgColors.pre} />
-      <Box
-        py="6"
-        borderRadius="lg"
-        maxH="70vh"
-        overflow="auto"
-        bgColor={props.bgColors.pre}
-        sx={{
-          '.linenumber': {
-            minWidth: '3.25em !important', // Fix odd changing minwidth
-            marginRight: '.5em !important', // Fix odd changing minwidth
-          },
-        }}
-      >
-        {props.children}
-      </Box>
+      <ScrollArea>
+        <Box maxH="70vh">
+          <Box
+            bgColor={props.bgColors.pre}
+            height="100%"
+            py="6"
+            borderRadius="lg"
+            sx={{
+              '.linenumber': {
+                minWidth: '3.25em !important', // Fix odd changing minwidth
+                marginRight: '.5em !important',
+              },
+            }}
+          >
+            {props.children}
+          </Box>
+        </Box>
+      </ScrollArea>
       {props.filename && (
         <Box
           pt="4"
