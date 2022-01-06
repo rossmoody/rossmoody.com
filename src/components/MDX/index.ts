@@ -1,9 +1,9 @@
 import { Kbd } from '@chakra-ui/react'
-import { Aside } from './Aside'
 import { DashDivider } from '../DashDivider'
-import { Image } from './Image'
 import { Link } from '../Link'
 import { PageHeader } from '../PageHeader'
+import { Aside } from './Aside'
+import { Image } from './Image'
 import { SyntaxHighlighter } from './SyntaxHighlighter'
 import * as T from './Typography'
 

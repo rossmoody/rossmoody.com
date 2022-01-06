@@ -1,6 +1,12 @@
 import fs from 'fs'
-import path from 'path'
 import matter from 'gray-matter'
+import path from 'path'
+import {
+  SNIPPETS_MDX_FILE_PATHS,
+  SNIPPETS_POST_DIRECTORY,
+  WRITING_MDX_FILE_PATHS,
+  WRITING_POST_DIRECTORY,
+} from './constants'
 
 export type CoreFrontmatter = {
   data: {
@@ -38,15 +44,24 @@ export type WritingFrontmatter = CoreFrontmatter & {
 
 export type SnippetsPosts = { posts: SnippetsFrontmatter[] }
 export type WritingPosts = { posts: WritingFrontmatter[] }
-export type DirectoryPaths = '/posts/snippets' | '/posts/writing'
 
-function getFrontMatter(directory: DirectoryPaths) {
-  const dir = path.join(process.cwd(), directory)
-  const files = fs.readdirSync(dir)
+const postTypes = {
+  writing: {
+    filePaths: WRITING_MDX_FILE_PATHS,
+    directory: WRITING_POST_DIRECTORY,
+  },
+  snippets: {
+    filePaths: SNIPPETS_MDX_FILE_PATHS,
+    directory: SNIPPETS_POST_DIRECTORY,
+  },
+}
 
-  const posts = files.map((filename) => {
+function getFrontMatter(key: keyof typeof postTypes) {
+  const { filePaths, directory } = postTypes[key]
+
+  const posts = filePaths.map((filename) => {
     const slug = filename.split('.')[0]
-    const fullPath = path.join(dir, `${slug}.mdx`)
+    const fullPath = path.join(directory, `${slug}.mdx`)
     const markdownWithMeta = fs.readFileSync(fullPath, 'utf-8')
     const { data } = matter(markdownWithMeta)
 

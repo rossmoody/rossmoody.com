@@ -5,7 +5,7 @@ import { Breadcrumbs } from './Breadcrumbs'
 
 export const PageHeader = (props: CoreFrontmatter['data']) => (
   <Box>
-    <Box maxW="720px">
+    <Box maxW="800px">
       <Breadcrumbs />
       <Heading as="h1" fontSize={['32px', '48px', '52px']} lineHeight={1.2}>
         {props.title}

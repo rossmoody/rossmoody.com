@@ -1,37 +1,23 @@
-import React from 'react'
+import { components } from 'components'
+import { PostLayout, PostPageProps } from 'layout/Post'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
+import { WRITING_MDX_FILE_PATHS, WRITING_POST_DIRECTORY } from 'utils/constants'
 import getPostData from 'utils/getPostData'
 import rehypePlugins from 'utils/rehypePlugins'
-import { WRITING_MDX_FILE_SLUGS } from 'utils/constants'
-import type { WritingFrontmatter } from 'utils/getFrontMatter'
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { MDXRemoteSerializeResult, MDXRemote } from 'next-mdx-remote'
-import { serialize } from 'next-mdx-remote/serialize'
-import { components, PageHeader, Seo } from 'components'
 
-export type PostPageProps = {
-  source: MDXRemoteSerializeResult
-  frontMatter: WritingFrontmatter['data']
-}
-
-export default function Post({ frontMatter, source }: PostPageProps) {
-  return (
-    <React.Fragment>
-      <Seo
-        title={frontMatter.title}
-        desc={frontMatter.description}
-        image={frontMatter.ogImage}
-        path={frontMatter.path}
-        date={frontMatter.date}
-        updated={frontMatter.lastUpdated}
-      />
-      <PageHeader {...frontMatter} />
-      <MDXRemote {...source} components={components} scope={frontMatter} />
-    </React.Fragment>
-  )
-}
+const Post = ({ frontMatter, source }: PostPageProps) => (
+  <PostLayout frontMatter={frontMatter}>
+    <MDXRemote {...source} components={components} scope={frontMatter} />
+  </PostLayout>
+)
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { content, frontMatter } = await getPostData(params!.slug as string)
+  const { content, frontMatter } = await getPostData(
+    params!.slug as string,
+    WRITING_POST_DIRECTORY
+  )
 
   const source = await serialize(content, {
     mdxOptions: {
@@ -49,10 +35,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = WRITING_MDX_FILE_SLUGS
+  const paths = WRITING_MDX_FILE_PATHS.map((path) =>
+    path.replace(/\.mdx?$/, '')
+  ).map((slug) => ({ params: { slug } }))
 
   return {
     paths,
     fallback: false,
   }
 }
+
+export default Post

@@ -33,11 +33,11 @@ Remix feels conceptually similar but where files live and how they are named see
 
 I ran into some snags for setting up Stitches and Remix at first. The setup was a breeze: install both packages, run the dev server, and import a Stitches styled component into a page route. However, the nuance of SSR, having the site load without an initial flash of unstyled content ([also known as FART](https://css-tricks.com/flash-of-inaccurate-color-theme-fart/)), and tracking a user’s theme state were a little trickier. This is especially true if I wanted to detect prefers-color-scheme dynamically.
 
-### ❌ Attempt #1
+### Failed Attempt #1
 
 At first, I set up the site using [Stitches SSR documentation](https://stitches.dev/docs/server-side-rendering). My styles were rendered correctly, but this approach caused some odd hydration errors in the console and didn’t fix my FART. Interestingly, my styles rendered fine without doing this part at all.
 
-### 😑 Attempt #2
+### Meh Attempt #2
 
 I was about to start following the [CSS-in-JS instructions on Remix’s site](https://remix.run/docs/en/v1/guides/styling#css-in-js-libraries), and I imagine it would have worked just fine, but I wanted to eliminate the need for a “throwaway” render.
 
@@ -85,7 +85,7 @@ export default function App() {
 }
 ```
 
-### 🎉 Winning Attempt #3
+### Winning Attempt #3
 
 [Jenna Smith](https://twitter.com/jjenzz) from Modulz hopped in [with a simple gist](https://twitter.com/jjenzz/status/1472500698185191428) that worked like a charm. I have to imagine altering the head tag via regex isn’t the ideal solution, but it works. Speculating from the tweet, Stitches may be hot on the trail of a static CSS mechanism, which will make all this a whole lot easier.
 

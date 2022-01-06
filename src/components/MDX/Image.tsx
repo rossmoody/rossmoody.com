@@ -5,7 +5,12 @@ export const Image = (props: ImageProps) => {
   const { alt, width, children, ...rest } = props
 
   return (
-    <Center my="12">
+    <Center
+      my="12"
+      _first={{
+        marginTop: '0',
+      }}
+    >
       <Box width={width}>
         <NextImage alt={props.alt} width={width} {...rest} quality={50} />
         {props.children && (

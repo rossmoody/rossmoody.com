@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react'
+import { DefaultSeo } from 'components'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { ThemeProvider } from 'providers/ThemeProvider'
-import { Layout } from 'layout'
-import { DefaultSeo } from 'components'
+import React, { useEffect } from 'react'
 import * as gtag from 'utils/analytics'
 import '../public/fonts.css'
 
@@ -24,9 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <React.Fragment>
       <DefaultSeo />
       <ThemeProvider>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>
   )
