@@ -14,7 +14,12 @@ export const TableOfContents = () => {
   }, [])
 
   return (
-    <Box as="aside" pos="sticky" top="20">
+    <Box
+      as="aside"
+      display={{ base: 'none', md: 'block' }}
+      pos="sticky"
+      top="20"
+    >
       <Box as="nav">
         <Text
           as="h2"
