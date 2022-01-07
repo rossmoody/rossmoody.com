@@ -1,7 +1,6 @@
-import { DefaultSeo } from 'components'
+import { DefaultSeo, ThemeProvider } from 'components'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
-import { ThemeProvider } from 'providers/ThemeProvider'
 import React, { useEffect } from 'react'
 import * as gtag from 'utils/analytics'
 import '../public/fonts.css'

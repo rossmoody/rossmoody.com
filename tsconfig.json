@@ -6,7 +6,6 @@
       "components/*": ["src/components/*"],
       "layout": ["src/layout"],
       "layout/*": ["src/layout/*"],
-      "providers/*": ["src/providers/*"],
       "images/*": ["public/images/*"],
       "utils/*": ["src/utils/*"]
     },

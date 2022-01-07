@@ -1,5 +1,5 @@
+import { BlogJsonLd, DefaultSeo as NextDefaultSeo } from 'next-seo'
 import React from 'react'
-import { DefaultSeo as NextDefaultSeo, BlogJsonLd } from 'next-seo'
 import config from './config'
 
 interface Props {

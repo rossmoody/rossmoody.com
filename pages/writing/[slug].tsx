@@ -7,11 +7,13 @@ import { WRITING_MDX_FILE_PATHS, WRITING_POST_DIRECTORY } from 'utils/constants'
 import getPostData from 'utils/getPostData'
 import rehypePlugins from 'utils/rehypePlugins'
 
-const Post = ({ frontMatter, source }: PostPageProps) => (
-  <PostLayout frontMatter={frontMatter}>
-    <MDXRemote {...source} components={components} scope={frontMatter} />
-  </PostLayout>
-)
+export default function Post({ frontMatter, source }: PostPageProps) {
+  return (
+    <PostLayout frontMatter={frontMatter}>
+      <MDXRemote {...source} components={components} scope={frontMatter} />
+    </PostLayout>
+  )
+}
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { content, frontMatter } = await getPostData(
@@ -44,5 +46,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   }
 }
-
-export default Post

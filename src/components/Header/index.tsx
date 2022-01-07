@@ -1,9 +1,9 @@
-import { IconButton, Flex, Divider } from '@chakra-ui/react'
+import { Divider, Flex, IconButton } from '@chakra-ui/react'
+import { useTheme } from 'components'
 import { ThemeNumber } from 'utils/createTheme'
-import { useTheme } from 'providers/ThemeProvider'
+import { Logo } from './Logo'
 import { NavLink } from './NavLink'
 import { ThemeIcon } from './ThemeIcon'
-import { Logo } from './Logo'
 
 export const Header = () => {
   const { theme, setTheme } = useTheme()

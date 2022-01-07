@@ -13,10 +13,8 @@ function sortByLastUpdated(
     : -1
 }
 
-const WritingOverview = ({ posts }: WritingPosts) => (
-  <WritingLayout posts={posts.sort(sortByLastUpdated)} />
-)
+export default function WritingOverview({ posts }: WritingPosts) {
+  return <WritingLayout posts={posts.sort(sortByLastUpdated)} />
+}
 
 export const getStaticProps = async () => getFrontMatter('writing')
-
-export default WritingOverview
