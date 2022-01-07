@@ -81,6 +81,10 @@ export function createTheme(number: ThemeNumber) {
         },
       },
     },
+    shadows: {
+      outline: '0 0 0 2px',
+      outlineColor: 'primary',
+    },
     styles: {
       global: {
         body: {

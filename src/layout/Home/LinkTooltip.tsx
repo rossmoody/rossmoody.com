@@ -1,4 +1,5 @@
-import { Tooltip, Text, Link } from '@chakra-ui/react'
+import { Text, Tooltip } from '@chakra-ui/react'
+import { ChakraNextLink } from './ChakraNextLink'
 import links from './data/links.json'
 
 interface TooltipLabelProps {
@@ -8,7 +9,7 @@ interface TooltipLabelProps {
 
 const TooltipLabel = (props: TooltipLabelProps) => (
   <>
-    <Text fontWeight="medium" fontSize="md" lineHeight={1.25} mb="2">
+    <Text fontWeight="medium" fontSize="md" lineHeight={1.25} mb="1">
       {props.label}
     </Text>
     <Text fontSize="sm" lineHeight={1}>
@@ -31,14 +32,12 @@ export const LinkTooltip = (props: LinkTooltipProps) => {
       bg="primary"
       color="surface"
       placement="top"
-      maxW="350px"
-      borderRadius="8px"
+      maxW="400px"
+      borderRadius="lg"
       fontWeight="400"
       padding="12px 16px"
     >
-      <Link href={link} color="primary">
-        {props.children}
-      </Link>
+      <ChakraNextLink href={link}>{props.children}</ChakraNextLink>
     </Tooltip>
   )
 }

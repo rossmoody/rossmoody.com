@@ -1,7 +1,7 @@
 import { Grid, GridItem } from '@chakra-ui/react'
-import favorites from './data/favorites.json'
-import { SectionTitle } from './SectionTitle'
-import { SectionFavorite } from './SectionFavorite'
+import favorites from '../data/favorites.json'
+import { SectionTitle } from '../SectionTitle'
+import { Favorite } from './Favorite'
 
 export const Favorites = () => (
   <Grid
@@ -14,7 +14,7 @@ export const Favorites = () => (
     </GridItem>
     {Object.values(favorites).map((favorite) => (
       <GridItem colSpan={1} key={favorite.title}>
-        <SectionFavorite
+        <Favorite
           pretext={favorite.pretext}
           heading={favorite.title}
           items={favorite.items}

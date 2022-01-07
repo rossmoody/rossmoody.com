@@ -1,5 +1,5 @@
-import NextLink from 'next/link'
-import { Box, Text, Link, Heading } from '@chakra-ui/react'
+import { Box, Heading, Text } from '@chakra-ui/react'
+import { ChakraNextLink } from './ChakraNextLink'
 
 interface SectionItemProperties {
   pretext: string
@@ -14,13 +14,9 @@ export const SectionItem = (props: SectionItemProperties) => (
     <Text fontWeight="medium" mb="8px" letterSpacing=".5px">
       {props.pretext}
     </Text>
-    <NextLink href={props.link} passHref>
-      <Link color="primary">
-        <Heading fontWeight="400" as="h3" color="inherit">
-          {props.heading}
-        </Heading>
-      </Link>
-    </NextLink>
+    <Heading fontWeight="400" as="h2" color="inherit">
+      <ChakraNextLink href={props.link}>{props.heading}</ChakraNextLink>
+    </Heading>
     <Text letterSpacing=".3px">{props.description}</Text>
   </Box>
 )

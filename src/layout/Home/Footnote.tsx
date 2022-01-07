@@ -1,13 +1,12 @@
 import { Text, Tooltip } from '@chakra-ui/react'
 import footnotes from './data/footnotes.json'
 
-export const Footnote = ({
-  name,
-  words,
-}: {
+type Footnote = {
   name: keyof typeof footnotes
   words: string
-}) => {
+}
+
+export const Footnote = ({ name, words }: Footnote) => {
   return (
     <Tooltip
       label={footnotes[name]}
@@ -28,6 +27,12 @@ export const Footnote = ({
         textDecorationColor="primary"
         _hover={{ cursor: 'help' }}
         tabIndex={0}
+        outline="none"
+        borderRadius="base"
+        _focusVisible={{
+          outline: '0 0 0 2px',
+          outlineColor: 'primary',
+        }}
       >
         {words}
       </Text>

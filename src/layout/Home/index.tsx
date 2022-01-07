@@ -1,7 +1,7 @@
 import { Heading, SlideFade } from '@chakra-ui/react'
 import { DashDivider } from 'components/DashDivider'
 import { Layout } from 'layout'
-import { Favorites } from './Favorites'
+import { Favorites } from './favorites/FavoritesSection'
 import { History } from './History'
 import { LinkTooltip } from './LinkTooltip'
 import { Projects } from './Projects'
