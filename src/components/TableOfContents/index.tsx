@@ -31,9 +31,9 @@ export const TableOfContents = () => {
         >
           Table of Contents
         </Text>
-        {headings.map((heading) => (
+        {headings.map((heading, index) => (
           <FragmentLink
-            key={heading.href}
+            key={`${heading.href}-${index}`}
             heading={heading}
             active={activeFragment === heading.item}
             setActiveFragment={setActiveFragment}
@@ -58,7 +58,7 @@ const getHeadings = (root: HTMLElement) => {
 const makeHeadingObject = (item: HTMLHeadingElement) => {
   const textContent = item.textContent ?? ''
   const childAnchorElement = item.querySelector('a')
-  const href = childAnchorElement?.href ?? '#'
+  const href = childAnchorElement?.getAttribute('data-href') ?? '#'
 
   return {
     item,

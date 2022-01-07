@@ -162,13 +162,10 @@ export const ScrollArea: React.FC = ({ children }) => {
         ref={contentRef}
         position="relative"
         overflow="scroll"
-        scrollbarWidth="none"
         zIndex={1}
         sx={{
           '&::-webkit-scrollbar': { display: 'none' },
-        }}
-        style={{
-          WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none',
         }}
       >
         {children}
