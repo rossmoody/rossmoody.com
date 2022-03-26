@@ -38,10 +38,6 @@
     "title": "Analog",
     "items": [
       {
-        "link": "https://www.lamy.com/en/lamy-2000/",
-        "name": "Lamy 2000 EF"
-      },
-      {
         "link": "https://www.baronfig.com/tools/confidant/classic?size=plus+%287%22+x+10%22%29&paper+type=ruled&color=charcoal",
         "name": "Baron Fig Notebook"
       },
@@ -54,8 +50,8 @@
         "name": "Technivorm Mochamaster"
       },
       {
-        "link": "https://www.aersf.com/tech-pack-2-black",
-        "name": "Aer Tech Pack 2"
+        "link": "https://www.aersf.com",
+        "name": "Aer Travel Bag 3"
       }
     ]
   },
@@ -68,8 +64,8 @@
         "name": "Logitech Vertical Mouse"
       },
       {
-        "link": "https://www.zsa.io/moonlander/",
-        "name": "Moonlander Keyboard"
+        "link": "https://kinesis-ergo.com/shop/advantage2/",
+        "name": "Kinesis Advantage 2 Keyboard"
       },
       {
         "link": "https://www.bluemic.com/en-us/products/snowball/",
@@ -78,10 +74,6 @@
       {
         "link": "https://www.apple.com/shop/buy-mac/macbook-pro/14-inch-space-gray-10-core-cpu-16-core-gpu-1tb#",
         "name": "Macbook Pro 14\" M1 Max"
-      },
-      {
-        "link": "https://us.kobobooks.com/products/kobo-libra-h2o?utm_source=Kobo&utm_medium=TopNav&utm_campaign=Libra",
-        "name": "Kobo Libra H20"
       },
       {
         "link": "https://www.apple.com/airpods-max/",
@@ -130,10 +122,6 @@
       {
         "link": "https://www.drinktrade.com/",
         "name": "DrinkTrade Coffee"
-      },
-      {
-        "link": "https://www.udemy.com/",
-        "name": "Udemy"
       },
       {
         "link": "https://www.pocketcasts.com/",

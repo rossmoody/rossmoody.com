@@ -1,4 +1,4 @@
-import { Heading, SimpleGrid, SlideFade, Text } from '@chakra-ui/react'
+import { Box, Heading, SimpleGrid, SlideFade, Text } from '@chakra-ui/react'
 import { DashDivider, WritingPreview } from 'components'
 import dsPrinciples from 'images/defining-ds-principles/one.png'
 import dsDocumentation from 'images/effective-ds-documentation/one.png'
@@ -21,9 +21,11 @@ const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
 export const WritingLayout = ({ posts }: WritingPosts) => (
   <Layout>
     <SlideFade in={true} offsetY="12px">
-      <Heading as="h1" fontSize={['40px', '48px', '56px']}>
-        Writing
-      </Heading>
+      <Box maxW="720px">
+        <Heading as="h1" fontSize={['40px', '48px', '56px']}>
+          Writing
+        </Heading>
+      </Box>
       <Text>
         Thoughts in written form on design systems, programming, cryptocurrency,
         everyday-carry, and other interests.

@@ -4,10 +4,10 @@ import getFrontMatter, {
   WritingPosts,
 } from 'utils/getFrontMatter'
 
-function sortByLastUpdated(
+const sortByLastUpdated = (
   postA: WritingFrontmatter,
   postB: WritingFrontmatter
-) {
+) => {
   return new Date(postA.data.lastUpdated) < new Date(postB.data.lastUpdated)
     ? 1
     : -1
