@@ -53,20 +53,28 @@ If I’m honest, they shift monthly (just like a design system). Some weeks I’
 
 ## My Values
 
-Simple, Intuitive, Flexible, Inclusive
+- Simple
+- Intuitive
+- Composable
+- Inclusive
 
 ## My Principles
 
 ### 1. Tools over rules
 
-Think of the system as a toolbox, not an instruction manual. Support the community, don’t block them. Design systems are about empowering others with tools and information to improve upon what has already been built — not police against it.
+Think of the system as a toolbox, not an instruction manual. Support the community, don’t govern them. Design systems are about supporting others with tools and information to improve upon what has already been built — not police against it.
+
+For me, this could be the only principle on this page as it underpins everything else. Design systems are massively subjective, but they have a tendency to position themselves as the "right" or "best" way to do something.
+
+It took me many years to realize, there is no "right" or "best" way. It's always a collection of decisions that are the byproduct of prioritizing certain values over others.
 
 ### 2. Lead by example, not by explanation
 
 Show best practices with real examples, not instructions on how to recreate them. Writing an instruction manual on design patterns is laborious to write and read. **It’s significantly easier to adopt, understand, update, maintain and implement from live examples.**
 
-Also, a system can’t, and shouldn’t, try to predict every situation a component will be used in with documentation. [In my experience, trying to document every scenario](/writing/effective-ds-documentation) ends up creating a laundry list of exceptions. For example:
-Buttons always lead with a verb… except for common actions like “Done”, “Cancel” or “OK” … but OK is only permitted in mobile applications… and this doesn’t apply to Button Groups… and not when button length might cause problems in compact UIs.
+Also, a system can’t, and shouldn’t, try to predict every situation a component will be used in with documentation. [In my experience, trying to document every scenario](/writing/effective-ds-documentation) ends up creating a laundry list of exceptions.
+
+For example: Buttons always lead with a verb… except for common actions like “Done”, “Cancel” or “OK” … but OK is only permitted in mobile applications… and this doesn’t apply to Button Groups… and not when button length might cause problems in compact UIs.
 
 <Image
   src="/images/defining-ds-principles/three.jpeg"
@@ -75,11 +83,13 @@ Buttons always lead with a verb… except for common actions like “Done”, �
   height="977px"
 />
 
-### 3. The goal is efficiency, not consistency
+### 3. The goal is cohesion, not consistency
 
-There are a lot of goals of a design system: consistency, usability, coherence, consolidation, accessibility, efficiency… the list goes on. The point of this principle is to remember the primary driver for a design system is not to enforce consistency.
+There are a lot of goals of a design system: consistency, usability, coherence, developer experience, designer experience, accessibility, efficiency… the list goes on. The point of this principle is to remember the primary driver for a design system is not to enforce consistency.
 
-Consistency is a result of efficiency, not the other way around. **When the system is intuitive and empowering to use, consistency becomes an automatic by-product of adoption**. Sure, consistency is a key consideration but when it’s the main priority of the system it becomes a self-governing restriction that causes stagnation.
+Consistency is the automatic result of a system that is a joy to use. **When the system is intuitive and composable, consistency becomes an automatic by-product of adoption**. Sure, consistency is a key consideration but when it’s the main priority of the system it becomes a self-governing restriction that causes stagnation.
+
+Let me phrase this a different way: if the primary goal of your design system is consistency, then fundamentally the first reaction to any change will be "no" on the basis that it's different. That has always felt like an unapproachable and uninspiring way to create.
 
 ### 4. Remove what’s not absolutely necessary and perfect what remains
 
@@ -105,8 +115,6 @@ How a system defines, references, talks about, and curates its design tokens (of
 For instance, a color is very rarely only a “color” when in a design system. It’s much more likely an abstracted token like “primary-color” or “text-color”.
 Thinking this way helps abstract the visual aesthetic away from the raw values to [how design attributes get applied to the context of the entire system](https://designsystem.digital.gov/design-tokens/#using-design-tokens). This is particularly helpful (a requirement, really) when designing with themes in mind.
 
-Animated example of Design Token implementation
-
 <Aside>
   Adobe Spectrum’s{' '}
   <a href="https://spectrum.adobe.com/page/design-tokens/">
@@ -115,20 +123,23 @@ Animated example of Design Token implementation
   is particularly wonderful.
 </Aside>
 
-### 7. The system succeeds when it can be used independent of its creators
+### 7. Trust your designers and engineers
 
-This is more of a north star than a principle but I find it to be a particularly useful periodic gut check. The system succeeds when it equips others with the principles, knowledge, and tools to solve problems without the design systems team.
+This is more of a north star than a principle but I find it to be a particularly useful periodic gut check: the system succeeds when it can be used independent of its creators. That is to say, the system should equip others with the principles, knowledge, and tools to solve problems without the design systems team.
 
-I think about this principle a lot like the proverb _“Give a person a fish and you feed them for a day; teach a person to fish and you feed them for a lifetime.”_ I find it to be a much more rewarding experience when the system strives to inspire the approach to solving problems vs being the catalog of previous solutions to them.
+I think about this principle a lot like the proverb _“Give a person a fish and you feed them for a day; teach a person to fish and you feed them for a lifetime.”_ I find it to be a much more rewarding experience when the system strives to inspire the approach to solving problems vs being the prescriptive guide of previous solutions to them.
 
-### 8. Flexible enough for different scenarios, specific enough to be useful
+The other aspect of this principle bleeds into #8. I find if you stop trusting your designers and engineers to use the components accessibly and effectively it results in tightening your grip on the composability in an attempt to ensure it. This may seem positive at first, but over the long term, it promotes a restrictive mentality that ultimately has diminishing return as users break apart and/or sidestep the system entirely in pursuit of more freedom.
+
+### 8. Composability over control
 
 This principle is a work in progress for me cause it’s not an easy one to follow from a practical standpoint.
 
-Modularity is important (especially to encourage adoption) but too much and it starts to feel like a puzzle, too little and it doesn’t leave enough room for flexibility. Finding the sweet spot depends on the team, business, product, and component.
+Composabilityy is important but too much and it starts to feel like a puzzle. Too little and it doesn’t leave enough room to flex. Finding the sweet spot is difficult and in my experience, largely subjective.
+
+Take the below example. Each variation produces a button with an icon. There are objective pros and cons for each approach but at the end of the day the chosen execution is based on preference.
 
 ```jsx
-// These variations produce a button with an icon.
 // What is the best balance between simplicity and modularity?
 
 // Configuration via properties
@@ -158,7 +169,7 @@ This topic is incredibly interesting to me. I think it could be several blog pos
 
 ## Credits
 
-Full disclosure: I appropriated 50% of these principles and internalized them at various points in my career. Some sources I remember, some I don’t. It’s highly unlikely I wrote a single one of these solely from my own head.
+Full disclosure: I appropriated 25% of these principles and internalized them at various points in my career. Some sources I remember, some I don’t. It’s highly unlikely I wrote a single one of these solely from my own head.
 
 - “Tools not rules” is [from a talk by Jess Clark](https://www.rethinkhq.com/videos/elevating-the-experience-of-your-design-system-jess-clark). To my defense, she said she stole it from a coworker. Originally I was saying “Guidance not governance” and I tried to change it up to “Rationale not rules” but let’s be honest, both are shit in comparison.
 - “The system succeeds when it can be used independent of its creators” is from an [incredible talk by Rich Fulcher](https://www.rethinkhq.com/videos/communicating-design-principles-at-scale-rich-fulcher-material-design-google).
