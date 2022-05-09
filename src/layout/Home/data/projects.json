@@ -1,14 +1,20 @@
 {
+  "cryptocons": {
+    "pretext": "Icon Library",
+    "heading": "Cryptocons",
+    "link": "https://cryptocons.io",
+    "description": "Cryptocons is an open-source library of cryptocurrency SVG icons, React components, and utility functions that make it easier to jumpstart your next cryptocurrency project."
+  },
   "linkRoamer": {
     "pretext": "Browser Extension",
     "heading": "Link Roamer",
-    "link": "https://www.linkroamer.com",
+    "link": "https://linkroamer.com",
     "description": "Link Roamer is a free and open-source browser extension for finding, organizing, inspecting, bookmarking, grouping, and exporting all the links on a page. It's pretty good at finding redirects and broken links, too."
   },
   "svgGobbler": {
     "pretext": "Browser Extension",
     "heading": "SVG Gobbler",
-    "link": "https://www.svggobbler.com",
+    "link": "https://svggobbler.com",
     "description": "SVG Gobbler is a browser extension that finds the vector content on the page you're viewing and gives you the option to download, optimize, copy, view the code, or export it as an image. Proud to say there are over 20k people gobbling SVGs with this extension."
   },
   "fomo": {
