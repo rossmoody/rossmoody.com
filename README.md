@@ -50,3 +50,9 @@ There is also code inside that is based on snippets from folks much smarter than
 - [Pedro Duarte](https://github.com/peduarte)
 - [Maxime Heckel](https://github.com/MaximeHeckel/blog.maximeheckel.com)
 - [Nikolov Lazar](https://github.com/nikolovlazar/nikolovlazar.com)
+
+---
+
+## More apps by me
+
+I like making things. [Check out what I'm up to lately](https://rossmoody.com).
