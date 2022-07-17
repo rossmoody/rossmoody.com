@@ -229,6 +229,7 @@ import {
   HeadersFunction,
 } from 'remix'
 import { getColorScheme } from './cookies'
+import { globalStyles } from '../stitches.config'
 
 export const headers: HeadersFunction = () => ({
   'Accept-CH': 'Sec-CH-Prefers-Color-Scheme',
@@ -240,6 +241,7 @@ export const loader: LoaderFunction = async ({ request }) => ({
 
 export default function App() {
   const { colorScheme } = useLoaderData()
+  globalStyles()
 
   return (
     <html lang="en">
