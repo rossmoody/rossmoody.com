@@ -1,4 +1,10 @@
 {
+  "assembl": {
+    "pretext": "macOS App",
+    "heading": "Assembl",
+    "link": "https://assembl.app",
+    "description": "The effortless window manager for macOS. Assembl resizes, organizes, and maximizes all visible windows on a screen with one easy-to-remember keyboard shortcut."
+  },
   "cryptocons": {
     "pretext": "Icon Library",
     "heading": "Cryptocons",
