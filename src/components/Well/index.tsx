@@ -1,10 +1,10 @@
 import { Box, Flex } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import React, { HTMLAttributes } from 'react'
-import { CoreFrontmatter } from 'utils/getFrontMatter'
+
 
 type WellProps = HTMLAttributes<HTMLDivElement> & {
-  slug: CoreFrontmatter['slug']
+  slug: ['slug']
   route: string
 }
 
