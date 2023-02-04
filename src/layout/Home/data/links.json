@@ -39,10 +39,10 @@
     "prettylink": "basicattentiontoken.com",
     "label": "Basic Attention Token"
   },
-  "splunk": {
-    "link": "https://www.splunk.com/",
-    "prettylink": "splunk.com",
-    "label": "Splunk"
+  "rippling": {
+    "link": "https://www.rippling.com/",
+    "prettylink": "rippling.com",
+    "label": "Rippling"
   },
   "aprilia": {
     "link": "https://www.aprilia.com/us_EN/models/rs-660/",

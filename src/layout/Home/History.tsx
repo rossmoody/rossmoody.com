@@ -1,5 +1,4 @@
 import { Heading } from '@chakra-ui/react'
-import React from 'react'
 import { Footnote as Note } from './Footnote'
 import { LinkTooltip as Tip } from './LinkTooltip'
 
@@ -26,9 +25,9 @@ export const History = () => (
     design and engineering teams.
     <br />
     <br />
-    These days I split my time between being a Principal Design Technologist at{' '}
-    <Tip name="splunk">Splunk</Tip> and tinkering with app development. I like{' '}
-    <Note name="french" words="French Bulldogs" />
+    These days I split my time between being a Design Technologist at{' '}
+    <Tip name="rippling">Rippling</Tip> and tinkering with app development. I
+    like <Note name="french" words="French Bulldogs" />
     , <Note name="cryptocurrency" words="cryptocurrency" />, and my{' '}
     <Tip name="aprilia">Aprilia</Tip> RS 660. If you let me too close to your
     closet I&apos;ll <Note name="organize" words="organize it" />.
