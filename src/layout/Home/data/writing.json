@@ -1,16 +1,4 @@
 {
-  "stitches": {
-    "pretext": "2022",
-    "heading": "Setting up Dark Theme with Remix & Stitches",
-    "link": "/writing/remix-stitches",
-    "description": "A short walkthrough of setting up CSS-in-JS theming functionality with Stitches and Remix leveraging SSR color-scheme preferences."
-  },
-  "favorite": {
-    "pretext": "2022",
-    "heading": "My Favorite Discoveries in Q4 2021",
-    "link": "/writing/favorites-q4-2021",
-    "description": "The first post in a running series where I catalog my favorite discoveries of the past quarter. Primarily apps, books, programming tools, and a sprinkle of every-day-carry."
-  },
   "ethereum": {
     "pretext": "2021",
     "heading": "A Gentle Introduction to Staking ETH 2.0",
