@@ -1,6 +1,6 @@
 import { Grid, GridItem } from '@chakra-ui/react'
-import { SectionTitle } from './SectionTitle'
 import { SectionItem } from './SectionItem'
+import { SectionTitle } from './SectionTitle'
 import writing from './data/writing.json'
 
 export const Writing = () => (

@@ -25,7 +25,6 @@ export type PreviewImageKeys =
   | 'dsDocumentation'
   | 'dsPrinciples'
   | 'stakingEth2'
-  | 'favorites'
   | 'remix'
   | 'vscodeSnippets'
 
