@@ -17,8 +17,8 @@ export const HomeLayout = () => (
         lineHeight={1.2}
       >
         <LinkTooltip name="intro">Hi, I&apos;m Ross.</LinkTooltip> A product
-        designer, full-stack engineer, and systems thinker that loves making
-        things for the web.
+        designer, design technologist, and design systems thinker that loves
+        making things for the web.
       </Heading>
       <DashDivider my="60px" />
       <History />
