@@ -16,9 +16,9 @@ export const HomeLayout = () => (
         fontSize={['32px', '48px', '64px']}
         lineHeight={1.2}
       >
-        <LinkTooltip name="intro">Hi, I&apos;m Ross.</LinkTooltip> A product
-        designer, programmer, and design systems thinker that loves making
-        things for the web.
+        <LinkTooltip name="intro">Hi, I&apos;m Ross.</LinkTooltip> A designer,
+        programmer, and design systems thinker that loves making things for the
+        web
       </Heading>
       <DashDivider my="60px" />
       <History />
