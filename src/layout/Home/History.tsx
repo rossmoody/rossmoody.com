@@ -20,8 +20,8 @@ export const History = () => (
     code to become a software engineer.
     <br />
     <br />I helped launch a browser at <Tip name="brave">Brave</Tip> that was
-    powered by <Tip name="crypto">cryptocurrency</Tip> and for the past 5+ years
-    I&apos;ve been focusing on design systems and bridging the gap between
+    powered by <Tip name="crypto">cryptocurrency</Tip> and for the past 10+
+    years I&apos;ve been focusing on design systems and bridging the gap between
     design and engineering teams.
     <br />
     <br />
@@ -29,7 +29,6 @@ export const History = () => (
     <Tip name="rippling">Rippling</Tip> and tinkering with app development. I
     like <Note name="french" words="French Bulldogs" />
     , <Note name="cryptocurrency" words="cryptocurrency" />, and my{' '}
-    <Tip name="aprilia">Aprilia</Tip> RS 660. If you let me too close to your
-    closet I&apos;ll <Note name="organize" words="organize it" />.
+    <Tip name="aprilia">Aprilia</Tip> RS 660.
   </Heading>
 )
