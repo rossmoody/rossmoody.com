@@ -25,9 +25,9 @@ export const History = () => (
     design and engineering teams.
     <br />
     <br />
-    These days I split my time between being a Design Technologist at{' '}
-    <Tip name="rippling">Rippling</Tip> and tinkering with app development. I
-    like <Note name="french" words="French Bulldogs" />
+    These days I split my time between being a designer at{' '}
+    <Tip name="auditboard">AuditBoard</Tip> and tinkering with app development.
+    I like <Note name="french" words="French Bulldogs" />
     , <Note name="cryptocurrency" words="cryptocurrency" />, and my{' '}
     <Tip name="aprilia">Aprilia</Tip> RS 660.
   </Heading>

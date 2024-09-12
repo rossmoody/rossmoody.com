@@ -39,10 +39,10 @@
     "prettylink": "basicattentiontoken.com",
     "label": "Basic Attention Token"
   },
-  "rippling": {
-    "link": "https://www.rippling.com/",
-    "prettylink": "rippling.com",
-    "label": "Rippling"
+  "auditboard": {
+    "link": "https://www.auditboard.com/",
+    "prettylink": "auditboard.com",
+    "label": "AuditBoard"
   },
   "aprilia": {
     "link": "https://www.aprilia.com/us_EN/models/rs-660/",
