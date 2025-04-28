@@ -27,8 +27,7 @@ export const History = () => (
     <br />
     These days I split my time between being a designer at{' '}
     <Tip name="auditboard">AuditBoard</Tip> and tinkering with app development.
-    I like <Note name="french" words="French Bulldogs" />
-    , <Note name="cryptocurrency" words="cryptocurrency" />, and my{' '}
-    <Tip name="aprilia">Aprilia</Tip> RS 660.
+    I like <Note name="french" words="French Bulldogs" />, home improvement, and
+    riding around on my Vespa.
   </Heading>
 )

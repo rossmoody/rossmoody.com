@@ -27,9 +27,6 @@ export const Header = () => {
         <NavLink path="/writing" aria-label="Navigate to Writing">
           Writing
         </NavLink>
-        {/* <NavLink path="/snippets" aria-label="Navigate to Snippets">
-          Snippets
-        </NavLink> */}
         <Divider orientation="vertical" h="5" borderColor="divider" />
         <IconButton
           aria-label="Change theme"

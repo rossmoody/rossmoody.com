@@ -1,12 +1,7 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
-import {
-  SNIPPETS_MDX_FILE_PATHS,
-  SNIPPETS_POST_DIRECTORY,
-  WRITING_MDX_FILE_PATHS,
-  WRITING_POST_DIRECTORY,
-} from './constants'
+import { WRITING_MDX_FILE_PATHS, WRITING_POST_DIRECTORY } from './constants'
 
 export type CoreFrontmatter = {
   data: {
@@ -25,15 +20,6 @@ export type PreviewImageKeys =
   | 'dsDocumentation'
   | 'dsPrinciples'
   | 'stakingEth2'
-  | 'remix'
-  | 'vscodeSnippets'
-
-export type SnippetsFrontmatter = CoreFrontmatter & {
-  data: {
-    type: string
-    tags: string[]
-  }
-}
 
 export type WritingFrontmatter = CoreFrontmatter & {
   data: {
@@ -41,17 +27,12 @@ export type WritingFrontmatter = CoreFrontmatter & {
   }
 }
 
-export type SnippetsPosts = { posts: SnippetsFrontmatter[] }
 export type WritingPosts = { posts: WritingFrontmatter[] }
 
 const postTypes = {
   writing: {
     filePaths: WRITING_MDX_FILE_PATHS,
     directory: WRITING_POST_DIRECTORY,
-  },
-  snippets: {
-    filePaths: SNIPPETS_MDX_FILE_PATHS,
-    directory: SNIPPETS_POST_DIRECTORY,
   },
 }
 

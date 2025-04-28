@@ -2,8 +2,6 @@ import { Box, Heading, SimpleGrid, SlideFade, Text } from '@chakra-ui/react'
 import { DashDivider, WritingPreview } from 'components'
 import dsPrinciples from 'images/defining-ds-principles/one.png'
 import dsDocumentation from 'images/effective-ds-documentation/one.png'
-import vscodeSnippets from 'images/how-to-vscode-snippets/carbon.png'
-import remix from 'images/remix-stitches/one.png'
 import stakingEth2 from 'images/staking-eth-2/one.png'
 import { Layout } from 'layout'
 import { PreviewImageKeys, WritingPosts } from 'utils/getFrontMatter'
@@ -12,8 +10,6 @@ const WritingImages: Record<PreviewImageKeys, StaticImageData> = {
   dsDocumentation,
   dsPrinciples,
   stakingEth2,
-  remix,
-  vscodeSnippets,
 }
 
 export const WritingLayout = ({ posts }: WritingPosts) => (

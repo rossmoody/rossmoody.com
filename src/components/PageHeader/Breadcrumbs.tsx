@@ -1,15 +1,13 @@
-import NextLink from 'next/link'
 import {
   Breadcrumb,
-  BreadcrumbItem as ChakraBreadcrumbItem,
   BreadcrumbLink,
+  BreadcrumbItem as ChakraBreadcrumbItem,
 } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 
 export const Breadcrumbs = () => {
   const { asPath } = useRouter()
-
-  const isWriting = asPath.includes('/writing')
 
   return (
     <Breadcrumb mb="3" color="primary" sx={{ span: { color: 'text' } }}>
@@ -19,10 +17,8 @@ export const Breadcrumbs = () => {
         </NextLink>
       </ChakraBreadcrumbItem>
       <ChakraBreadcrumbItem>
-        <NextLink href={isWriting ? '/writing' : '/snippets'} passHref>
-          <BreadcrumbLink borderRadius="base">
-            {isWriting ? 'Writing' : 'Snippets'}
-          </BreadcrumbLink>
+        <NextLink href="/writing" passHref>
+          <BreadcrumbLink borderRadius="base">Writing</BreadcrumbLink>
         </NextLink>
       </ChakraBreadcrumbItem>
     </Breadcrumb>
