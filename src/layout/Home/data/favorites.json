@@ -41,46 +41,6 @@
       }
     ]
   },
-  "analog": {
-    "pretext": "Tools",
-    "title": "Analog",
-    "items": [
-      {
-        "link": "https://gochirp.com",
-        "name": "Chirp Back Wheel"
-      },
-      {
-        "link": "https://us.moccamaster.com/kb-matte-black.html",
-        "name": "Technivorm Mochamaster"
-      },
-      {
-        "link": "https://www.aersf.com",
-        "name": "Aer Travel Bag 3"
-      }
-    ]
-  },
-  "tech": {
-    "pretext": "Gear",
-    "title": "Tech",
-    "items": [
-      {
-        "link": "https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.html",
-        "name": "Logitech Vertical Mouse"
-      },
-      {
-        "link": "https://kinesis-ergo.com/shop/advantage2/",
-        "name": "Kinesis Advantage 2 Keyboard"
-      },
-      {
-        "link": "https://www.bluemic.com/en-us/products/snowball/",
-        "name": "Blue Snowball Microphone"
-      },
-      {
-        "link": "https://www.apple.com/shop/buy-mac/macbook-pro/14-inch-space-gray-10-core-cpu-16-core-gpu-1tb#",
-        "name": "Macbook Pro 14\" M1 Max"
-      }
-    ]
-  },
   "books": {
     "pretext": "Literature",
     "title": "Books",
@@ -142,6 +102,46 @@
       {
         "link": "https://shop.ledger.com/products/ledger-nano-x",
         "name": "Ledger Nano X"
+      }
+    ]
+  },
+  "analog": {
+    "pretext": "Tools",
+    "title": "Analog",
+    "items": [
+      {
+        "link": "https://gochirp.com",
+        "name": "Chirp Back Wheel"
+      },
+      {
+        "link": "https://us.moccamaster.com/kb-matte-black.html",
+        "name": "Technivorm Mochamaster"
+      },
+      {
+        "link": "https://www.aersf.com",
+        "name": "Aer Travel Bag 3"
+      }
+    ]
+  },
+  "tech": {
+    "pretext": "Gear",
+    "title": "Tech",
+    "items": [
+      {
+        "link": "https://www.logitech.com/en-us/products/mice/mx-vertical-ergonomic-mouse.html",
+        "name": "Logitech Vertical Mouse"
+      },
+      {
+        "link": "https://kinesis-ergo.com/shop/advantage2/",
+        "name": "Kinesis Advantage 2 Keyboard"
+      },
+      {
+        "link": "https://www.bluemic.com/en-us/products/snowball/",
+        "name": "Blue Snowball Microphone"
+      },
+      {
+        "link": "https://www.apple.com/shop/buy-mac/macbook-pro/14-inch-space-gray-10-core-cpu-16-core-gpu-1tb#",
+        "name": "Macbook Pro 14\" M1 Max"
       }
     ]
   }
