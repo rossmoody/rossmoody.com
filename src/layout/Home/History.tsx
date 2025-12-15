@@ -20,14 +20,14 @@ export const History = () => (
     code to become a software engineer.
     <br />
     <br />I helped launch a browser at <Tip name="brave">Brave</Tip> that was
-    powered by <Tip name="crypto">cryptocurrency</Tip> and for the past 10+
+    powered by <Tip name="crypto">cryptocurrency</Tip> and for the past 15+
     years I&apos;ve been focusing on design systems and bridging the gap between
     design and engineering teams.
     <br />
     <br />
-    These days I split my time between being a designer at{' '}
+    These days I split my time between being a design technologist at{' '}
     <Tip name="auditboard">AuditBoard</Tip> and tinkering with app development.
-    I like <Note name="french" words="French Bulldogs" />, home improvement, and
-    riding around on my Vespa.
+    I like <Note name="french" words="French Bulldogs" />, working on my house,
+    and riding around in my 1993 Nissan D21.
   </Heading>
 )
