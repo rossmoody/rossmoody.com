@@ -24,12 +24,20 @@
         "name": "GitHub Desktop"
       },
       {
-        "link": "https://www.figma.com/",
-        "name": "Figma"
+        "link": "https://warp.dev/",
+        "name": "Warp"
       },
       {
-        "link": "https://iterm2.com/",
-        "name": "iTerm2"
+        "link": "https://tryklack.com/",
+        "name": "Klack"
+      },
+      {
+        "link": "https://arc.net/",
+        "name": "Arc Browser"
+      },
+      {
+        "link": "https://cleanshot.com",
+        "name": "CleanShot"
       }
     ]
   },
@@ -38,12 +46,8 @@
     "title": "Analog",
     "items": [
       {
-        "link": "https://www.baronfig.com/tools/confidant/classic?size=plus+%287%22+x+10%22%29&paper+type=ruled&color=charcoal",
-        "name": "Baron Fig Notebook"
-      },
-      {
-        "link": "https://www.amazon.com/Moisture-Garden-Gardening-Outdoors-Battery/dp/B01J1HO6XY",
-        "name": "Plant Moisture Meter"
+        "link": "https://gochirp.com",
+        "name": "Chirp Back Wheel"
       },
       {
         "link": "https://us.moccamaster.com/kb-matte-black.html",
@@ -86,8 +90,8 @@
         "name": "Project Hail Mary"
       },
       {
-        "link": "https://www.goodreads.com/book/show/233667.Firestarter",
-        "name": "Firestarter"
+        "link": "https://www.goodreads.com/book/show/4406.East_of_Eden",
+        "name": "East of Eden"
       },
       {
         "link": "https://www.goodreads.com/book/show/149267.The_Stand",
@@ -104,6 +108,14 @@
       {
         "link": "https://www.goodreads.com/book/show/42046112-recursion",
         "name": "Recursion"
+      },
+      {
+        "link": "https://www.goodreads.com/book/show/216017751-this-inevitable-ruin",
+        "name": "Dungeon Crawler Carl"
+      },
+      {
+        "link": "https://www.goodreads.com/book/show/256008.Lonesome_Dove",
+        "name": "Lonesome Dove"
       }
     ]
   },
@@ -120,12 +132,12 @@
         "name": "DrinkTrade Coffee"
       },
       {
-        "link": "https://www.pocketcasts.com/",
-        "name": "PocketCasts"
+        "link": "https://www.anthropic.com/",
+        "name": "Claude"
       },
       {
-        "link": "https://www.netlify.com/",
-        "name": "Netlify"
+        "link": "https://cooking.nytimes.com/",
+        "name": "NYT Cooking"
       },
       {
         "link": "https://shop.ledger.com/products/ledger-nano-x",
