@@ -1,18 +1,18 @@
 {
   "ethereum": {
-    "pretext": "2022",
+    "pretext": "2025",
     "heading": "A Gentle Introduction to Staking ETH 2.0",
     "link": "/writing/staking-eth-2",
     "description": "A beginner’s journey to discovering the different methods and resources available for staking Eth2."
   },
   "principles": {
-    "pretext": "2023",
+    "pretext": "2025",
     "heading": "Defining Design System Principles",
     "link": "/writing/defining-ds-principles",
     "description": "My iterative set of standards for building and maintaining empowering design systems."
   },
   "documentation": {
-    "pretext": "2021",
+    "pretext": "2025",
     "heading": "6 Tips for Effective Design System Documentation",
     "link": "/writing/effective-ds-documentation",
     "description": "Practical tactics for writing helpful design system documentation."
