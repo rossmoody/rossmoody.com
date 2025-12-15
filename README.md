@@ -21,13 +21,13 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  yarn
+  npm i
 ```
 
 Start the server
 
 ```bash
-  yarn dev
+  npm run dev
 ```
 
 Open <http://localhost:3000> with your browser to see the result.
