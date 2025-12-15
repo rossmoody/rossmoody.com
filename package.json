@@ -7,6 +7,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "prettier": "prettier-config-rossmoody",
   "dependencies": {
     "@chakra-ui/react": "^1.7.3",
