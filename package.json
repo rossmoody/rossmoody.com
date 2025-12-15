@@ -8,6 +8,9 @@
     "lint": "next lint"
   },
   "prettier": "prettier-config-rossmoody",
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "^11",
