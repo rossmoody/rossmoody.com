@@ -1,9 +1,9 @@
+import { Box, Heading, SlideFade, Text } from '@chakra-ui/react'
+import { Well } from 'components'
 import NextImage from 'next/image'
 import { useState } from 'react'
-import { Heading, Box, Text, SlideFade } from '@chakra-ui/react'
-import { Well } from 'components'
-import { ArrowRight } from './ArrowRight'
 import type { WritingFrontmatter } from 'utils/getFrontMatter'
+import { ArrowRight } from './ArrowRight'
 
 type WritingPreviewProps = WritingFrontmatter & {
   previewImage: StaticImageData
@@ -31,6 +31,7 @@ export const WritingPreview = (props: WritingPreviewProps) => {
           placeholder="blur"
           layout="fill"
           objectFit="cover"
+          unoptimized
         />
       </Box>
       <Box>

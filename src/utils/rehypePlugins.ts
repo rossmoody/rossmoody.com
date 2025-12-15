@@ -1,12 +1,14 @@
-import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 
 const rehypePlugins = [
   rehypeSlug,
-  () =>
-    rehypeAutolinkHeadings({
+  [
+    rehypeAutolinkHeadings,
+    {
       behavior: 'append',
-    }),
-]
+    },
+  ],
+] as any[]
 
 export default rehypePlugins

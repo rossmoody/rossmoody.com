@@ -12,7 +12,13 @@ export const Image = (props: ImageProps) => {
       }}
     >
       <Box width={width}>
-        <NextImage alt={props.alt} width={width} {...rest} quality={50} />
+        <NextImage
+          alt={props.alt}
+          width={width}
+          {...rest}
+          quality={50}
+          unoptimized
+        />
         {props.children && (
           <Box
             as="figcaption"

@@ -24,7 +24,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const source = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [],
-      // @ts-ignore
       rehypePlugins,
     },
   })
