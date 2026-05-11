@@ -11,7 +11,7 @@ type FragmentLink = {
   >
 }
 
-export const FragmentLink: React.FC<FragmentLink> = ({
+export const FragmentLink: React.FC<React.PropsWithChildren<FragmentLink>> = ({
   children,
   heading,
   active,

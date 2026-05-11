@@ -1,25 +1,31 @@
 import { Box, Center } from '@chakra-ui/react'
 import NextImage, { ImageProps } from 'next/image'
 
-export const Image = (props: ImageProps) => {
-  const { alt, width, children, ...rest } = props
+type Props = Omit<ImageProps, 'width' | 'height'> & {
+  width?: number | string
+  height?: number | string
+  children?: React.ReactNode
+}
+
+const toPx = (value: number | string | undefined) =>
+  typeof value === 'string' ? parseInt(value, 10) : value
+
+export const Image = (props: Props) => {
+  const { width, height, children, ...rest } = props
+  const numericWidth = toPx(width)
+  const numericHeight = toPx(height)
 
   return (
-    <Center
-      my="12"
-      _first={{
-        marginTop: '0',
-      }}
-    >
+    <Center my="12" _first={{ marginTop: '0' }}>
       <Box width={width}>
         <NextImage
-          alt={props.alt}
-          width={width}
           {...rest}
+          width={numericWidth}
+          height={numericHeight}
           quality={50}
           unoptimized
         />
-        {props.children && (
+        {children && (
           <Box
             as="figcaption"
             bg="surfaceDark"
@@ -29,13 +35,9 @@ export const Image = (props: ImageProps) => {
             fontSize="sm"
             mt="-8px"
             borderBottomRadius="lg"
-            sx={{
-              a: {
-                color: 'primary',
-              },
-            }}
+            sx={{ a: { color: 'primary' } }}
           >
-            {props.children}
+            {children}
           </Box>
         )}
       </Box>

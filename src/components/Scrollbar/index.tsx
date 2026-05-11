@@ -12,7 +12,9 @@ type Vector = {
   dy: number
 }
 
-export const ScrollArea: React.FC = ({ children }) => {
+export const ScrollArea: React.FC<React.PropsWithChildren> = ({
+  children,
+}) => {
   const thumbRef = React.useRef<HTMLDivElement>(null)
   const wrapperRef = React.useRef<HTMLDivElement>(null)
   const contentRef = React.useRef<HTMLDivElement>(null)

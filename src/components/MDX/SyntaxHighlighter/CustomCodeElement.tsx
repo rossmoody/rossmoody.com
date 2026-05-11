@@ -1,6 +1,8 @@
 import { Box } from '@chakra-ui/react'
 
-export const CustomCodeElement: React.FC = (props) => (
+export const CustomCodeElement: React.FC<React.PropsWithChildren> = (
+  props
+) => (
   <Box
     as="code"
     fontFamily="mono"

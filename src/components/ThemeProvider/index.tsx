@@ -9,7 +9,9 @@ interface ThemeContextProps {
 
 const ThemeContext = React.createContext({} as ThemeContextProps)
 
-export const ThemeProvider: React.FC = ({ children }) => {
+export const ThemeProvider: React.FC<React.PropsWithChildren> = ({
+  children,
+}) => {
   const [theme, setTheme] = React.useState<ThemeNumber>(6)
 
   const themeMemo = React.useMemo(

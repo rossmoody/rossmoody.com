@@ -1,4 +1,5 @@
 import { Kbd } from '@chakra-ui/react'
+import type { MDXRemoteProps } from 'next-mdx-remote'
 import { DashDivider } from '../DashDivider'
 import { Link } from '../Link'
 import { PageHeader } from '../PageHeader'
@@ -7,18 +8,13 @@ import { Image } from './Image'
 import { SyntaxHighlighter } from './SyntaxHighlighter'
 import * as T from './Typography'
 
-// import dynamic from 'next/dynamic'
-// const Component = dynamic(() => import('./Path'))
-
 const customComponents = {
   Aside,
   PageHeader,
   Image,
 }
 
-type Components = Record<any, (props: any) => any>
-
-export const components: Partial<Components> = {
+export const components = {
   h1: T.H1,
   h2: T.H2,
   h3: T.H3,
@@ -33,4 +29,4 @@ export const components: Partial<Components> = {
   kbd: Kbd,
   a: Link,
   ...customComponents,
-}
+} as unknown as MDXRemoteProps['components']

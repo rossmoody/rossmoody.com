@@ -4,7 +4,9 @@ export interface AsideProps {
   label?: string
 }
 
-export const Aside: React.FC<AsideProps> = (props) => {
+export const Aside: React.FC<React.PropsWithChildren<AsideProps>> = (
+  props
+) => {
   const label = props.label ?? 'Note'
 
   return (

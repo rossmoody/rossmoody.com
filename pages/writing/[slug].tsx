@@ -10,7 +10,7 @@ import rehypePlugins from 'utils/rehypePlugins'
 export default function Post({ frontMatter, source }: PostPageProps) {
   return (
     <PostLayout frontMatter={frontMatter}>
-      <MDXRemote {...source} components={components} scope={frontMatter} />
+      <MDXRemote {...source} components={components} />
     </PostLayout>
   )
 }
@@ -22,6 +22,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )
 
   const source = await serialize(content, {
+    scope: frontMatter,
     mdxOptions: {
       remarkPlugins: [],
       rehypePlugins,

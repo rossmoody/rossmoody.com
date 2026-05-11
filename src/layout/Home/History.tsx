@@ -20,15 +20,17 @@ export const History = () => (
     code to become a software engineer.
     <br />
     <br />I helped launch a browser at <Tip name="brave">Brave</Tip> that was
-    powered by <Tip name="crypto">cryptocurrency</Tip> and for the past 15+
-    years I&apos;ve been focusing on design systems and bridging the gap between
-    design and engineering teams.
+    powered by <Tip name="crypto">cryptocurrency</Tip> and have spent the years
+    since focusing on design systems and bridging the gap between design and
+    engineering teams.
     <br />
     <br />
     These days I split my time between being a design technologist at{' '}
     <Tip name="optro">Optro</Tip> and building{' '}
-    <Tip name="pennyweight">Pennyweight</Tip>, a pricing engine for independent
-    jewelers. I like <Note name="french" words="French Bulldogs" />, working on
-    my house, and riding around in my 1993 Nissan D21.
+    <Tip name="pennyweight">Pennyweight</Tip>, a pricing engine that helps
+    independent jewelers turn live spot prices, materials, labor, and margin
+    into accurate retail prices. I like{' '}
+    <Note name="french" words="French Bulldogs" />, working on my house, and
+    riding around in my 1993 Nissan D21.
   </Heading>
 )

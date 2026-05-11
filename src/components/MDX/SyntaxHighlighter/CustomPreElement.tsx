@@ -3,11 +3,13 @@ import { ScrollArea } from 'components'
 import { CodeTypeTab } from './CodeTypeTab'
 import { getBgColors } from './utils'
 
-type CustomPreTag = React.FC<{
-  language: string
-  bgColors: ReturnType<typeof getBgColors>
-  filename?: string
-}>
+type CustomPreTag = React.FC<
+  React.PropsWithChildren<{
+    language: string
+    bgColors: ReturnType<typeof getBgColors>
+    filename?: string
+  }>
+>
 
 export const CustomPreElement: CustomPreTag = (props) => {
   return (

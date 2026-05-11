@@ -9,7 +9,9 @@ export type PostPageProps = {
   frontMatter: WritingFrontmatter['data']
 }
 
-const PostLayout: React.FC<Pick<PostPageProps, 'frontMatter'>> = (props) => {
+const PostLayout: React.FC<
+  React.PropsWithChildren<Pick<PostPageProps, 'frontMatter'>>
+> = (props) => {
   const { children, frontMatter } = props
 
   return (
