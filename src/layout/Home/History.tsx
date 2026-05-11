@@ -26,8 +26,9 @@ export const History = () => (
     <br />
     <br />
     These days I split my time between being a design technologist at{' '}
-    <Tip name="auditboard">AuditBoard</Tip> and tinkering with app development.
-    I like <Note name="french" words="French Bulldogs" />, working on my house,
-    and riding around in my 1993 Nissan D21.
+    <Tip name="optro">Optro</Tip> and building{' '}
+    <Tip name="pennyweight">Pennyweight</Tip>, a pricing engine for independent
+    jewelers. I like <Note name="french" words="French Bulldogs" />, working on
+    my house, and riding around in my 1993 Nissan D21.
   </Heading>
 )

@@ -1,4 +1,10 @@
 {
+  "pennyweight": {
+    "pretext": "Web App",
+    "heading": "Pennyweight",
+    "link": "https://pennyweight.app",
+    "description": "Pennyweight is a pricing engine for independent jewelers and small studios. It combines live metal spot prices, material weights, stone costs, labor, and margin into accurate retail pricing so every piece in a catalog stays priced right, every day."
+  },
   "svgGobbler": {
     "pretext": "Browser Extension",
     "heading": "SVG Gobbler",
@@ -8,7 +14,7 @@
   "assembl": {
     "pretext": "macOS App",
     "heading": "Assembl",
-    "link": "https://assembl.app",
+    "link": "https://github.com/rossmoody/Assembl",
     "description": "The effortless window manager for macOS. Assembl resizes, organizes, and maximizes all visible windows on a screen with one easy-to-remember keyboard shortcut."
   },
   "linkRoamer": {

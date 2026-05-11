@@ -39,10 +39,15 @@
     "prettylink": "basicattentiontoken.com",
     "label": "Basic Attention Token"
   },
-  "auditboard": {
-    "link": "https://www.auditboard.com/",
-    "prettylink": "auditboard.com",
-    "label": "AuditBoard"
+  "optro": {
+    "link": "https://www.optro.com/",
+    "prettylink": "optro.com",
+    "label": "Optro"
+  },
+  "pennyweight": {
+    "link": "https://pennyweight.app",
+    "prettylink": "pennyweight.app",
+    "label": "A pricing engine I'm building for independent jewelers and small studios."
   },
   "aprilia": {
     "link": "https://www.aprilia.com/us_EN/models/rs-660/",
