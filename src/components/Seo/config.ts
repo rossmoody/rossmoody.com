@@ -21,7 +21,7 @@ const config = {
   siteUrl: 'https://rossmoody.com/',
   siteLanguage: 'en',
   logo: '/logo.png',
-  image: 'https://rossmoody.com/open-graph.png',
+  image: 'https://rossmoody.com/api/og',
   favicon: '/favicon.ico',
   shortName: 'RossMoody',
   author: ' Ross Moody',
