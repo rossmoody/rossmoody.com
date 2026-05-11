@@ -1,8 +1,7 @@
-import { Divider, Flex, IconButton } from '@chakra-ui/react'
+import { Flex, IconButton } from '@chakra-ui/react'
 import { useTheme } from 'components'
 import { ThemeNumber } from 'utils/createTheme'
 import { Logo } from './Logo'
-import { NavLink } from './NavLink'
 import { ThemeIcon } from './ThemeIcon'
 
 export const Header = () => {
@@ -23,19 +22,13 @@ export const Header = () => {
       marginX="auto"
     >
       <Logo />
-      <Flex gap="8" align="center">
-        <NavLink path="/writing" aria-label="Navigate to Writing">
-          Writing
-        </NavLink>
-        <Divider orientation="vertical" h="5" borderColor="divider" />
-        <IconButton
-          aria-label="Change theme"
-          onClick={handleClick}
-          icon={<ThemeIcon />}
-          size="sm"
-          variant="ghost"
-        />
-      </Flex>
+      <IconButton
+        aria-label="Change theme"
+        onClick={handleClick}
+        icon={<ThemeIcon />}
+        size="sm"
+        variant="ghost"
+      />
     </Flex>
   )
 }

@@ -16,10 +16,7 @@ export type CoreFrontmatter = {
   slug: string
 }
 
-export type PreviewImageKeys =
-  | 'dsDocumentation'
-  | 'dsPrinciples'
-  | 'stakingEth2'
+export type PreviewImageKeys = 'dsDocumentation' | 'dsPrinciples'
 
 export type WritingFrontmatter = CoreFrontmatter & {
   data: {
