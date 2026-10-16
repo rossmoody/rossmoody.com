@@ -3,15 +3,15 @@ import { NextSeo, ArticleJsonLd } from 'next-seo'
 import config from './config'
 
 interface Props {
-  image?: string
-  desc?: string
+  ogImage?: string
+  description?: string
   path?: string
   title?: string
   date?: string
-  updated?: string
+  lastUpdated?: string
 }
 
-const Seo = ({ title, desc, image, path, date, updated }: Props) => {
+const Seo = ({ title, description, ogImage, path, date, lastUpdated }: Props) => {
   const {
     title: configTitle,
     description: configDescription,
@@ -22,12 +22,12 @@ const Seo = ({ title, desc, image, path, date, updated }: Props) => {
   } = config
 
   const seo = {
-    description: desc || configDescription,
-    image: image ? `${url}${image}` : configImage,
-    title: `${title} - ${configTitle}` || configTitle,
+    description: description || configDescription,
+    image: ogImage ? `${url}${ogImage}` : configImage,
+    title: title ? `${title} - ${configTitle}` : configTitle,
     url: `${url}${path || ''}`,
     date: date,
-    updated: updated || date,
+    updated: lastUpdated || date,
   }
 
   const formattedDate = seo.date ? new Date(seo.date).toISOString() : ''
@@ -64,11 +64,11 @@ const Seo = ({ title, desc, image, path, date, updated }: Props) => {
       />
       <ArticleJsonLd
         authorName={author}
-        dateModified={formattedDate}
+        dateModified={formattedUpdatedDate}
         datePublished={formattedDate}
         description={seo.description}
         images={[seo.image]}
-        publisherLogo="/logo.png"
+        publisherLogo={`${url}/logo.png`}
         publisherName={author}
         title={seo.title}
         url={seo.url}

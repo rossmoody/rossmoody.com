@@ -20,8 +20,8 @@ export const DefaultSeo = (props: Props) => (
         {
           url: config.image,
           alt: config.title,
-          width: 1280,
-          height: 720,
+          width: 1200,
+          height: 630,
         },
       ],
     }}

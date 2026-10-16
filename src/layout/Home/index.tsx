@@ -1,4 +1,5 @@
-import { Heading, SlideFade } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
+import { keyframes } from '@emotion/react'
 import { DashDivider } from 'components/DashDivider'
 import { Layout } from 'layout'
 import { Favorites } from './favorites/FavoritesSection'
@@ -7,9 +8,17 @@ import { LinkTooltip } from './LinkTooltip'
 import { Projects } from './Projects'
 import { Writing } from './Writing'
 
+const slideFade = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+`
+
 export const HomeLayout = () => (
   <Layout>
-    <SlideFade in={true} offsetY="20px">
+    <Box
+      animation={`${slideFade} 0.3s ease-out`}
+      sx={{ '@media (prefers-reduced-motion: reduce)': { animation: 'none' } }}
+    >
       <Heading
         as="h1"
         pt="8"
@@ -28,6 +37,6 @@ export const HomeLayout = () => (
       <Writing />
       <DashDivider my="60px" />
       <Favorites />
-    </SlideFade>
+    </Box>
   </Layout>
 )
