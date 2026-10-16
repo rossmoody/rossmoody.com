@@ -9,8 +9,10 @@ export const TableOfContents = () => {
   useEffect(() => {
     const main = document.getElementById('page-content')
     const headings = getHeadings(main!)
+    // Headings only exist in the DOM after the MDX content mounts
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHeadings(headings)
-    setActiveFragment(headings[0].item)
+    setActiveFragment(headings[0]?.item)
   }, [])
 
   return (

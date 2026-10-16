@@ -4,7 +4,11 @@ import { SectionTitle } from './SectionTitle'
 import writing from './data/writing.json'
 
 export const Writing = () => (
-  <Grid templateColumns={{ sm: '1fr', md: 'repeat(3, 1fr)' }} gap={4}>
+  <Grid
+    id="writing"
+    templateColumns={{ sm: '1fr', md: 'repeat(3, 1fr)' }}
+    gap={4}
+  >
     <GridItem colSpan={1}>
       <SectionTitle title="Writing" />
     </GridItem>

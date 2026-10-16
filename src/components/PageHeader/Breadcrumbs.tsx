@@ -12,14 +12,14 @@ export const Breadcrumbs = () => {
   return (
     <Breadcrumb mb="3" color="primary" sx={{ span: { color: 'text' } }}>
       <ChakraBreadcrumbItem>
-        <NextLink href="/" passHref>
-          <BreadcrumbLink borderRadius="base">Home</BreadcrumbLink>
-        </NextLink>
+        <BreadcrumbLink as={NextLink} href="/" borderRadius="base">
+          Home
+        </BreadcrumbLink>
       </ChakraBreadcrumbItem>
       <ChakraBreadcrumbItem>
-        <NextLink href="/writing" passHref>
-          <BreadcrumbLink borderRadius="base">Writing</BreadcrumbLink>
-        </NextLink>
+        <BreadcrumbLink as={NextLink} href="/#writing" borderRadius="base">
+          Writing
+        </BreadcrumbLink>
       </ChakraBreadcrumbItem>
     </Breadcrumb>
   )

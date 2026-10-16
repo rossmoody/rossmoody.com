@@ -21,13 +21,11 @@ export const Well = React.forwardRef<HTMLDivElement, WellProps>(
         ref={ref}
         {...rest}
       >
-        <NextLink href={`${route}${slug}`} passHref>
-          <Box as="a">
-            <Flex direction="column" height="100%">
-              {children}
-            </Flex>
-          </Box>
-        </NextLink>
+        <Box as={NextLink} href={`${route}${slug}`}>
+          <Flex direction="column" height="100%">
+            {children}
+          </Flex>
+        </Box>
       </Box>
     )
   }

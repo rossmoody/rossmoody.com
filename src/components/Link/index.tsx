@@ -13,15 +13,15 @@ export const Link: React.FC<LinkProps> = (props) => {
 
   return (
     <Tooltip label={prettifyLink(props.href)}>
-      <NextLink href={props.href ?? '/'} passHref>
-        <ChakraLink
-          isExternal={isExternal}
-          borderRadius="base"
-          color="primary"
-          _hover={{ color: 'textProminent' }}
-          {...props}
-        />
-      </NextLink>
+      <ChakraLink
+        as={NextLink}
+        isExternal={isExternal}
+        borderRadius="base"
+        color="primary"
+        _hover={{ color: 'textProminent' }}
+        {...props}
+        href={props.href ?? '/'}
+      />
     </Tooltip>
   )
 }

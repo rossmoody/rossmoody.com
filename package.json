@@ -6,36 +6,36 @@
     "prebuild": "node scripts/generate-sitemap.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "prettier": "prettier-config-rossmoody",
   "engines": {
-    "node": ">=18"
+    "node": ">=20.9"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.10.4",
+    "@chakra-ui/react": "^2.10.10",
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
     "@radix-ui/react-use-layout-effect": "^1.1.0",
-    "framer-motion": "^11.11.17",
+    "framer-motion": "^12.43.0",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.18",
-    "next-mdx-remote": "^5.0.0",
+    "next": "^16.4.2",
+    "next-mdx-remote": "^6.0.0",
     "next-seo": "^6.6.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-syntax-highlighter": "^15.6.1"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-syntax-highlighter": "^16.1.2"
   },
   "devDependencies": {
     "@ctrl/tinycolor": "^4.1.0",
     "@netlify/plugin-nextjs": "^5.8.1",
     "@types/gtag.js": "^0.0.20",
-    "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@types/react-syntax-highlighter": "^15.5.13",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.18",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.2",
     "prettier-config-rossmoody": "^1.0.2",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1",
