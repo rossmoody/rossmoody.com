@@ -15,22 +15,18 @@ const Item = ({ href, label }: ItemProperties) => (
 
 const footerItems = [
   {
-    ariaLabel: 'Send email',
     href: 'mailto:ross@rossmoody.com',
     label: 'Email',
   },
   {
-    ariaLabel: 'Navigate to Dribbble Profile',
     href: 'https://dribbble.com/_rossmoody',
     label: 'Dribbble',
   },
   {
-    ariaLabel: 'Navigate to GitHub Profile',
     href: 'https://www.github.com/rossmoody',
     label: 'GitHub',
   },
   {
-    ariaLabel: 'Navigate to LinkedIn Profile',
     href: 'https://www.linkedin.com/in/moodyrooster/',
     label: 'LinkedIn',
   },
@@ -42,11 +38,7 @@ export const Footer = () => (
     <Flex gap="12px" wrap="wrap" fontSize="sm">
       {footerItems.map((item, index) => (
         <Fragment key={index}>
-          <Item
-            aria-label={item.ariaLabel}
-            href={item.href}
-            label={item.label}
-          />
+          <Item href={item.href} label={item.label} />
           {index < footerItems.length - 1 && '/'}
         </Fragment>
       ))}

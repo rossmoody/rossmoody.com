@@ -18,7 +18,7 @@ export const Permalink: React.FC<Permalink> = ({ href }) => {
 
   const handleClick = useCallback(() => {
     const { origin, pathname } = window.location
-    const url = `${origin}/${pathname}${href}`
+    const url = `${origin}${pathname}${href}`
     navigator.clipboard.writeText(url)
 
     setCopyText('Copied')

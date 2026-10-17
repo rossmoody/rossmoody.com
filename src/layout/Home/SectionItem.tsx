@@ -14,7 +14,7 @@ export const SectionItem = (props: SectionItemProperties) => (
     <Text fontWeight="medium" mb="8px" letterSpacing=".5px">
       {props.pretext}
     </Text>
-    <Heading fontWeight="400" as="h2" color="inherit">
+    <Heading fontWeight="400" as="h3" color="inherit">
       <ChakraNextLink href={props.link}>{props.heading}</ChakraNextLink>
     </Heading>
     <Text letterSpacing=".3px">{props.description}</Text>

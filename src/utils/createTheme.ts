@@ -42,34 +42,51 @@ const themes = {
 
 export type ThemeNumber = keyof typeof themes
 
-export function createTheme(number: ThemeNumber) {
+export const DEFAULT_DARK_THEME: ThemeNumber = 6
+export const DEFAULT_LIGHT_THEME: ThemeNumber = 1
+export const THEME_STORAGE_KEY = 'theme'
+export const THEME_NUMBERS = Object.keys(themes).map(Number) as ThemeNumber[]
+
+export function getThemeColors(number: ThemeNumber) {
   const { divider, primary, surface, textProminent } = themes[number]
 
-  const text = new TinyColor(textProminent).setAlpha(0.85).toRgbString()
-  const textSubdued = new TinyColor(textProminent).setAlpha(0.7).toRgbString()
-  const surfaceDark = new TinyColor(surface).darken(3).toHexString()
-  const surfaceDarkHover = new TinyColor(surface).darken(2).toHexString()
+  return {
+    primary,
+    surface,
+    divider,
+    surfaceDark: new TinyColor(surface).darken(3).toHexString(),
+    surfaceDarkHover: new TinyColor(surface).darken(2).toHexString(),
+    text: new TinyColor(textProminent).setAlpha(0.85).toRgbString(),
+    textSubdued: new TinyColor(textProminent).setAlpha(0.7).toRgbString(),
+    textProminent,
+  }
+}
 
+/**
+ * CSS that overrides Chakra's color variables per theme so the saved theme
+ * can be applied before React hydrates.
+ */
+export function getThemeVariablesCss() {
+  return THEME_NUMBERS.map((number) => {
+    const variables = Object.entries(getThemeColors(number))
+      .map(([name, value]) => `--chakra-colors-${name}:${value};`)
+      .join('')
+    return `html[data-site-theme="${number}"]{${variables}}`
+  }).join('')
+}
+
+export function createTheme(number: ThemeNumber) {
   return extendTheme({
     fonts: {
       heading: 'Plantin MT Pro',
       body: 'Apercu Pro',
       mono: 'Mona Lisa',
     },
-    colors: {
-      primary,
-      surface,
-      divider,
-      surfaceDark,
-      surfaceDarkHover,
-      text,
-      textSubdued,
-      textProminent,
-    },
+    colors: getThemeColors(number),
     components: {
       Heading: {
         baseStyle: {
-          color: textProminent,
+          color: 'textProminent',
           fontWeight: '400',
         },
         Text: {
@@ -88,8 +105,8 @@ export function createTheme(number: ThemeNumber) {
     styles: {
       global: {
         body: {
-          backgroundColor: surface,
-          color: text,
+          backgroundColor: 'surface',
+          color: 'text',
           lineHeight: '1.6',
         },
         'p, ul, ol': {
@@ -98,7 +115,7 @@ export function createTheme(number: ThemeNumber) {
           letterSpacing: '.4px',
         },
         'b, i, em, strong': {
-          color: textProminent,
+          color: 'textProminent',
         },
       },
     },
